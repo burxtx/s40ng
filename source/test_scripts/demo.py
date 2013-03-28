@@ -5,8 +5,8 @@ import json, os.path
 from cs_util import *
 
 class SettingTest(uitestcase.UITestCase):
-    subarea = "Phone Setting"
-    feature = "config.db settings"
+    subarea = "Customization"
+    feature = "Nuage settings"
     # def setUp(self):
     #     """ Set up function. """
     #     uitestcase.UITestCase.setUp(self)
@@ -15,14 +15,12 @@ class SettingTest(uitestcase.UITestCase):
     # def tearDown(self):
     #     """ Tear down function. """
     #     uitestcase.UITestCase.tearDown(self)
-
+    # f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
     def test_all(self):
         """Check phone config.db settings
-        @tcId compare settings: config.db VS static settings file
+        @tcId all
         """
-        
-        f = r"C:\W-AQUA\granite\granite\test_scripts\c_variant\all.json"
-
+        f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         count = 0
@@ -170,11 +168,9 @@ class SettingTest(uitestcase.UITestCase):
 
     def test_media_files(self):
         """preloaded media files check
-        @tcId compare settings: preloaded media files check
+        @tcId preloaded media files check
         """
-        
-        f = r"C:\W-AQUA\granite\granite\test_scripts\c_variant\all.json"
-
+        f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         count = 0
@@ -286,11 +282,9 @@ class SettingTest(uitestcase.UITestCase):
 
     def test_app_list(self):
         """Preloaded apps check
-        @tcId compare settings: Preloaded apps check
+        @tcId Preloaded apps check
         """
-        
-        f = r"C:\W-AQUA\granite\granite\test_scripts\c_variant\all.json"
-
+        f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         count = 0
@@ -331,11 +325,9 @@ class SettingTest(uitestcase.UITestCase):
 
     def test_functional(self):
         """functional check
-        @tcId compare settings: functional check
+        @tcId functional check
         """        
-
-        f = r"C:\W-AQUA\granite\granite\test_scripts\c_variant\all.json"
-
+        f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         count = 0
@@ -367,11 +359,9 @@ class SettingTest(uitestcase.UITestCase):
 
     def test_settings_compare(self):
         """config.db settings check
-        @tcId compare settings: config.db settings check
+        @tcId config.db settings check
         """        
-
-        f = r"C:\W-AQUA\granite\granite\test_scripts\c_variant\all.json"
-
+        f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         count = 0
