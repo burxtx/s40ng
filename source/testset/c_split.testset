@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testset>
+  <testcase name="compare settings: config.db VS static settings file" feature="config.db settings" subarea="Phone Setting" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts\c_variant" file="demo" class="SettingTest" method="test_all" />
+    <testresult result="" time="3/28/2013 9:59:55 AM" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" />
+  </testcase>
+  <testcase name="compare settings: preloaded media files check" feature="config.db settings" subarea="Phone Setting" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts\c_variant" file="demo" class="SettingTest" method="test_media_files" />
+    <testresult result="" time="3/28/2013 9:59:55 AM" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" />
+  </testcase>
+  <testcase name="compare settings: Preloaded apps check" feature="config.db settings" subarea="Phone Setting" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts\c_variant" file="demo" class="SettingTest" method="test_app_list" />
+    <testresult result="N/A" time="3/28/2013 10:01:39 AM" author="" isblackboxmodeon="false" reportpath="c_split_results\xml\compare settings_ Preloaded apps check_1.xml" errorreason="Result file not found" errortraceback="" />
+  </testcase>
+  <testcase name="compare settings: functional check" feature="config.db settings" subarea="Phone Setting" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts\c_variant" file="demo" class="SettingTest" method="test_functional" />
+    <testresult result="" time="3/28/2013 9:59:55 AM" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" />
+  </testcase>
+  <testcase name="compare settings: config.db settings check" feature="config.db settings" subarea="Phone Setting" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts\c_variant" file="demo" class="SettingTest" method="test_settings_compare" />
+    <testresult result="Passed" time="3/28/2013 11:19:20 AM" author="ettian" isblackboxmodeon="false" reportpath="..\test_sets\c_split_results\xml\compare settings_ config.db settings check_1.xml" errorreason="" errortraceback="" />
+  </testcase>
+</testset>

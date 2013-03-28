@@ -185,7 +185,7 @@
             }
         },
         "profile_settings": {
-            "profile tones": [
+            "profile files": [
                 {"value": "testing tone.wav",
                  "type": "Ringtone"},
                 {"value": "message tone.mp3",

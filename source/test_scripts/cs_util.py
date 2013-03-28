@@ -93,6 +93,13 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.exit()
 		return r
 
+	# def compare_settings(self, fv, pv):
+	# 	# convert True to true
+	# 	if fv == True or False:
+	# 		fv = str(fv).lower()
+ #        r = cmp(str(fv), str(pv))
+ #        return r
+
 	# def check_phone_messaging(self):
 		# self.tc.navigate("Settings")
 
