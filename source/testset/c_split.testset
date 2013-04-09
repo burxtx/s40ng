@@ -2,11 +2,19 @@
 <testset>
   <testcase name="all" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo" class="SettingTest" method="test_all" />
-    <testresult result="" time="3/28/2013 4:59:47 PM" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" />
+    <testresult result="Passed" time="4/1/2013 10:58:35 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\all_1.xml" errorreason="" errortraceback="" />
+    <testresult result="Passed" time="4/1/2013 11:29:24 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\all_2.xml" errorreason="" errortraceback="" />
+    <testresult result="Passed" time="4/9/2013 12:21:33 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\all_3.xml" errorreason="" errortraceback="" />
+    <testresult result="N/A" time="4/9/2013 3:49:44 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\all_4.xml" errorreason="Test execution terminated" errortraceback="" />
+    <testresult result="No Result" time="4/9/2013 3:51:58 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\all_5.xml" errorreason="IncludeHelper instance has no attribute 'HW_RESET_SW_RESET_REQUESTED'" errortraceback="" />
+    <testresult result="No Result" time="4/9/2013 3:55:21 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\all_6.xml" errorreason="IncludeHelper instance has no attribute 'HW_RESET_SW_RESET_REQUESTED'" errortraceback="" />
+    <testresult result="N/A" time="4/9/2013 4:10:49 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\all_7.xml" errorreason="Exit: evo-home could not be reached&#xA;Granite will reset the phone in order to recover from the situation!" errortraceback="" />
+    <testresult result="Passed" time="4/9/2013 4:21:43 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\all_8.xml" errorreason="" errortraceback="" />
   </testcase>
   <testcase name="preloaded media files check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo" class="SettingTest" method="test_media_files" />
-    <testresult result="" time="3/28/2013 4:59:47 PM" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" />
+    <testresult result="Failed" time="4/9/2013 4:59:18 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_1.xml" errorreason="'Cannot select Reminder, item is not found from screen.'" errortraceback="" />
+    <testresult result="Passed" time="4/9/2013 5:10:42 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_2.xml" errorreason="" errortraceback="" />
   </testcase>
   <testcase name="Preloaded apps check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo" class="SettingTest" method="test_app_list" />
@@ -14,10 +22,33 @@
   </testcase>
   <testcase name="functional check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo" class="SettingTest" method="test_functional" />
-    <testresult result="" time="3/28/2013 4:59:47 PM" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" />
+    <testresult result="Passed" time="3/29/2013 2:39:47 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_1.xml" errorreason="" errortraceback="" />
+    <testresult result="No Result" time="3/29/2013 2:56:48 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_2.xml" errorreason="Local variable 'r' referenced before assignment." errortraceback="" />
+    <testresult result="No Result" time="3/29/2013 3:17:22 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_3.xml" errorreason="global name 'f_v' is not defined" errortraceback="" />
+    <testresult result="No Result" time="3/29/2013 3:20:23 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_4.xml" errorreason="global name 'f_v' is not defined" errortraceback="" />
+    <testresult result="No Result" time="3/29/2013 3:28:10 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_5.xml" errorreason="expected index value, got str" errortraceback="" />
+    <testresult result="No Result" time="3/29/2013 3:38:10 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_6.xml" errorreason="expected index value, got str" errortraceback="" />
+    <testresult result="Passed" time="3/29/2013 3:46:27 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_7.xml" errorreason="" errortraceback="" />
+    <testresult result="No Result" time="3/29/2013 3:47:58 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_8.xml" errorreason="global name 'f_v' is not defined" errortraceback="" />
+    <testresult result="No Result" time="3/29/2013 3:49:22 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_9.xml" errorreason="global name 'p_v' is not defined" errortraceback="" />
+    <testresult result="Passed" time="3/29/2013 3:50:51 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_10.xml" errorreason="" errortraceback="" />
+    <testresult result="Passed" time="4/1/2013 11:01:06 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_11.xml" errorreason="" errortraceback="" />
+    <testresult result="Passed" time="4/1/2013 11:14:50 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_12.xml" errorreason="" errortraceback="" />
+    <testresult result="Passed" time="4/1/2013 11:19:21 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_13.xml" errorreason="" errortraceback="" />
+    <testresult result="Passed" time="4/1/2013 11:20:08 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_14.xml" errorreason="" errortraceback="" />
+    <testresult result="N/A" time="4/8/2013 3:08:57 PM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_15.xml" errorreason="Result file not found" errortraceback="" />
+    <testresult result="N/A" time="4/8/2013 4:54:05 PM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_16.xml" errorreason="Result file not found" errortraceback="" />
+    <testresult result="N/A" time="4/8/2013 4:58:16 PM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_17.xml" errorreason="Result file not found" errortraceback="" />
+    <testresult result="N/A" time="4/8/2013 5:07:37 PM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_18.xml" errorreason="Result file not found" errortraceback="" />
+    <testresult result="N/A" time="4/9/2013 12:10:24 PM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_19.xml" errorreason="Execution aborted by user" errortraceback="" />
+    <testresult result="Passed" time="4/9/2013 12:12:28 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\functional check_20.xml" errorreason="" errortraceback="" />
   </testcase>
   <testcase name="config.db settings check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo" class="SettingTest" method="test_settings_compare" />
-    <testresult result="" time="3/28/2013 4:59:47 PM" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" />
+    <testresult result="N/A" time="4/1/2013 2:48:55 PM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_1.xml" errorreason="Execution aborted by user" errortraceback="" />
+    <testresult result="N/A" time="4/1/2013 2:49:50 PM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_2.xml" errorreason="Result file not found" errortraceback="" />
+    <testresult result="Passed" time="4/1/2013 2:50:19 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_3.xml" errorreason="" errortraceback="" />
+    <testresult result="Passed" time="4/2/2013 10:48:58 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_4.xml" errorreason="" errortraceback="" />
+    <testresult result="Passed" time="4/9/2013 4:54:37 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_5.xml" errorreason="" errortraceback="" />
   </testcase>
 </testset>

@@ -117,7 +117,14 @@ class SettingTest(uitestcase.UITestCase):
                             manual_tc.append((setting, sf))
 
                     elif "bluetooth" in setting:
-                        self.settingutil.check_phone_bluetooth()
+                        if "bluetooth/visible" in setting:
+                            f_v = f_ss[group][feature][setting]["value"]
+                            r, p_v = self.settingutil.check_phone_bluetooth(f_v)
+                            status = "pass" if r == 0 else "fail"
+                            self.comment("---[setting][%s]%s " % (status, setting))
+                            if status == "fail":
+                                count += 1
+                                failed_tc.append((setting, f_v, p_v))
 
                     elif "midlet files" in setting:
                         app_files = []
@@ -146,8 +153,6 @@ class SettingTest(uitestcase.UITestCase):
                         # self.settingutil.addlog(setting, r)
                         status = "pass" if r == 0 else "fail"
                         self.comment("---[setting][%s]%s " % (status, setting))
-                        # status = "pass" if r == 0 else "fail"
-                        # self.comment("------[setting][%s]%s " % (status, setting))
                         if status == "fail":
                             count += 1
                             failed_tc.append((setting, f_v, p_v))
@@ -340,8 +345,14 @@ class SettingTest(uitestcase.UITestCase):
             for feature in f_ss[group]:
                 self.comment("--[feature] %s" % feature)
                 for setting in f_ss[group][feature]:
-                    if "bluetooth" in setting:
-                        self.settingutil.check_phone_bluetooth()
+                    if "bluetooth/visible" in setting:
+                        f_v = f_ss[group][feature][setting]["value"]
+                        r, p_v = self.settingutil.check_phone_bluetooth(f_v)
+                        status = "pass" if r == 0 else "fail"
+                        self.comment("---[setting][%s]%s " % (status, setting))
+                        if status == "fail":
+                            count += 1
+                            failed_tc.append((setting, f_v, p_v))
 
         self.comment("---------------- functional failed: %d -------------------" % count)
         if len(failed_tc) != count:
@@ -396,13 +407,11 @@ class SettingTest(uitestcase.UITestCase):
                             if f_v == True or False:
                                 f_v = str(f_v).lower()
                             r = cmp(str(f_v), str(p_v))
-                            # r = self.settingutil.compare_settings(f_v, p_v)
                     # failed using util func
+                    # r = self.settingutil.compare_settings(f_v, p_v)
                     # p_v = self.settingutil.get_phone_setting(setting)
                             status = "pass" if r == 0 else "fail"
                             self.comment("---[setting][%s]%s " % (status, setting))
-                            # status = "pass" if r == 0 else "fail"
-                            # self.comment("------[setting][%s]%s " % (status, setting))
                             if status == "fail":
                                 count += 1
                                 failed_tc.append((setting, f_v, p_v))

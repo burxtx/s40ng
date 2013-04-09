@@ -77,10 +77,19 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.exit()
 		return r
     # check phone UI
-	def check_phone_bluetooth(self):
+	def check_phone_bluetooth(self, fv):
 		self.tc.navigate("Settings")
 		self.tc.select("Bluetooth")
+		if not self.tc.check("Visible"):
+			self.tc.select("Bluetooth")
+		if self.tc.check("Visible"):
+			pv = self.tc.check("widgets/bool-on-dark")
+		else:
+			self.tc.comment('"Visible" option is not displayed.')
+			pv = False
+		r = cmp(str(fv), str(pv))
 		self.tc.exit()
+		return r, pv
 
 	def check_phone_app(self, app, remove=False):
 		r = -1 if self.tc.check(app) == False else 0
