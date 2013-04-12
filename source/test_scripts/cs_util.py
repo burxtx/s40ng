@@ -76,31 +76,50 @@ class SettingUtil(uitestcase.UITestCase):
 		r = -1 if self.tc.check(f) == False else 0
 		self.tc.exit()
 		return r
-    # check phone UI
-	def check_phone_bluetooth(self, fv):
-		self.tc.navigate("Settings")
-		self.tc.select("Bluetooth")
-		if not self.tc.check("Visible"):
-			self.tc.select("Bluetooth")
-		if self.tc.check("Visible"):
-			pv = self.tc.check("widgets/bool-on-dark")
-		else:
-			self.tc.comment('"Visible" option is not displayed.')
-			pv = False
-		r = cmp(str(fv), str(pv))
-		self.tc.exit()
-		return r, pv
 
-	def check_phone_app(self, app, remove=False):
+	def check_phone_app(self, app, remove=False, icon=None):
 		r = -1 if self.tc.check(app) == False else 0
+		# app not found
 		if r == -1:
 			if remove:
 				return 0
 			return r
+		# app is found
 		else:
+			# if icon is uploaded
+			if icon:
+				r = self.tc.compareImage('reference_files\\images\\app_list_folder', timeout=10000)
+				self.tc.comment(r)
+				# if r == -1:
+				# 	return r
 			self.tc.select(app)
 		self.tc.exit()
 		return r
+		
+    # check phone UI
+	def check_phone_bluetooth_ui(self, visible=True, device_name=None):
+		self.tc.navigate("Settings")
+		self.tc.select("Bluetooth")
+		if not self.tc.check("Visible"):
+			self.tc.select("widgets/switch-bg-off-dark", relatedTo="Bluetooth")
+		if self.tc.check("Visible"):
+			r = self.tc.check("widgets/bool-on-dark", relatedTo='Visible')
+			if not r:
+				self.tc.fail("[fail] bluetooth visible is turned off")
+		else:
+			self.tc.comment('"Visible" option is not displayed.')
+			r = False
+		# r1 = cmp(str(visible), str(pv))
+		if device_name:
+			r2 = self.tc.check(device_name, relatedTo="Device name")
+			if not r:
+				self.tc.fail("[fail] bluetooth device name is incorrect")
+			self.tc.exit()
+			return r, r2
+		self.tc.exit()
+		return r
+
+
 
 	# def compare_settings(self, fv, pv):
 	# 	# convert True to true

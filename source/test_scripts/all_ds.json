@@ -284,11 +284,21 @@
         "preloaded_applications": {
             "midlet files": [
                 {"value": "QQ2009S",
-                 "type": ""},
+                 "type": "",
+                 "icon": ""},
                 {"value": "UC*",
-                 "type": ""},
+                 "type": "",
+                 "icon": ""},
                 {"value": "feisibook",
-                 "type": "removed"}
+                 "type": "removed",
+                 "icon": ""}
+            ]
+        },
+        "folders": {
+            "app list folders": [
+                {"value": "Test_fav",
+                 "type": "folder",
+                 "icon": "app_list_folder"}
             ]
         }
     }

@@ -116,16 +116,6 @@ class SettingTest(uitestcase.UITestCase):
                             self.comment("---[setting]sys graphic, please manually check, %s" % sf)
                             manual_tc.append((setting, sf))
 
-                    elif "bluetooth" in setting:
-                        if "bluetooth/visible" in setting:
-                            f_v = f_ss[group][feature][setting]["value"]
-                            r, p_v = self.settingutil.check_phone_bluetooth(f_v)
-                            status = "pass" if r == 0 else "fail"
-                            self.comment("---[setting][%s]%s " % (status, setting))
-                            if status == "fail":
-                                count += 1
-                                failed_tc.append((setting, f_v, p_v))
-
                     elif "midlet files" in setting:
                         app_files = []
                         for f in f_ss[group][feature][setting]:
@@ -140,7 +130,9 @@ class SettingTest(uitestcase.UITestCase):
 
                     # config.db settings check
                     else:
+                        # return upper bool: True, False
                         f_v = f_ss[group][feature][setting]["value"]
+                        # return lower bool: true false
                         p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % setting)
                         # failed using util func
                         # p_v = self.settingutil.get_phone_setting(setting)
@@ -302,14 +294,16 @@ class SettingTest(uitestcase.UITestCase):
             for feature in f_ss[group]:
                 self.comment("--[feature] %s" % feature)
                 for setting in f_ss[group][feature]:
-                    if "midlet files" in setting:
+                    # if "midlet files" in setting:
+                    if "folder" in setting or "midlet files" in setting:
                         app_files = []
                         for f in f_ss[group][feature][setting]:
-                            app_files.append({"file": f["value"], "type": f["type"]})
+                            app_files.append({"file": f["value"], "type": f["type"], "icon": f["icon"]})
                         for a in app_files:
+                            # r = self.settingutil.check_phone_app(a["file"], a["type"], a["icon"])
                             r = self.settingutil.check_phone_app(a["file"], a["type"])
                             status = "pass" if r == 0 else "fail"
-                            self.comment("---[setting][%s]preloaded application: %s " % (status, a))
+                            self.comment("---[setting][%s]preloaded application or folder: %s " % (status, a))
                             if status == "fail":
                                 count += 1
                                 failed_tc.append((setting, a, 'NA'))
@@ -322,46 +316,6 @@ class SettingTest(uitestcase.UITestCase):
                 self.comment("%d. %s: expect[%s] actual[%s]" % (i+1,tc[0],tc[1],tc[2]))
 
         self.comment("---------------- application list check manual: %d -------------------" % m_count)
-        if len(manual_tc) != m_count:
-            self.comment("[CRITICAL] you should not see this, pls contact developer.")
-        if len(manual_tc):
-            for i, tc in enumerate(manual_tc):
-                self.comment("%d. %s. %s" % (i+1,tc[0],tc[1]))
-
-    def test_functional(self):
-        """functional check
-        @tcId functional check
-        """        
-        f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
-        self.settingutil = SettingUtil(self)
-        f_ss = self.settingutil.converter(f)
-        count = 0
-        failed_tc = []
-        m_count = 0
-        manual_tc = []
-        # py dict from json file
-        for group in f_ss:
-            self.comment("[group] %s" % group)
-            for feature in f_ss[group]:
-                self.comment("--[feature] %s" % feature)
-                for setting in f_ss[group][feature]:
-                    if "bluetooth/visible" in setting:
-                        f_v = f_ss[group][feature][setting]["value"]
-                        r, p_v = self.settingutil.check_phone_bluetooth(f_v)
-                        status = "pass" if r == 0 else "fail"
-                        self.comment("---[setting][%s]%s " % (status, setting))
-                        if status == "fail":
-                            count += 1
-                            failed_tc.append((setting, f_v, p_v))
-
-        self.comment("---------------- functional failed: %d -------------------" % count)
-        if len(failed_tc) != count:
-            self.comment("[CRITICAL] you should not see this, pls contact developer.")
-        if len(failed_tc):
-            for i, tc in enumerate(failed_tc):
-                self.comment("%d. %s: expect[%s] actual[%s]" % (i+1,tc[0],tc[1],tc[2]))
-
-        self.comment("---------------- functional manual: %d -------------------" % m_count)
         if len(manual_tc) != m_count:
             self.comment("[CRITICAL] you should not see this, pls contact developer.")
         if len(manual_tc):
