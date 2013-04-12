@@ -98,28 +98,45 @@ class SettingUtil(uitestcase.UITestCase):
 		
     # check phone UI
 	def check_phone_bluetooth_ui(self, visible=True, device_name=None):
+		img = "widgets/bool-on-dark" if visible else "widgets/bool-off-dark"
 		self.tc.navigate("Settings")
 		self.tc.select("Bluetooth")
 		if not self.tc.check("Visible"):
 			self.tc.select("widgets/switch-bg-off-dark", relatedTo="Bluetooth")
 		if self.tc.check("Visible"):
-			r = self.tc.check("widgets/bool-on-dark", relatedTo='Visible')
+			r = self.tc.check(img, relatedTo='Visible')
 			if not r:
-				self.tc.fail("[fail] bluetooth visible is turned off")
+				self.tc.fail("[fail] bluetooth visible incorrect")
 		else:
 			self.tc.comment('"Visible" option is not displayed.')
 			r = False
-		# r1 = cmp(str(visible), str(pv))
 		if device_name:
 			r2 = self.tc.check(device_name, relatedTo="Device name")
-			if not r:
+			if not r2:
 				self.tc.fail("[fail] bluetooth device name is incorrect")
 			self.tc.exit()
 			return r, r2
 		self.tc.exit()
 		return r
 
+	def check_phone_time_date_ui(self, dateformat="YYYY-MM-DD", timeformat24h=True, nitz_update=True):
+		tf24h = 'widgets/switch-bg-on-dark' if timeformat24h else 'widgets/switch-bg-off-dark'
+		nitz = 'widgets/switch-bg-on-dark' if nitz_update else 'widgets/switch-bg-off-dark'
+		self.tc.navigate("Settings")
+		self.tc.select("Time and date")
 
+		r3 = self.tc.check(nitz, relatedTo="Set automatically")
+		if not r3:
+			self.tc.fail("[fail] nitz incorrect")
+		r1 = self.tc.check(dateformat, relatedTo="Date format")
+		if not r1:
+			self.tc.fail("[fail] date format incorrect")
+		r2 = self.tc.check(tf24h, relatedTo="Time format")
+		if not r2:
+			self.tc.fail("[fail] time format incorrect")
+			
+		self.tc.exit()
+		return r1, r2, r3
 
 	# def compare_settings(self, fv, pv):
 	# 	# convert True to true
