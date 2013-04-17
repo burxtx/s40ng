@@ -44,6 +44,10 @@
             "./yapas/operator/service-provider-name-source": {
                 "value": 1,
                 "desc": "Integer, 0.SIM(default) 1. Network"
+            },
+            "./yapas/update-manager/auto-check": {
+                "value": 1,
+                "desc": ""
             }
         },
         "contact_settings": {

@@ -138,6 +138,63 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.exit()
 		return r1, r2, r3
 
+	def check_phone_network_ui(self, auto_update=True):
+		auto_update_opt = 'widgets/switch-bg-on-dark' if auto_update else 'widgets/switch-bg-off-dark'
+		self.tc.navigate("Settings")
+		self.tc.select("Phone update")
+		r = self.tc.check(auto_update_opt, relatedTo="Get updates")
+		if not r:
+			self.tc.fail("[fail] phone update incorrect")
+		self.tc.exit()
+		return r
+
+	def check_phone_sms_ui(self, delivery_report=True, num_lock=False):
+		delivery_report_opt = "widgets/switch-bg-on-dark" if delivery_report else "widgets/switch-bg-off-dark"
+
+		self.tc.navigate("Settings")
+		self.tc.select("Messaging")
+		r1 = self.tc.check(delivery_report_opt, relatedTo="Delivery reports")
+		if not r1:
+			self.tc.fail("[fail] sms delivery report incorrect")
+		if not num_lock:
+			num_lock_opt = "Add number"
+			r2 = self.tc.check(num_lock_opt, relatedTo="Message center")
+			if not r2:
+				self.tc.fail("[fail] sms center number locked")
+		else:
+			r2 = self.tc.check("Message center")
+			if not r2:
+				r2 = True
+		self.tc.exit()
+		return r1, r2
+
+	def check_phone_mms_ui(self, delivery_report=True, allow_adverts=True, reception=1):
+		delivery_report_opt = "widgets/switch-bg-on-dark" if delivery_report else "widgets/switch-bg-off-dark"
+		allow_adverts_opt = "widgets/switch-bg-on-dark" if allow_adverts else "widgets/switch-bg-off-dark"
+		reception_opt = {1:"Automatic", 2:"Manual", 3:"Off", 4:"Off"}
+		self.tc.navigate("Settings")
+		self.tc.select("Messaging")
+		r1 = self.tc.check(allow_adverts_opt, relatedTo="Allow adverts")
+		if not r1:
+			self.tc.fail("[fail] allow adverts incorrect")
+		r2 = self.tc.check(delivery_report_opt, relatedTo="Delivery reports")
+		if not r2:
+			self.tc.fail("[fail] mms delivery report incorrect")
+		r3 = self.tc.check(reception_opt[reception], relatedTo="MMS reception")
+		if not r3:
+			self.tc.fail("[fail] mms reception incorrect")
+		return r1, r2, r3
+		
+	def check_phone_voicemail_ui(self, voicemail_num="123"):
+		self.tc.navigate("Settings")
+		self.tc.select("Calls")
+		r = self.tc.check(voicemail_num, relatedTo="Voice mailbox")
+		if not r:
+			self.tc.fail("[fail] voice mailbox number incorrect")
+		self.tc.exit()
+		return r
+
+
 	# def compare_settings(self, fv, pv):
 	# 	# convert True to true
 	# 	if fv == True or False:

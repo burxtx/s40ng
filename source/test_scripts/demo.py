@@ -162,6 +162,8 @@ class SettingTest(uitestcase.UITestCase):
         if len(manual_tc):
             for i, tc in enumerate(manual_tc):
                 self.comment("%d. %s. %s" % (i+1,tc[0],tc[1]))
+        if count > 0:
+            self.fail("[Result] Check config.db, media or application failed")
 
     def test_media_files(self):
         """preloaded media files check
@@ -276,6 +278,8 @@ class SettingTest(uitestcase.UITestCase):
         if len(manual_tc):
             for i, tc in enumerate(manual_tc):
                 self.comment("%d. %s. %s" % (i+1,tc[0],tc[1]))
+        if count > 0:
+            self.fail("[Result] Check media files failed")
 
     def test_app_list(self):
         """Preloaded apps check
@@ -321,6 +325,8 @@ class SettingTest(uitestcase.UITestCase):
         if len(manual_tc):
             for i, tc in enumerate(manual_tc):
                 self.comment("%d. %s. %s" % (i+1,tc[0],tc[1]))
+        if count > 0:
+            self.fail("[Result] Check applications failed")
 
     def test_settings_compare(self):
         """config.db settings check
@@ -384,3 +390,5 @@ class SettingTest(uitestcase.UITestCase):
         if len(manual_tc):
             for i, tc in enumerate(manual_tc):
                 self.comment("%d. %s. %s" % (i+1,tc[0],tc[1]))
+        if count > 0:
+            self.fail("[Result] Check config.db settings failed")

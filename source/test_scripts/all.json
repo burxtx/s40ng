@@ -44,6 +44,10 @@
             "./yapas/operator/service-provider-name-source": {
                 "value": 1,
                 "desc": "Integer, 0.SIM(default) 1. Network"
+            },
+            "./yapas/update-manager/auto-check": {
+                "value": 1,
+                "desc": ""
             }
         },
         "contact_settings": {
@@ -122,7 +126,7 @@
                 "desc": ""
             },
             "./SimSlot/0/SMS/0/Ext/Nokia/request-delivery-report": {
-                "value": true,
+                "value": false,
                 "desc": ""
             },
             "./platform/ISM_MSG_PLATFORM_MSG_MSG_TIMESTAMP": {
@@ -132,7 +136,7 @@
         },
         "mms_settings": {
             "./SimSlot/0/MMS/0/Ext/Nokia/request-delivery-report": {
-                "value": true,
+                "value": false,
                 "desc": ""
             },
             "./platform/ISM_MSG_PLATFORM_MMS_RECEIVED_MMS_MAX_SIZE": {
@@ -144,7 +148,7 @@
                 "desc": "MMS Retrieval mode for SIM1"
             },
             "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_ALLOW_ADVERTS": {
-                "value": true,
+                "value": false,
                 "desc": "Allow advertisements for SIM1"
             }
         },
