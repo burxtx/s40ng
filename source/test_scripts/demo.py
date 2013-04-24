@@ -138,7 +138,7 @@ class SettingTest(uitestcase.UITestCase):
                         # p_v = self.settingutil.get_phone_setting(setting)
                         
                         # convert True to true
-                        if f_v == True or False:
+                        if f_v == True or f_v == False:
                             f_v = str(f_v).lower()
                         r = cmp(str(f_v), str(p_v))
                         # generate status from "r"
@@ -348,13 +348,12 @@ class SettingTest(uitestcase.UITestCase):
                     p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % setting)
                     if not isinstance(f_ss[group][feature][setting], list):
                         f_v = f_ss[group][feature][setting]["value"]
-                        if f_v == True or False:
+                        if f_v == True or f_v == False:
                             f_v = str(f_v).lower()
                         r = cmp(str(f_v), str(p_v))
                         # r = self.settingutil.compare_settings(f_v, p_v)
                         status = "pass" if r == 0 else "fail"
                         self.comment("---[setting][%s]%s " % (status, setting))
-                        # status = "pass" if r == 0 else "fail"
                         # self.comment("------[setting][%s]%s " % (status, setting))
                         if status == "fail":
                             count += 1
@@ -364,7 +363,7 @@ class SettingTest(uitestcase.UITestCase):
                     else:
                         for f in f_ss[group][feature][setting]:
                             f_v = f["value"]
-                            if f_v == True or False:
+                            if f_v == True or f_v == False:
                                 f_v = str(f_v).lower()
                             r = cmp(str(f_v), str(p_v))
                     # failed using util func

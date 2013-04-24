@@ -81,6 +81,10 @@
             }
         },
         "emergency_calls": {
+            "./yapas/operator/emergency/emergency-number/0/number": {
+                "value": "223",
+                "desc": ""
+            },
             "./yapas/operator/emergency/emergency-number/1/number": {
                 "value": "123",
                 "desc": ""

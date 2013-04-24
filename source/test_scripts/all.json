@@ -46,7 +46,7 @@
                 "desc": "Integer, 0.SIM(default) 1. Network"
             },
             "./yapas/update-manager/auto-check": {
-                "value": 1,
+                "value": false,
                 "desc": ""
             }
         },
@@ -81,6 +81,10 @@
             }
         },
         "emergency_calls": {
+            "./yapas/operator/emergency/emergency-number/0/number": {
+                "value": "223",
+                "desc": ""
+            },
             "./yapas/operator/emergency/emergency-number/1/number": {
                 "value": "123",
                 "desc": ""
@@ -126,7 +130,7 @@
                 "desc": ""
             },
             "./SimSlot/0/SMS/0/Ext/Nokia/request-delivery-report": {
-                "value": false,
+                "value": true,
                 "desc": ""
             },
             "./platform/ISM_MSG_PLATFORM_MSG_MSG_TIMESTAMP": {
@@ -136,7 +140,7 @@
         },
         "mms_settings": {
             "./SimSlot/0/MMS/0/Ext/Nokia/request-delivery-report": {
-                "value": false,
+                "value": true,
                 "desc": ""
             },
             "./platform/ISM_MSG_PLATFORM_MMS_RECEIVED_MMS_MAX_SIZE": {
@@ -148,7 +152,7 @@
                 "desc": "MMS Retrieval mode for SIM1"
             },
             "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_ALLOW_ADVERTS": {
-                "value": false,
+                "value": true,
                 "desc": "Allow advertisements for SIM1"
             }
         },
