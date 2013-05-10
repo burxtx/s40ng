@@ -211,7 +211,7 @@
         "profile_settings": {
             "profile files": [
                 {"value": "testing tone.wav",
-                 "type": "Ringtone"},
+                 "type": "SIM1 ringtone"},
                 {"value": "message tone.mp3",
                  "type": "Message tone"},
                 {"value": "Alone.aac",
@@ -266,7 +266,7 @@
                 {
                     "value": "ring_128.mp3",
                     "sys": true,
-                    "type": "Ringtone"
+                    "type": "SIM1 ringtone"
                 },
                 {
                     "value": "Botnia.aac",

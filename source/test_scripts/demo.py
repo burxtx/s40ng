@@ -347,6 +347,7 @@ class SettingTest(uitestcase.UITestCase):
                 for setting in f_ss[group][feature]:
                     p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % setting)
                     if not isinstance(f_ss[group][feature][setting], list):
+                        self.comment('5555555 %s ' % setting)
                         f_v = f_ss[group][feature][setting]["value"]
                         if f_v == True or f_v == False:
                             f_v = str(f_v).lower()
