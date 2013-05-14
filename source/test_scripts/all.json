@@ -1,12 +1,14 @@
 {
     "connectivity": {
         "bluetooth": {
-            "./yapas/bluetooth/visible": {
+            "Bluetooth visibility":{
+                "ref":"./yapas/bluetooth/visible",
                 "value": true,
                 "type": "boolean",
                 "desc": ""
             },
-            "./yapas/bluetooth/device-name": {
+            "Device name":{
+                "ref":"./yapas/bluetooth/device-name",
                 "value": "Asha 501",
                 "desc": ""
             }
@@ -14,6 +16,7 @@
         "usb_settings": {
             "./yapas/usb/default-mode": {
                 "value": "always ask",
+                
                 "desc": ""
             }
         }

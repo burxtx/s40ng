@@ -1,0 +1,881 @@
+{
+    "Applications and Content": {
+        "Memory Card Content": {
+            "Size of the Memory Card": [
+                {
+                    "ref": "", 
+                    "value": "4"
+                }
+            ]
+        }, 
+        "Preloaded Media": {
+            "Video Files": [
+                {
+                    "Video file": "video0000.3gp"
+                }, 
+                {
+                    "Video file": "Maximus_Video_MC.3gp"
+                }
+            ], 
+            "Tone Files": [
+                {
+                    "Tone file": "Maid with the Flaxen Hair.mp3", 
+                    "System File": "false"
+                }, 
+                {
+                    "Tone Type": "AlarmTones", 
+                    "Tone file": "Activity.aac", 
+                    "System File": "true"
+                }, 
+                {
+                    "Tone Type": "AlertTones", 
+                    "Tone file": "Float.aac", 
+                    "System File": "true"
+                }, 
+                {
+                    "Tone Type": "MessageTones", 
+                    "Tone file": "Low bell.aac", 
+                    "System File": "true"
+                }, 
+                {
+                    "Tone Type": "RingingTones", 
+                    "Tone file": "Polaris.aac", 
+                    "System File": "true"
+                }
+            ], 
+            "Graphic Files": [
+                {
+                    "Graphic file": "sommer_blomster.jpeg", 
+                    "System File": "true", 
+                    "Use freetext folder name": "false", 
+                    "Application using the file": "Wallpapers"
+                }, 
+                {
+                    "Graphic file": "testing jpg 240x320.jpg", 
+                    "System File": "false", 
+                    "Use freetext folder name": "false", 
+                    "Application using the file": "Wallpapers"
+                }
+            ], 
+            "Music Files": [
+                {
+                    "Music file": "Drenched.mp3"
+                }, 
+                {
+                    "Music file": "Spring.mp3"
+                }
+            ]
+        }, 
+        "Bookmarks and Homepage URL": {
+            "Bookmark": [
+                {
+                    "URL": "http://www.sina.cn", 
+                    "Show in application list": "0", 
+                    "Icon": "Sian 16 x 16.png", 
+                    "Name": "7 BL BMK", 
+                    "Show in browser": "1"
+                }, 
+                {
+                    "URL": "http://www.dell.com.cn", 
+                    "Show in application list": "0", 
+                    "Icon": "Dell.png", 
+                    "Name": "8 BL BMK", 
+                    "Show in browser": "1"
+                }, 
+                {
+                    "URL": "http://www.tamll.com", 
+                    "Show in application list": "0", 
+                    "Icon": "tmall.png", 
+                    "Name": "9 BF BMK", 
+                    "Show in browser": "Test BL"
+                }, 
+                {
+                    "URL": "http://www.163.com", 
+                    "Show in application list": "0", 
+                    "Icon": "easy net.png", 
+                    "Name": "10 BF BMK", 
+                    "Show in browser": "Test BL"
+                }, 
+                {
+                    "URL": "http://www.skydrive.com", 
+                    "Show in application list": "0", 
+                    "Icon": "skydrive 16 x 16.png", 
+                    "Name": "11 BF BMK", 
+                    "Show in browser": "Test BL"
+                }, 
+                {
+                    "URL": "http://www.baidu.com", 
+                    "Show in application list": "1", 
+                    "Icon": "baidu 16 x16.png", 
+                    "Name": "1 AL BMK", 
+                    "Show in browser": "0"
+                }, 
+                {
+                    "URL": "http://www.126.com", 
+                    "Show in application list": "1", 
+                    "Icon": "126M.png", 
+                    "Name": "2 AL BMK", 
+                    "Show in browser": "0"
+                }, 
+                {
+                    "URL": "http://www.qq.com", 
+                    "Show in application list": "1", 
+                    "Icon": "QQ 16 x 16.png", 
+                    "Name": "3 AL BMK", 
+                    "Show in browser": "0"
+                }, 
+                {
+                    "URL": "http://www.google.hk", 
+                    "Show in application list": "Test AL", 
+                    "Icon": "Google.png", 
+                    "Name": "4 AF BMK", 
+                    "Show in browser": "0"
+                }, 
+                {
+                    "URL": "http://www.chinaren.com", 
+                    "Show in application list": "Test AL", 
+                    "Icon": "bmk 1.png", 
+                    "Name": "5 AF BMK", 
+                    "Show in browser": "0"
+                }, 
+                {
+                    "URL": "http://www.12345.com", 
+                    "Show in application list": "Test AL", 
+                    "Icon": "bmk 2.png", 
+                    "Name": "6 AF BMK", 
+                    "Show in browser": "0"
+                }
+            ], 
+            "Home Page URL for Application List": [
+                {
+                    "URL": "http://www.10086.com", 
+                    "Name in Application List Editor": "aaa", 
+                    "Show in application list": "1", 
+                    "Icon": "cmcc.png"
+                }
+            ]
+        }, 
+        "Browser Settings": {
+            "Default Search Provider": [
+                {
+                    "ref": "", 
+                    "value": "1"
+                }
+            ]
+        }, 
+        "Customer Folders for Application List and Browser": {
+            "Customer folder in Application list": [
+                {
+                    "Folder icon": "Folder 1 50x50 .png", 
+                    "Folder name": "Test AL"
+                }
+            ], 
+            "Customer folder in Browser": [
+                {
+                    "Folder icon": "bmk 2.png", 
+                    "Folder name": "Test BL"
+                }
+            ]
+        }, 
+        "Customer certificates": {
+            "CellCom_Celcaproot_13Nov2008.zip (1 certificates)": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ], 
+            "Orange_Java_Mobile_Device_Root_13Nov2008.zip (1 certificates)": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ], 
+            "Vodafone_OperatorDomain_TopLevel_CA_13Nov2008.zip (2 certificates)": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ], 
+            "SmarTone-Vodafone_HK_13Nov2008.zip (1 certificates)": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ], 
+            "Telefonica_NEW_20110316_130650.zip (2 certificates)": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ]
+        }, 
+        "Preloaded Applications": {
+            "Midlet Files": [
+                {
+                    "Part of MIDlet suite": "false", 
+                    "Jar File": "QQ2009S_NOKIA_BG.jar", 
+                    "Midlet name": "QQ2009", 
+                    "Jad File": "QQ2009S_NOKIA_BG.jad"
+                }, 
+                {
+                    "Part of MIDlet suite": "false", 
+                    "Jar File": "UCWEB-7.0.3-4118-69-10011918.jar", 
+                    "Midlet name": "UC", 
+                    "Jad File": "UCWEB-7.0.3-4118-69-10011918.jad"
+                }
+            ], 
+            "Nokia Midlet removal": [
+                {
+                    "Midlet name": "BubbleBash3"
+                }, 
+                {
+                    "Midlet name": "RealFootball2013"
+                }, 
+                {
+                    "Midlet name": "AssassinsCreed"
+                }, 
+                {
+                    "Midlet name": "LittleBigCity"
+                }, 
+                {
+                    "Midlet name": "TheWeatherChannel"
+                }
+            ]
+        }
+    }, 
+    "Connectivity": {
+        "Bluetooth settings": {
+            "Device name": [
+                {
+                    "ref": "./yapas/bluetooth/device-name", 
+                    "value": "Asha 501"
+                }
+            ], 
+            "Bluetooth visibility": [
+                {
+                    "ref": "./yapas/bluetooth/visible", 
+                    "value": "true"
+                }
+            ]
+        }, 
+        "USB settings": {
+            "Default USB mode": [
+                {
+                    "ref": "./yapas/usb/default-mode", 
+                    "value": "modem"
+                }
+            ]
+        }, 
+        "Configuration Settings": {
+            "Packet Data Access Points": [
+                {
+                    "Proxy port": "80", 
+                    "CC Setting": "Test_CMCC", 
+                    "Use Secure Authentication Type": "true", 
+                    "GPRS Access Point": "cmwap123", 
+                    "Use proxy push": "true", 
+                    "Access Point Name": "Test_cmwap", 
+                    "Use for general S40 APPLICATION rule": "true", 
+                    "Use for general internet access": "true"
+                }, 
+                {
+                    "Proxy port": "80", 
+                    "CC Setting": "Test_CMCC", 
+                    "Use Secure Authentication Type": "false", 
+                    "GPRS Access Point": "cmwap456", 
+                    "Use proxy push": "true", 
+                    "Access Point Name": "Test_net", 
+                    "Use for general S40 APPLICATION rule": "false", 
+                    "Use for general internet access": "false"
+                }
+            ], 
+            "Configuration Set": [
+                {
+                    "Service provider name": "CMCC_Test", 
+                    "Mobile Country Code (MCC)": "460", 
+                    "Mobile Network Code(s) (MNC). Multiple MNCs separated using ','": "00,02,07", 
+                    "Provisioning URL": "http://wap.monternet.com/?cp22=v22monternet", 
+                    "Configuration set Name": "Test_CMCC"
+                }
+            ], 
+            "Connection settings for MMS": [
+                {
+                    "Access Point Name": "Test_MMS", 
+                    "CC Setting": "Test_CMCC", 
+                    "MMS Homepage": "http://mmsc.monternet.com", 
+                    "Package data / WLAN Access Point": "Test_net"
+                }
+            ], 
+            "Connection settings for WAP": [
+                {
+                    "Access Point Name": "Test_WAP", 
+                    "CC Setting": "Test_CMCC", 
+                    "Package data / WLAN Access Point": "Test_net", 
+                    "WAP Homepage": "http://wap.monternet.com/?cp22=v22monternet"
+                }
+            ]
+        }
+    }, 
+    "User Interface": {
+        "Language Settings": {
+            "Read Suggested display language from SIM": [
+                {
+                    "ref": "./yapas/display/auto-language-valid", 
+                    "value": "true"
+                }
+            ], 
+            "Suggested display language": [
+                {
+                    "ref": "./yapas/display/default-language", 
+                    "value": "ru-RU"
+                }
+            ]
+        }, 
+        "Time and Date Settings": {
+            "NITZ ( Network Identity and Time Zone) ": [
+                {
+                    "ref": "./yapas/clock/nitz-update", 
+                    "value": "true"
+                }
+            ], 
+            "Date format": [
+                {
+                    "ref": "./yapas/display/dateformat", 
+                    "value": "YYYY-MM-DD"
+                }
+            ], 
+            "Time Format": [
+                {
+                    "ref": "./yapas/clock/24h", 
+                    "value": "false"
+                }
+            ]
+        }, 
+        "Profile Settings": {
+            "Email Tone": [
+                {
+                    "ref": "", 
+                    "value": "test tone 2.amr"
+                }, 
+                {
+                    "ref": "", 
+                    "value": "/system_files/audio/_system_messagetones/"
+                }
+            ], 
+            "Message Tone": [
+                {
+                    "ref": "", 
+                    "value": "message tone.aac"
+                }, 
+                {
+                    "ref": "", 
+                    "value": "/system_files/audio/_system_messagetones/"
+                }
+            ], 
+            "SIM2 Ringtone": [
+                {
+                    "ref": "", 
+                    "value": "SIM 2 Ringtone.mp3"
+                }, 
+                {
+                    "ref": "", 
+                    "value": "/system_files/audio/_system_ringtones/"
+                }
+            ], 
+            "Alarm Tone": [
+                {
+                    "ref": "", 
+                    "value": "Alone.mp3"
+                }, 
+                {
+                    "ref": "", 
+                    "value": "/system_files/audio/_system_alarmtones/"
+                }
+            ], 
+            "Reminder Tone": [
+                {
+                    "ref": "", 
+                    "value": "Reminder tone.mp3"
+                }, 
+                {
+                    "ref": "", 
+                    "value": "/system_files/audio/_system_alerttones/"
+                }
+            ], 
+            "Push Notifications Tone": [
+                {
+                    "ref": "", 
+                    "value": "notification tone.mp3"
+                }, 
+                {
+                    "ref": "", 
+                    "value": "/system_files/audio/_system_alarmtones/"
+                }
+            ], 
+            "SIM1 Ringtone": [
+                {
+                    "ref": "", 
+                    "value": "sim 1 tone 600.mp3"
+                }, 
+                {
+                    "ref": "", 
+                    "value": "/system_files/audio/_system_ringtones/"
+                }
+            ],
+            "Ringtone": [
+                {
+                    "ref": "", 
+                    "value": "testing tone.wav"
+                }
+            ]
+        }, 
+        "Graphic UI Settings": {
+            "System wallpaper": [
+                {
+                    "ref": "", 
+                    "value": "Aqua_test.png"
+                }, 
+                {
+                    "ref": "", 
+                    "value": "/system_files/images/_system_wallpaper/"
+                }
+            ], 
+            "Operator Startup Graphic": [
+                {
+                    "ref": "", 
+                    "value": "testing 240x320.png"
+                }, 
+                {
+                    "ref": "", 
+                    "value": "/system_files/images/_system_animations/"
+                }
+            ]
+        }, 
+        "Main menu settings": {
+            "Tile content": [
+                {
+                    "Position": "14", 
+                    "Content item": "2 AL BMK"
+                }, 
+                {
+                    "Position": "13", 
+                    "Content item": "3 AL BMK"
+                }, 
+                {
+                    "Position": "25", 
+                    "Content item": "NokiaChat"
+                }, 
+                {
+                    "Position": "19", 
+                    "Content item": "UC"
+                }, 
+                {
+                    "Position": "24", 
+                    "Content item": "Test AL"
+                }, 
+                {
+                    "Position": "16", 
+                    "Content item": "QQ2009"
+                }, 
+                {
+                    "Position": "18", 
+                    "Content item": "aaa"
+                }, 
+                {
+                    "Position": "21", 
+                    "Content item": "Apps"
+                }, 
+                {
+                    "Position": "3", 
+                    "Content item": "Internet"
+                }, 
+                {
+                    "Position": "23", 
+                    "Content item": "Camera5in1"
+                }, 
+                {
+                    "Position": "4", 
+                    "Content item": "Alarms"
+                }, 
+                {
+                    "Position": "20", 
+                    "Content item": "NokiaGift"
+                }, 
+                {
+                    "Position": "22", 
+                    "Content item": "Games"
+                }, 
+                {
+                    "Position": "12", 
+                    "Content item": "1 AL BMK"
+                }, 
+                {
+                    "Position": "0", 
+                    "Content item": "Messaging"
+                }, 
+                {
+                    "Position": "31", 
+                    "Content item": "Tutorial"
+                }, 
+                {
+                    "Position": "28", 
+                    "Content item": "Calculator"
+                }, 
+                {
+                    "Position": "34", 
+                    "Content item": "Notes"
+                }
+            ]
+        }
+    }, 
+    "Calling and Contact": {
+        "Emergency Calls": {
+            "Emergency number 5 (Can be edited in Nuage)": [
+                {
+                    "ref": "", 
+                    "value": "23456"
+                }
+            ], 
+            "Emergency number 2 (Can be edited in Nuage)": [
+                {
+                    "ref": "", 
+                    "value": "1234"
+                }
+            ], 
+            "Emergency number 3 (Can be edited in Nuage)": [
+                {
+                    "ref": "", 
+                    "value": "2999"
+                }
+            ], 
+            "Emergency number 1 (Can be edited in Nuage)": [
+                {
+                    "ref": "", 
+                    "value": "223"
+                }
+            ], 
+            "Emergency number 4 (Can be edited in Nuage)": [
+                {
+                    "ref": "", 
+                    "value": "3999"
+                }
+            ]
+        }, 
+        "Other Call Settings": {
+            "Clear Code support": [
+                {
+                    "ref": "./yapas/display/amx-clear-codes", 
+                    "value": "telcel"
+                }
+            ], 
+            "Two Digit Dialing": [
+                {
+                    "ref": "./yapas/calls/two-digit-dialing", 
+                    "value": "true"
+                }
+            ]
+        }, 
+        "Contact Settings": {
+            "Intelligent digits in CLI matching": [
+                {
+                    "ref": "./yapas/region/number-matching/match-leading-0", 
+                    "value": "true"
+                }
+            ], 
+            "Phonebook ADN before PD CLI matching": [
+                {
+                    "ref": "./yapas/region/number-matching/match-adn-first", 
+                    "value": "true"
+                }
+            ], 
+            "Support a star key in number matching": [
+                {
+                    "ref": "./yapas/region/number-matching/match-leading-star", 
+                    "value": "false"
+                }
+            ], 
+            "CPHS/CSP Common PCN Handset support": [
+                {
+                    "ref": "./platform/INFO_PP_CSP", 
+                    "value": "true"
+                }
+            ], 
+            "Sort contacts by": [
+                {
+                    "ref": "./yapas/contacts/sortby", 
+                    "value": "1"
+                }
+            ], 
+            "Phonebook SDN CLI matching": [
+                {
+                    "ref": "./yapas/region/number-matching/match-fdn-sdn", 
+                    "value": "true"
+                }
+            ], 
+            "Phonebook Calling line Identification": [
+                {
+                    "ref": "./yapas/region/number-matching/number-of-digits", 
+                    "value": "10"
+                }
+            ]
+        }, 
+        "Calling Network settings": {
+            "GSM L2 Fill Bit Randomization": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ], 
+            "GSM L2 Fill Bit Randomization": [
+                {
+                    "ref": "./platform/INFO_PP_RANDOM_L2_FILL_BITS", 
+                    "value": "true"
+                }
+            ],
+            "GPRS GEA1 algorithm support": [
+                {
+                    "ref": "", 
+                    "value": "false"
+                }
+            ], 
+            "GPRS GEA2 algorithm support": [
+                {
+                    "ref": "", 
+                    "value": "false"
+                }
+            ], 
+            "GPRS GEA3 algorithm support": [
+                {
+                    "ref": "", 
+                    "value": "false"
+                }
+            ], 
+            "GPRS GEA4 algorithm support": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ], 
+            "GPRS GEA5 algorithm support": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ],  
+            "GPRS GEA6 algorithm support": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ],  
+            "GPRS GEA7 algorithm support": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ], 
+            "FDN GPRS Control": [
+                {
+                    "ref": "./platform/INFO_PP_FDN_CONTROLS_GPRS_CONN", 
+                    "value": "true"
+                }
+            ], 
+            "Source for Service Provider Name": [
+                {
+                    "ref": "./yapas/operator/service-provider-name-source", 
+                    "value": "1"
+                }
+            ], 
+            "Support for wide-band AMR speech in 2G network": [
+                {
+                    "ref": "./platform/INFO_PP_CODEC_ORDER2", 
+                    "value": "true"
+                }
+            ], 
+            "GSM A5/1 ciphering algorithm support": [
+                {
+                    "ref": "", 
+                    "value": "false"
+                }
+            ], 
+            "GSM A5/2 ciphering algorithm support": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ],  
+            "GSM A5/3 ciphering algorithm support": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ], 
+            "Enable/disable check for phone updates": [
+                {
+                    "ref": "./yapas/update-manager/auto-check", 
+                    "value": "false"
+                }
+            ]
+        }, 
+        "Voicemail box Settings": {
+            "Voice mail override number": [
+                {
+                    "ref": "./yapas/operator/voice-mail-override/number", 
+                    "value": "*123"
+                }
+            ]
+        }
+    }, 
+    "Messaging": {
+        "SMS Settings": {
+            "Timestamp type to be used in messaging": [
+                {
+                    "ref": "./platform/ISM_MSG_PLATFORM_MSG_MSG_TIMESTAMP", 
+                    "value": "0"
+                }
+            ], 
+            "SMS Delivery Reports for SIM1": [
+                {
+                    "ref": "./SimSlot/0/SMS/0/Ext/Nokia/request-delivery-report", 
+                    "value": "true"
+                }
+            ], 
+            "SMS Delivery Reports for SIM2": [
+                {
+                    "ref": "./SimSlot/1/SMS/0/Ext/Nokia/request-delivery-report", 
+                    "value": "true"
+                }
+            ], 
+            "Message center number locked": [
+                {
+                    "ref": "./SMS/0/Ext/Nokia/sms-center-number-locked", 
+                    "value": "true"
+                }
+            ]
+        }, 
+        "MMS Settings": {
+            "Allow adverts for SIM1": [
+                {
+                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_ALLOW_ADVERTS", 
+                    "value": "true"
+                }
+            ], 
+            "Allow adverts for SIM2": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ], 
+            "MMS Retrieval mode for SIM1": [
+                {
+                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_RETRIEVAL_MODE", 
+                    "value": "1"
+                }
+            ], 
+            "Request MMS Delivery Report for SIM1": [
+                {
+                    "ref": "./SimSlot/0/MMS/0/Ext/Nokia/request-delivery-report", 
+                    "value": "true"
+                }
+            ], 
+            "Request MMS Delivery Report for SIM2": [
+                {
+                    "ref": "./SimSlot/1/MMS/0/Ext/Nokia/request-delivery-report", 
+                    "value": "true"
+                }
+            ], 
+            "MMS Retrieval mode for SIM2": [
+                {
+                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_ALLOW_ADVERTS_2", 
+                    "value": "4"
+                }
+            ], 
+            "Maximum size for received MMS message": [
+                {
+                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_RECEIVED_MMS_MAX_SIZE", 
+                    "value": "102400"
+                }
+            ]
+        }, 
+        "Other Messaging Settings": {
+            "Modify the Available Accounts list": [
+                {
+                    "Availability of the account": "1", 
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='AOL Mail']", 
+                    "Position order in the list": "1"
+                }, 
+                {
+                    "Availability of the account": "1", 
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='126.com']", 
+                    "Position order in the list": "2"
+                }, 
+                {
+                    "Availability of the account": "1", 
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='Mail.ru']", 
+                    "Position order in the list": "3"
+                }, 
+                {
+                    "Availability of the account": "1", 
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='QQMail']", 
+                    "Position order in the list": "4"
+                }, 
+                {
+                    "Availability of the account": "1", 
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='Twitter']", 
+                    "Position order in the list": "5"
+                }, 
+                {
+                    "Availability of the account": "1", 
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='Yandex.Mail']", 
+                    "Position order in the list": "6"
+                }, 
+                {
+                    "Availability of the account": "1", 
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='Gmail']", 
+                    "Position order in the list": "7"
+                }, 
+                {
+                    "Availability of the account": "1", 
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='Hotmail']", 
+                    "Position order in the list": "8"
+                }, 
+                {
+                    "Availability of the account": "0", 
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='163.com']", 
+                    "Position order in the list": "7"
+                }, 
+                {
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='Yahoo! Mail']", 
+                    "Availability of the account": "0"
+                }, 
+                {
+                    "Availability of the account": "0", 
+                    "Account Name": "Malformed mapping expression: Generated/accounts-available[@key='Nokia account']", 
+                    "Position order in the list": "10"
+                }
+            ], 
+            "Cell Broadcast Reception": [
+                {
+                    "ref": "", 
+                    "value": "true"
+                }
+            ], 
+            "Operator message channel": [
+                {
+                    "ref": "", 
+                    "value": "102"
+                }
+            ]
+        }
+    }, 
+    "Variant Management": {
+        "MemoryCard": {
+            "Size of the Memory Card": [
+                {
+                    "ref": "", 
+                    "value": "4"
+                }
+            ]
+        }
+    }
+}

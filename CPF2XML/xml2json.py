@@ -1,8 +1,8 @@
-# from material import template
 from lxml import etree
 import json
+import StringIO
 
-source = "1317d2_test_automation_input.xml"
+source = "test_automation_input.xml"
 tag_focus_layer = "focus-layer"
 tag_setting = 'setting'
 tag_main_view = 'main-view'
@@ -13,9 +13,6 @@ tag_subsetting = 'subsetting'
 tag_reference = 'reference'
 tag_sequence = 'sequence'
 py_all = {}
-py_group_list = []
-py_feature_list = []
-py_setting_list = []
 
 tree = etree.parse(source)
 focus_layer_node = tree.iter(tag_focus_layer)
@@ -71,16 +68,12 @@ for layer in focus_layer_node:
 				if value and setting_name and feature and group:
 					# if py_all[group][feature].has_key(setting_name):
 					# print "----[expect value] %s" % value
-					py_all[group][feature][setting_name].append({tag_value:value})
+					# auto add ref attribute for config.db setting name
+					py_all[group][feature][setting_name].append({tag_value:value, "ref":""})
 					# print py_all
-
-print json.dumps(py_all, indent=4)
-# further plan: directly grep py_group_list from Nuage Variant Summary page, or even Accept360
-py_group_list = []
-py_feature_list = []
-py_setting_list = []
-
-for group in py_group_list:
-    py_all[group] = {}
-    for feature in py_feature_list:
-        py_all[group][feature] = {}
+# s = StringIO.StringIO()
+# s.write(json.dumps(py_all, indent=4))
+j = json.dumps(py_all, indent=4)
+f = open("auto_test_config.json", "w")
+f.write(j)
+f.close()
