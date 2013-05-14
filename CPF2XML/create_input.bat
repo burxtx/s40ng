@@ -37,8 +37,8 @@ echo S40NG exclusive: convert xml to json config file
 python xml2json.py
 if exist auto_test_configs.json (
 echo ------------------------------------------------------------------
-echo copying auto_test_config.json under ..\s40ng\source\test_scripts
-copy auto_test_config.json ..\s40ng\source\test_scripts
+echo copying auto_test_config.json under ..\source\test_scripts
+copy auto_test_config.json ..\source\test_scripts
 )
 pause
 )
