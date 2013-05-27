@@ -1,83 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <testset>
-  <testcase name="all" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo" class="SettingTest" method="test_all" relativetotestset="false" />
-    <testresult result="" time="5/14/2013 10:02:13 AM" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" />
-  </testcase>
-  <testcase name="preloaded media files check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo" class="SettingTest" method="test_media_files" relativetotestset="false" />
-    <testresult result="Failed" time="5/14/2013 10:09:19 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_1.xml" errorreason="'Cannot select Sounds and vibra, item is not found from screen.'" errortraceback="" />
-    <testresult result="Failed" time="4/26/2013 3:31:57 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_2.xml" errorreason="'Cannot select Ringtone, item is not found from screen.'" errortraceback="" />
-    <testresult result="Failed" time="4/26/2013 3:37:42 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_3.xml" errorreason="'Cannot select Ringtone, item is not found from screen.'" errortraceback="" />
-    <testresult result="Failed" time="4/26/2013 3:48:26 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_4.xml" errorreason="'[Result] Check media files failed'" errortraceback="" />
-    <testresult result="N/A" time="5/14/2013 10:24:52 AM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_5.xml" errorreason="Result file not found" errortraceback="" />
-    <testresult result="Failed" time="5/2/2013 10:58:01 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_6.xml" errorreason="'Cannot select SIM1 ringtone, item is not found from screen.'" errortraceback="" />
-    <testresult result="Failed" time="5/2/2013 11:09:25 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_7.xml" errorreason="'[Result] Check media files failed'" errortraceback="" />
-    <testresult result="N/A" time="5/2/2013 12:04:20 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_8.xml" errorreason="" errortraceback="" />
-    <testresult result="Failed" time="5/14/2013 10:37:00 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_9.xml" errorreason="'[Result] Check media files failed'" errortraceback="" />
-  </testcase>
-  <testcase name="Preloaded apps check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo" class="SettingTest" method="test_app_list" relativetotestset="false" />
-    <testresult result="Passed" time="5/14/2013 10:11:04 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Preloaded apps check_1.xml" errorreason="" errortraceback="" />
-  </testcase>
-  <testcase name="config.db settings check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo" class="SettingTest" method="test_settings_compare" relativetotestset="false" />
-    <testresult result="No Result" time="5/13/2013 3:37:06 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_1.xml" errorreason="ref" errortraceback="" />
-    <testresult result="Passed" time="5/13/2013 3:38:42 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_2.xml" errorreason="" errortraceback="" />
-    <testresult result="No Result" time="5/13/2013 3:45:33 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_3.xml" errorreason="'list' object has no attribute 'has_key'" errortraceback="" />
-    <testresult result="No Result" time="5/13/2013 3:53:07 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_4.xml" errorreason="value" errortraceback="" />
-    <testresult result="No Result" time="5/13/2013 3:55:57 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_5.xml" errorreason="expected index value, got str" errortraceback="" />
-    <testresult result="No Result" time="5/13/2013 3:58:14 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_6.xml" errorreason="global name 'fv' is not defined" errortraceback="" />
-    <testresult result="Failed" time="5/13/2013 3:59:33 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_7.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="Failed" time="5/13/2013 4:03:21 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_8.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="No Result" time="5/13/2013 4:56:44 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_9.xml" errorreason="Ringtone" errortraceback="" />
-    <testresult result="No Result" time="5/13/2013 4:59:02 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_10.xml" errorreason="Expecting object: line 422 column 13 (char 14470)" errortraceback="" />
-    <testresult result="No Result" time="5/13/2013 4:59:42 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_11.xml" errorreason="Memory Card Content" errortraceback="" />
-    <testresult result="No Result" time="5/13/2013 5:01:47 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_12.xml" errorreason="GPRS GEA6 algorithm support" errortraceback="" />
-    <testresult result="Failed" time="5/13/2013 5:06:00 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_13.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="Failed" time="4/23/2013 4:25:38 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_14.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="Failed" time="4/23/2013 4:26:04 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_15.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="Failed" time="4/23/2013 4:28:00 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_16.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="Failed" time="4/24/2013 10:55:54 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_17.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="Failed" time="4/24/2013 11:02:19 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_18.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="Failed" time="5/2/2013 11:11:37 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_19.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="Failed" time="5/2/2013 12:05:14 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_20.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="No Result" time="5/2/2013 2:45:13 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_21.xml" errorreason="value" errortraceback="" />
-    <testresult result="No Result" time="5/2/2013 2:48:21 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_22.xml" errorreason="unsupported format character '^' (0x5E) at index 1" errortraceback="" />
-    <testresult result="No Result" time="5/2/2013 2:48:51 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_23.xml" errorreason="value" errortraceback="" />
-    <testresult result="Failed" time="5/6/2013 10:09:49 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_24.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="Failed" time="5/8/2013 10:50:02 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_25.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="Failed" time="5/10/2013 5:42:39 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_26.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-    <testresult result="N/A" time="5/14/2013 2:19:33 PM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_27.xml" errorreason="Result file not found" errortraceback="" />
-    <testresult result="No Result" time="5/14/2013 2:20:19 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_28.xml" errorreason="expected string for parameter 'text' but got 'list'" errortraceback="" />
-    <testresult result="No Result" time="5/14/2013 2:21:07 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_29.xml" errorreason="global name 'f_ss' is not defined" errortraceback="" />
-    <testresult result="N/A" time="5/14/2013 2:21:55 PM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_30.xml" errorreason="Result file not found" errortraceback="" />
-    <testresult result="N/A" time="5/14/2013 2:22:22 PM" author="" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_31.xml" errorreason="Result file not found" errortraceback="" />
-    <testresult result="No Result" time="5/14/2013 2:32:38 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_32.xml" errorreason="[Errno 2] Could not find file 'C:\s40ng\source\test_scripts\auto_test_configs.json'.: C:/s40ng/source/test_scripts/auto_test_configs.json" errortraceback="" />
-    <testresult result="Failed" time="5/14/2013 2:36:43 PM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_33.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" />
-  </testcase>
   <testcase name="Bluetooth ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func" class="UiTest" method="test_bluetooth_ui" relativetotestset="false" />
-    <testresult result="" time="5/14/2013 10:02:13 AM" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" />
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_new" class="UiTest" method="test_bluetooth_ui" relativetotestset="false" />
+    <testresult result="No Result" time="05/23/2013 17:37:06" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_1.xml" errorreason="index out of range: 1" errortraceback="" originalresult="" />
+    <testresult result="No Result" time="05/23/2013 17:40:29" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_2.xml" errorreason="expected index value, got str" errortraceback="" originalresult="" />
+    <testresult result="No Result" time="05/23/2013 17:41:07" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_3.xml" errorreason="expected index value, got str" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="05/23/2013 17:42:29" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_4.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="05/23/2013 17:44:11" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_5.xml" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="Time and Date ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func" class="UiTest" method="test_time_date_ui" relativetotestset="false" />
-    <testresult result="Passed" time="5/14/2013 10:11:58 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Time and Date ui_1.xml" errorreason="" errortraceback="" />
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_new" class="UiTest" method="test_time_date_ui" relativetotestset="false" />
+    <testresult result="" time="05/23/2013 17:36:54" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone update ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func" class="UiTest" method="test_phone_network_ui" relativetotestset="false" />
-    <testresult result="Failed" time="5/14/2013 10:12:47 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone update ui_1.xml" errorreason="'[fail] phone update incorrect'" errortraceback="" />
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_new" class="UiTest" method="test_phone_network_ui" relativetotestset="false" />
+    <testresult result="" time="05/23/2013 17:36:54" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone sms ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func" class="UiTest" method="test_phone_sms_ui" relativetotestset="false" />
-    <testresult result="Passed" time="5/14/2013 10:13:46 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_1.xml" errorreason="" errortraceback="" />
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_new" class="UiTest" method="test_phone_sms_ui" relativetotestset="false" />
+    <testresult result="" time="05/23/2013 17:36:54" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone mms ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func" class="UiTest" method="test_phone_mms_ui" relativetotestset="false" />
-    <testresult result="Passed" time="5/14/2013 10:14:40 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone mms ui_1.xml" errorreason="" errortraceback="" />
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_new" class="UiTest" method="test_phone_mms_ui" relativetotestset="false" />
+    <testresult result="" time="05/23/2013 17:36:54" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone voice mailbox number ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func" class="UiTest" method="test_phone_voice_mail_ui" relativetotestset="false" />
-    <testresult result="Failed" time="5/14/2013 10:15:32 AM" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone voice mailbox number ui_1.xml" errorreason="'[fail] voice mailbox number incorrect'" errortraceback="" />
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_new" class="UiTest" method="test_phone_voice_mail_ui" relativetotestset="false" />
+    <testresult result="" time="05/23/2013 17:36:54" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="all" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo_new" class="SettingTest" method="test_all" relativetotestset="false" />
+    <testresult result="" time="05/27/2013 12:00:13" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="preloaded media files check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo_new" class="SettingTest" method="test_media_files" relativetotestset="false" />
+    <testresult result="" time="05/27/2013 12:00:13" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Preloaded apps check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo_new" class="SettingTest" method="test_app_list" relativetotestset="false" />
+    <testresult result="Failed" time="05/27/2013 12:29:09" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Preloaded apps check_1.xml" errorreason="'[Result] Check applications failed'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="05/27/2013 13:29:04" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Preloaded apps check_2.xml" errorreason="'[Result] Check applications failed'" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="config.db settings check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="demo_new" class="SettingTest" method="test_settings_compare" relativetotestset="false" />
+    <testresult result="" time="05/27/2013 12:00:13" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
 </testset>

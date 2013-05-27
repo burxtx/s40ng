@@ -16,6 +16,20 @@ class SettingUtil(uitestcase.UITestCase):
 	        s = json.load(f)
 	    f.close()
 	    return s
+	def cpf2phone(self, s):
+		# if "alarm" in s:
+		# 	s = "Alarm tone"
+		# if "Message" in s:
+		# 	s = "Message tone"
+		# if "Ring" in s:
+		# 	s = "Ringtone"
+		# if "Alert" in s:
+		# 	s = "Reminder tone"
+		if "Notifications Tone" in s:
+			s = s.replace("Notifications Tone", "notifications tone")
+		elif "Tone" in s:
+			s = s.replace("Tone", 'tone')
+		return s
 
 	def get_phone_setting(self, setting):
 	    # read phone config.db
@@ -26,6 +40,8 @@ class SettingUtil(uitestcase.UITestCase):
 		# get non system music files from Music
 		self.tc.navigate('Music')
 		self.tc.select("Songs")
+		# get rid of file type: e.g.".mp3"
+		f = f.split(".")[0]
 		r = -1 if self.tc.check(f) == False else 0
 		self.tc.exit()
 		return r
@@ -42,15 +58,24 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.navigate('Settings')
 		self.tc.select('Sounds and vibra')
 		# select tone type
+		if "Alarm" in ft:
+			ft = "Alarm tone"
+		if "Message" in ft:
+			ft = "Message tone"
+		if "Ring" in ft:
+			ft = "Ringtone"
+		if "Alert" in ft:
+			ft = "Reminder tone"
 		self.tc.select(ft)
 		r = -1 if self.tc.check(f) == False else 0
 		self.tc.exit()
 		return r
 		
-	def check_phone_profile_tone(self, f=None):
+	def check_phone_profile_tone(self, f=None, ft=None):
 		self.tc.navigate('Settings')
 		self.tc.select('Sounds and vibra')
-		r = -1 if self.tc.check(f) == False else 0
+		ft = self.cpf2phone(ft)
+		r = -1 if self.tc.check(f, relatedTo=ft) == False else 0
 		self.tc.exit()
 		return r
 				# self.tc.comment("[fail once] tone: %s" % f["file"])
@@ -66,6 +91,8 @@ class SettingUtil(uitestcase.UITestCase):
 	def get_phone_video(self, f=None):
 		self.tc.navigate("Videos")
 		self.tc.check(f)
+		# get rid of file type: e.g.".mp3"
+		f = f.split(".")[0]
 		r = -1 if self.tc.check(f) == False else 0
 		self.tc.exit()
 
@@ -78,24 +105,43 @@ class SettingUtil(uitestcase.UITestCase):
 		return r
 
 	def check_phone_app(self, app, remove=False, icon=None):
-		r = -1 if self.tc.check(app) == False else 0
-		# app not found
-		if r == -1:
-			if remove:
-				return 0
-			return r
-		# app is found
+		if "NokiaChat" or "NokiaGift" in app:
+			app = app.replace("Nokia", "")
 		else:
-			# if icon is uploaded
-			if icon:
-				r = self.tc.compareImage('reference_files\\images\\app_list_folder', timeout=10000)
-				self.tc.comment(r)
-				# if r == -1:
-				# 	return r
-			self.tc.select(app)
+			app = "*" + app + "*"
+		r = -1 if self.tc.check(app) == False else 0
+		# judge app removal attribute
+		if remove:
+			r = -1 if r == 0 else 0
+			return r
+		# judge app found or not
+		else:
+			if r == -1:
+				return r
+			# if app found, open it then check icon(icon check not implemented)
+			elif r == 0:
+				self.tc.select(app)
+				self.tc.exit()
+				if icon:
+					r = self.tc.compareImage('reference_files\\images\\app_list_folder', timeout=10000)
+					self.tc.comment(r)
+				return r
+				
+	def check_bmk(self, bmk, inapplist="1", inbrowser="0"):
+		# judge if in app list or folder
+		if inapplist != "1" and inapplist != "0":
+			self.tc.select(inapplist)
+			r = -1 if self.tc.check(bmk) == False else 0
+		if inapplist == "1":
+			# judge if folder name is "1"
+			if self.tc.check("1"):
+				self.tc.select("1")
+			r = -1 if self.tc.check(bmk) == False else 0
+		if inapplist == "0":
+			r = 0 if self.tc.check(bmk) == False else -1
 		self.tc.exit()
 		return r
-		
+
     # check phone UI
 	def check_phone_bluetooth_ui(self, visible=True, device_name=None):
 		img = "widgets/bool-on-dark" if visible else "widgets/bool-off-dark"

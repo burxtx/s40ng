@@ -60,6 +60,8 @@ for layer in focus_layer_node:
 							if ref in sub_value.attrib['reference']:
 								if sub_value.text and setting_name and feature and group:
 									py_all[group][feature][setting_name][i][sub_setting_name]=sub_value.text
+							# if folder name is '1' or '0'?
+							# Leave to implement. First, check app list, if wanted bmk not found, then check folder with this name, return. 
 
 		else:
 			value_node = setting.iter(tag_value)

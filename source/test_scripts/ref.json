@@ -1,10 +1,23 @@
 {
     "Applications and Content": {
         "Memory Card Content": {
+            "Preloaded Applications on Memory Card": [
+                {
+                    "Jar File": "UCWEB-7.0.3-4118-69-10011918.jar", 
+                    "Midlet name": "uc", 
+                    "Jad File": "UCWEB-7.0.3-4118-69-10011918.jad"
+                }
+            ], 
             "Size of the Memory Card": [
                 {
                     "ref": "", 
                     "value": "4"
+                }
+            ], 
+            "Memory Card type": [
+                {
+                    "ref": "", 
+                    "value": "1"
                 }
             ]
         }, 
@@ -354,7 +367,7 @@
         "Profile Settings": {
             "Email Tone": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/sound/emailtone", 
                     "value": "test tone 2.amr"
                 }, 
                 {
@@ -364,7 +377,7 @@
             ], 
             "Message Tone": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/sound/messagetone", 
                     "value": "message tone.aac"
                 }, 
                 {
@@ -374,7 +387,7 @@
             ], 
             "SIM2 Ringtone": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/sound/ringtone-sim2", 
                     "value": "SIM 2 Ringtone.mp3"
                 }, 
                 {
@@ -384,7 +397,7 @@
             ], 
             "Alarm Tone": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/sound/alarmtone", 
                     "value": "Alone.mp3"
                 }, 
                 {
@@ -394,7 +407,7 @@
             ], 
             "Reminder Tone": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/sound/alerttone", 
                     "value": "Reminder tone.mp3"
                 }, 
                 {
@@ -404,7 +417,7 @@
             ], 
             "Push Notifications Tone": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/sound/pushnotificationtone", 
                     "value": "notification tone.mp3"
                 }, 
                 {
@@ -414,7 +427,7 @@
             ], 
             "SIM1 Ringtone": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/sound/ringtone-sim1", 
                     "value": "sim 1 tone 600.mp3"
                 }, 
                 {
@@ -424,7 +437,7 @@
             ],
             "Ringtone": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/sound/ringtone", 
                     "value": "testing tone.wav"
                 }
             ]
@@ -432,7 +445,7 @@
         "Graphic UI Settings": {
             "System wallpaper": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/display/wallpaper-filename", 
                     "value": "Aqua_test.png"
                 }, 
                 {
@@ -442,7 +455,7 @@
             ], 
             "Operator Startup Graphic": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/operator/logo-filename", 
                     "value": "testing 240x320.png"
                 }, 
                 {
@@ -532,31 +545,31 @@
         "Emergency Calls": {
             "Emergency number 5 (Can be edited in Nuage)": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/operator/emergency/emergency-number/4/number", 
                     "value": "23456"
                 }
             ], 
             "Emergency number 2 (Can be edited in Nuage)": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/operator/emergency/emergency-number/1/number", 
                     "value": "1234"
                 }
             ], 
             "Emergency number 3 (Can be edited in Nuage)": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/operator/emergency/emergency-number/2/number", 
                     "value": "2999"
                 }
             ], 
             "Emergency number 1 (Can be edited in Nuage)": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/operator/emergency/emergency-number/0/number", 
                     "value": "223"
                 }
             ], 
             "Emergency number 4 (Can be edited in Nuage)": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/operator/emergency/emergency-number/3/number", 
                     "value": "3999"
                 }
             ]
@@ -731,13 +744,13 @@
             "Timestamp type to be used in messaging": [
                 {
                     "ref": "./platform/ISM_MSG_PLATFORM_MSG_MSG_TIMESTAMP", 
-                    "value": "0"
+                    "value": ""
                 }
             ], 
             "SMS Delivery Reports for SIM1": [
                 {
                     "ref": "./SimSlot/0/SMS/0/Ext/Nokia/request-delivery-report", 
-                    "value": "true"
+                    "value": ""
                 }
             ], 
             "SMS Delivery Reports for SIM2": [
@@ -762,7 +775,7 @@
             ], 
             "Allow adverts for SIM2": [
                 {
-                    "ref": "", 
+                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_ALLOW_ADVERTS_2", 
                     "value": "true"
                 }
             ], 
@@ -770,6 +783,12 @@
                 {
                     "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_RETRIEVAL_MODE", 
                     "value": "1"
+                }
+            ],  
+            "MMS Retrieval mode for SIM2": [
+                {
+                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_RETRIEVAL_MODE_2", 
+                    "value": "4"
                 }
             ], 
             "Request MMS Delivery Report for SIM1": [
@@ -783,13 +802,7 @@
                     "ref": "./SimSlot/1/MMS/0/Ext/Nokia/request-delivery-report", 
                     "value": "true"
                 }
-            ], 
-            "MMS Retrieval mode for SIM2": [
-                {
-                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_ALLOW_ADVERTS_2", 
-                    "value": "4"
-                }
-            ], 
+            ],
             "Maximum size for received MMS message": [
                 {
                     "ref": "./platform/ISM_MSG_PLATFORM_MMS_RECEIVED_MMS_MAX_SIZE", 
@@ -856,7 +869,7 @@
             ], 
             "Cell Broadcast Reception": [
                 {
-                    "ref": "", 
+                    "ref": "./yapas/cell-broadcast/active", 
                     "value": "true"
                 }
             ], 
