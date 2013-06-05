@@ -43,6 +43,7 @@ class SettingTest(uitestcase.UITestCase):
                         # profile_tone_files.append({"file": f_name["value"], "type": setting})
                         # for f in f_ss[group][feature][setting]:
                         #     profile_tone_files.append({"file": f["value"], "type": f["type"]})
+                        self.comment(setting)
                         r = self.settingutil.check_phone_profile_tone(f["value"], setting)
                         status = "pass" if r == 0 else "fail"
                         self.comment("----[setting][%s]profile: %s " % (status, f["value"]))
@@ -201,6 +202,14 @@ class SettingTest(uitestcase.UITestCase):
                             if status == "fail":
                                 count += 1
                                 failed_tc.append((setting, f["Name"], 'NA'))
+                    elif "Home Page URL for Application List" in setting:
+                        for f in f_ss[group][feature][setting]:
+                            r = self.settingutil.check_bmk(f["Name in Application List Editor"], inapplist=f["Show in application list"])
+                            status = "pass" if r == 0 else "fail"
+                            self.comment("----[setting][%s]Preloaded homepage url: %s " % (status, f["Name in Application List Editor"]))
+                            if status == "fail":
+                                count += 1
+                                failed_tc.append((setting, f["Name in Application List Editor"], 'NA'))
 
 
         self.comment("---------------- application list check failed: %d -------------------" % count)

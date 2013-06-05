@@ -17,19 +17,13 @@ class SettingUtil(uitestcase.UITestCase):
 	    f.close()
 	    return s
 	def cpf2phone(self, s):
-		# if "alarm" in s:
-		# 	s = "Alarm tone"
-		# if "Message" in s:
-		# 	s = "Message tone"
-		# if "Ring" in s:
-		# 	s = "Ringtone"
-		# if "Alert" in s:
-		# 	s = "Reminder tone"
-		if "Notifications Tone" in s:
-			s = s.replace("Notifications Tone", "notifications tone")
-		elif "Tone" in s:
-			s = s.replace("Tone", 'tone')
-		return s
+		s_words = s.split(" ")
+		new_words = []
+		new_words.append(s_words[0])
+		for word in s_words[1:]:
+			new_word = word.lower()
+			new_words.append(new_word)
+		return " ".join(new_words)
 
 	def get_phone_setting(self, setting):
 	    # read phone config.db
@@ -63,7 +57,15 @@ class SettingUtil(uitestcase.UITestCase):
 		if "Message" in ft:
 			ft = "Message tone"
 		if "Ring" in ft:
-			ft = "Ringtone"
+			if self.tc.check("Ringtone"):
+				self.tc.select("Ringtone")
+			elif self.tc.check("SIM1 ringtone"):
+				self.tc.select("SIM1 ringtone")
+			else:
+				self.tc.comment("[ERROR] Oops, something went wrong")
+			r = -1 if self.tc.check(f) == False else 0
+			self.tc.exit()
+			return r
 		if "Alert" in ft:
 			ft = "Reminder tone"
 		self.tc.select(ft)
@@ -74,7 +76,9 @@ class SettingUtil(uitestcase.UITestCase):
 	def check_phone_profile_tone(self, f=None, ft=None):
 		self.tc.navigate('Settings')
 		self.tc.select('Sounds and vibra')
+		self.tc.comment(ft)
 		ft = self.cpf2phone(ft)
+		self.tc.comment(ft)
 		r = -1 if self.tc.check(f, relatedTo=ft) == False else 0
 		self.tc.exit()
 		return r
@@ -95,6 +99,7 @@ class SettingUtil(uitestcase.UITestCase):
 		f = f.split(".")[0]
 		r = -1 if self.tc.check(f) == False else 0
 		self.tc.exit()
+		return r
 
 	def get_phone_graphic_non_sys(self, f=None):
 		self.tc.navigate('Files')
@@ -107,8 +112,7 @@ class SettingUtil(uitestcase.UITestCase):
 	def check_phone_app(self, app, remove=False, icon=None):
 		if "NokiaChat" or "NokiaGift" in app:
 			app = app.replace("Nokia", "")
-		else:
-			app = "*" + app + "*"
+		app = "*" + app + "*"
 		r = -1 if self.tc.check(app) == False else 0
 		# judge app removal attribute
 		if remove:
@@ -127,7 +131,7 @@ class SettingUtil(uitestcase.UITestCase):
 					self.tc.comment(r)
 				return r
 				
-	def check_bmk(self, bmk, inapplist="1", inbrowser="0"):
+	def check_bmk(self, bmk, inapplist="1", inbrowser="0", icon=None):
 		# judge if in app list or folder
 		if inapplist != "1" and inapplist != "0":
 			self.tc.select(inapplist)
@@ -139,6 +143,8 @@ class SettingUtil(uitestcase.UITestCase):
 			r = -1 if self.tc.check(bmk) == False else 0
 		if inapplist == "0":
 			r = 0 if self.tc.check(bmk) == False else -1
+		# if icon:
+		# 	r2 = self.tc.check(icon)
 		self.tc.exit()
 		return r
 
@@ -239,6 +245,27 @@ class SettingUtil(uitestcase.UITestCase):
 			self.tc.fail("[fail] voice mailbox number incorrect")
 		self.tc.exit()
 		return r
+
+	def check_phone_certificate(self, cer):
+		self.tc.navigate("Settings")
+		self.tc.select("Certificates in use")
+		cer = cer[0:5]+"*"
+		self.tc.comment(cer)
+		r = self.tc.check(cer)
+		self.tc.exit()
+		return r
+
+	def check_operator_channel(self, channel):
+		self.tc.navigate("Settings")
+		self.tc.select("Operator messages")
+		r = self.tc.check("*"+channel+"*", relatedTo="Channels")
+		self.tc.exit()
+		return r
+
+	def check_main_menu(self):
+		# r = self.tc.check(item, occurrence=int(position))
+		for item in self.tc.read.texts():
+			self.tc.comment(item)
 
 
 	# def compare_settings(self, fv, pv):

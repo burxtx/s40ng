@@ -45,6 +45,8 @@ class UiTest(uitestcase.UITestCase):
                     r1, r2 = self.settingutil.check_phone_bluetooth_ui(visible=visible, device_name=device_name)
                     status = "pass" if r1 and r2 else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
+                    if status == "fail":
+                        self.fail("[Result] %s: Failed" % feature)
 
     def test_time_date_ui(self):
         """Check phone time and date UI settings
@@ -78,6 +80,8 @@ class UiTest(uitestcase.UITestCase):
                     r1, r2, r3 = self.settingutil.check_phone_time_date_ui(timeformat24h=timeformat24h, nitz_update=nitz_update, dateformat=dateformat)
                     status = "pass" if r1 and r2 and r3 else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
+                    if status == "fail":
+                        self.fail("[Result] %s: Failed" % feature)
 
     def test_phone_network_ui(self):
         """Check phone network UI settings
@@ -103,6 +107,8 @@ class UiTest(uitestcase.UITestCase):
                     r = self.settingutil.check_phone_network_ui(auto_update=auto_update)
                     status = "pass" if r else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
+                    if status == "fail":
+                        self.fail("[Result] %s: Failed" % feature)
 
     def test_phone_sms_ui(self):
         """Check phone sms UI settings
@@ -133,6 +139,8 @@ class UiTest(uitestcase.UITestCase):
                     r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report=delivery_report, num_lock=num_lock)
                     status = "pass" if r1 and r2 else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
+                    if status == "fail":
+                        self.fail("[Result] %s: Failed" % feature)
 
     def test_phone_mms_ui(self):
         """Check phone mms UI settings
@@ -166,6 +174,8 @@ class UiTest(uitestcase.UITestCase):
                     r1, r2, r3 = self.settingutil.check_phone_mms_ui(delivery_report=delivery_report, allow_adverts=allow_adverts, reception=reception)
                     status = "pass" if r1 and r2 and r3 else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
+                    if status == "fail":
+                        self.fail("[Result] %s: Failed" % feature)
 
     def test_phone_voice_mail_ui(self):
         """Check phone voice mailbox number
@@ -192,3 +202,89 @@ class UiTest(uitestcase.UITestCase):
                     r = self.settingutil.check_phone_voicemail_ui(voicemail_num=voicemail_num)
                     status = "pass" if r else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
+                    if status == "fail":
+                        self.fail("[Result] %s: Failed" % feature)
+
+    def test_phone_certificate(self):
+        """Check phone certificates
+        @tcId phone certificates ui
+        """
+        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)
+        # f_ss = json.loads(xml2json(source))
+        # read configuration items mapping file, for reference
+        failed_tc = []
+        m_count = 0
+        manual_tc = []
+        # py dict from json file
+        for group in f_ss:
+            self.comment("[group] %s" % group)
+            for feature in f_ss[group]:
+                if "Customer certificates" in feature:
+                    self.comment("--[feature] %s" % feature)
+                    for setting in f_ss[group][feature]:
+                        # if "Voice mail" in setting:
+                        #     voicemail_num = f_ss[group][feature][setting][0]["value"]
+                        r = self.settingutil.check_phone_certificate(setting)
+                        status = "pass" if r else "fail"
+                        self.comment("----[setting][%s]%s" % (status, setting))
+                        if status == "fail":
+                            self.fail("[Result] %s: Failed" % feature)
+
+    def test_operator_messages(self):
+        """Check operator messages
+        @tcId operator channel
+        """
+        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)
+        # f_ss = json.loads(xml2json(source))
+        # read configuration items mapping file, for reference
+        failed_tc = []
+        m_count = 0
+        manual_tc = []
+        # py dict from json file
+        for group in f_ss:
+            self.comment("[group] %s" % group)
+            for feature in f_ss[group]:
+                for setting in f_ss[group][feature]:
+                    if "Operator message channel" in setting:
+                        self.comment("--[feature] %s" % feature)
+                        # if "Voice mail" in setting:
+                        channel_num = f_ss[group][feature][setting][0]["value"]
+                        r = self.settingutil.check_operator_channel(channel_num)
+                        self.comment(r)
+                        status = "pass" if r else "fail"
+                        self.comment("----[setting][%s]%s" % (status, setting))
+                        if status == "fail":
+                            self.fail("[Result] %s: Failed" % feature)
+
+    def test_main_menu(self):
+        """Check main menu
+        @tcId tile content
+        """
+        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)
+        # f_ss = json.loads(xml2json(source))
+        # read configuration items mapping file, for reference
+        failed_tc = []
+        m_count = 0
+        manual_tc = []
+        # py dict from json file
+        for group in f_ss:
+            self.comment("[group] %s" % group)
+            for feature in f_ss[group]:
+                for setting in f_ss[group][feature]:
+                    if "Tile content" in setting:
+                        self.comment("--[feature] %s" % feature)
+                        # if "Voice mail" in setting:
+                        item = f_ss[group][feature][setting][0]["Content item"]
+                        position = f_ss[group][feature][setting][0]["Position"]
+                        r = self.settingutil.check_main_menu()
+                        self.comment(r)
+                        status = "pass" if r else "fail"
+                        self.comment("----[setting][%s]%s" % (status, setting))
+                        if status == "fail":
+                            self.fail("[Result] %s: Failed" % feature)

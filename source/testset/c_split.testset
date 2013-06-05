@@ -2,38 +2,50 @@
 <testset>
   <testcase name="Bluetooth ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_bluetooth_ui" relativetotestset="false" />
-    <testresult result="Passed" time="05/28/2013 14:50:54" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_1.xml" errorreason="" errortraceback="" originalresult="" />
-    <testresult result="No Result" time="05/28/2013 14:51:20" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_2.xml" errorreason="index out of range: 1" errortraceback="" originalresult="" />
-    <testresult result="N/A" time="05/28/2013 15:00:17" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_3.xml" errorreason="Execution aborted by user" errortraceback="" originalresult="" />
-    <testresult result="No Result" time="05/28/2013 15:00:41" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_4.xml" errorreason="Local variable 'device_name' referenced before assignment." errortraceback="" originalresult="" />
-    <testresult result="Failed" time="05/28/2013 15:03:00" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_5.xml" errorreason="'[fail] bluetooth device name is incorrect'" errortraceback="" originalresult="" />
-    <testresult result="Passed" time="05/28/2013 15:05:23" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_6.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="Time and Date ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_time_date_ui" relativetotestset="false" />
-    <testresult result="Failed" time="05/28/2013 14:05:06" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Time and Date ui_1.xml" errorreason="'[fail] nitz incorrect'" errortraceback="" originalresult="" />
-    <testresult result="Passed" time="05/28/2013 14:06:24" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Time and Date ui_2.xml" errorreason="" errortraceback="" originalresult="" />
-    <testresult result="No Result" time="05/28/2013 15:11:24" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Time and Date ui_3.xml" errorreason="global name 's' is not defined" errortraceback="" originalresult="" />
-    <testresult result="Passed" time="05/28/2013 15:12:49" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Time and Date ui_4.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone update ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_network_ui" relativetotestset="false" />
-    <testresult result="N/A" time="05/28/2013 15:11:49" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone update ui_1.xml" errorreason="Execution aborted by user" errortraceback="" originalresult="" />
-    <testresult result="Passed" time="05/28/2013 15:13:39" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone update ui_2.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone sms ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_sms_ui" relativetotestset="false" />
-    <testresult result="No Result" time="05/28/2013 14:06:37" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_1.xml" errorreason="index out of range: 2" errortraceback="" originalresult="" />
-    <testresult result="N/A" time="05/28/2013 12:42:43" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_2.xml" errorreason="" errortraceback="" originalresult="" />
-    <testresult result="Passed" time="05/28/2013 16:54:17" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_3.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone mms ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_mms_ui" relativetotestset="false" />
-    <testresult result="No Result" time="05/28/2013 14:06:47" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone mms ui_1.xml" errorreason="index out of range: 3" errortraceback="" originalresult="" />
-    <testresult result="Passed" time="05/28/2013 16:55:19" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone mms ui_2.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone voice mailbox number ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_voice_mail_ui" relativetotestset="false" />
-    <testresult result="Passed" time="05/28/2013 16:56:18" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone voice mailbox number ui_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="phone certificates ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_certificate" relativetotestset="false" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="operator channel" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_operator_messages" relativetotestset="false" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="tile content" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_main_menu" relativetotestset="false" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="preloaded media files check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_media_files" relativetotestset="false" />
+    <testresult result="Failed" time="06/05/2013 12:07:52" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_1.xml" errorreason="'[Result] Check media files failed'" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Preloaded apps check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_app_list" relativetotestset="false" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="config.db settings check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_settings_compare" relativetotestset="false" />
+    <testresult result="" time="06/05/2013 11:57:23" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
 </testset>
