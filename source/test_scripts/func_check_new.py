@@ -124,19 +124,30 @@ class UiTest(uitestcase.UITestCase):
         m_count = 0
         manual_tc = []
         # Default NDT value
-        delivery_report = True
+        delivery_report_ss = delivery_report1 = delivery_report2 = True
         num_lock = False
+        dual_sim1 = dual_sim2 =False
         # py dict from json file
         for group in f_ss:
             self.comment("[group] %s" % group)
             for feature in f_ss[group]:
                 if "SMS Settings" in feature:
                     for setting in f_ss[group][feature]:
-                        if "SMS Delivery Reports" in setting:
-                            delivery_report = f_ss[group][feature][setting][0]["value"]
+                        self.comment(setting)
+                        if "SMS Delivery Reports" == setting:
+                            delivery_report_ss = f_ss[group][feature][setting][0]["value"]
+
+                        if "SMS Delivery Reports for SIM1" == setting:
+                            delivery_report1 = f_ss[group][feature][setting][0]["value"]
+                            dual_sim1 = True
+
+                        if "SMS Delivery Reports for SIM2" == setting:
+                            delivery_report2 = f_ss[group][feature][setting][0]["value"]
+                            dual_sim2 = True
+
                         if "Message center number locked" in setting:
                             num_lock = f_ss[group][feature][setting][0]["value"]
-                    r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report=delivery_report, num_lock=num_lock)
+                    r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report=delivery_report_ss, num_lock=num_lock, sim1=dual_sim1, sim2=dual_sim2)
                     status = "pass" if r1 and r2 else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
                     if status == "fail":
@@ -233,8 +244,8 @@ class UiTest(uitestcase.UITestCase):
                             self.fail("[Result] %s: Failed" % feature)
 
     def test_operator_messages(self):
-        """Check operator messages
-        @tcId operator channel
+        """
+        @tcId operator messages
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
@@ -244,21 +255,23 @@ class UiTest(uitestcase.UITestCase):
         failed_tc = []
         m_count = 0
         manual_tc = []
+        flag = False
+        channel_num = ""
         # py dict from json file
         for group in f_ss:
             self.comment("[group] %s" % group)
             for feature in f_ss[group]:
-                for setting in f_ss[group][feature]:
-                    if "Operator message channel" in setting:
-                        self.comment("--[feature] %s" % feature)
-                        # if "Voice mail" in setting:
-                        channel_num = f_ss[group][feature][setting][0]["value"]
-                        r = self.settingutil.check_operator_channel(channel_num)
-                        self.comment(r)
-                        status = "pass" if r else "fail"
-                        self.comment("----[setting][%s]%s" % (status, setting))
-                        if status == "fail":
-                            self.fail("[Result] %s: Failed" % feature)
+                if "Other Messaging Settings" in feature:
+                    for setting in f_ss[group][feature]:
+                        if "Operator message channel" in setting:
+                            channel_num = f_ss[group][feature][setting][0]["value"]
+                        if "Cell Broadcast Reception" in setting:
+                            flag = f_ss[group][feature][setting][0]["value"]
+                    r1, r2 = self.settingutil.check_operator_channel(channel_num, flag)
+                    status = "pass" if r1 and r2 else "fail"
+                    self.comment("--[feature][%s]%s" % (status, feature))
+                    if status == "fail":
+                        self.fail("[Result] %s: Failed" % feature)
 
     def test_main_menu(self):
         """Check main menu
@@ -288,3 +301,4 @@ class UiTest(uitestcase.UITestCase):
                         self.comment("----[setting][%s]%s" % (status, setting))
                         if status == "fail":
                             self.fail("[Result] %s: Failed" % feature)
+

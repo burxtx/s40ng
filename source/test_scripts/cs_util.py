@@ -201,23 +201,27 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.exit()
 		return r
 
-	def check_phone_sms_ui(self, delivery_report=True, num_lock=False):
+	def check_phone_sms_ui(self, delivery_report=True, num_lock=False, sim1=False, sim2=False):
 		delivery_report_opt = "widgets/switch-bg-on-dark" if delivery_report == True or delivery_report == "true" else "widgets/switch-bg-off-dark"
 		self.tc.navigate("Settings")
 		self.tc.select("Messaging")
-		r1 = self.tc.check(delivery_report_opt, relatedTo="Delivery reports")
+		# check if DS or SS
+		if sim1:
+			r1 = self.tc.check(delivery_report_opt, relatedTo="SIM1//Delivery reports")
+		if sim2:
+			r1 = self.tc.check(delivery_report_opt, relatedTo="SIM2//Delivery reports")
+		else:
+			r1 = self.tc.check(delivery_report_opt, relatedTo="Delivery reports")
 		if not r1:
 			self.tc.fail("[fail] sms delivery report incorrect")
+
 		if num_lock == False or num_lock == 'false':
 			num_lock_opt = "Add number"
 			r2 = self.tc.check(num_lock_opt, relatedTo="Message center")
 			if not r2:
 				self.tc.fail("[fail] sms center number locked")
 		else:
-			r2 = self.tc.check("Message center")
-			if not r2:
-				r2 = True
-		self.tc.exit()
+			r2 = True if self.tc.check("Message center") else False
 		return r1, r2
 
 	def check_phone_mms_ui(self, delivery_report=True, allow_adverts=True, reception=1):
@@ -255,12 +259,23 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.exit()
 		return r
 
-	def check_operator_channel(self, channel):
+	def check_operator_channel(self, channel="", flag=False):
 		self.tc.navigate("Settings")
 		self.tc.select("Operator messages")
-		r = self.tc.check("*"+channel+"*", relatedTo="Channels")
+		r1 = r2 = True
+		opt = "widgets/switch-bg-on-dark" if flag == True or flag == "true" else "widgets/switch-bg-off-dark"
+		r1 = self.tc.check(opt, relatedTo="Operator messages")
+		if not r1:
+			self.tc.comment("[fail] Cell broadcast reception is incorrect")
+		if channel != "":
+			if not self.tc.check("Channels"):
+				# self.tc.select("Operator messages")
+				self.tc.select("*Receive messages*", relatedTo="Operator messages")
+			r2 = self.tc.check("*"+channel+"*", relatedTo="Channels")
+			if not r2:
+				self.tc.comment("[fail] Channel is incorrect")
 		self.tc.exit()
-		return r
+		return r1, r2
 
 	def check_main_menu(self):
 		# r = self.tc.check(item, occurrence=int(position))
