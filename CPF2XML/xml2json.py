@@ -14,6 +14,15 @@ tag_reference = 'reference'
 tag_sequence = 'sequence'
 py_all = {}
 
+def dateconvert(s):
+	if "?dot^" in s:
+		s = s.replace("?dot^", ".")
+	if "?slash^" in s:
+		s = s.replace("?slash^", "/")
+	if "?space^" in s:
+		s = s.replace("?space^", " ")
+	return s
+
 tree = etree.parse(source)
 focus_layer_node = tree.iter(tag_focus_layer)
 for layer in focus_layer_node:
@@ -75,7 +84,7 @@ for layer in focus_layer_node:
 					# print py_all
 # s = StringIO.StringIO()
 # s.write(json.dumps(py_all, indent=4))
-j = json.dumps(py_all, indent=4)
+j = dateconvert(json.dumps(py_all, indent=4))
 f = open("auto_test_config.json", "w")
 f.write(j)
 f.close()
