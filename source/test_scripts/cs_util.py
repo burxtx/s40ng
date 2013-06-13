@@ -150,7 +150,7 @@ class SettingUtil(uitestcase.UITestCase):
 
     # check phone UI
 	def check_phone_bluetooth_ui(self, visible=True, device_name="Nokia 501"):
-		img = "widgets/bool-on-dark" if visible == True or visible == "true" else "widgets/bool-off-dark"
+		img = "widgets/bool-on-dark" if visible == True else "widgets/bool-off-dark"
 		self.tc.navigate("Settings")
 		self.tc.select("Bluetooth")
 		if not self.tc.check("Visible"):
@@ -172,8 +172,8 @@ class SettingUtil(uitestcase.UITestCase):
 		return r
 
 	def check_phone_time_date_ui(self, timeformat24h=True, nitz_update=True, dateformat="DD-MM-YYYY"):
-		tf24h = 'widgets/switch-bg-on-dark' if timeformat24h == True or timeformat24h == "true" else 'widgets/switch-bg-off-dark'
-		nitz = 'widgets/switch-bg-on-dark' if nitz_update == True or nitz_update == "true" else 'widgets/switch-bg-off-dark'
+		tf24h = 'widgets/switch-bg-on-dark' if timeformat24h == True else 'widgets/switch-bg-off-dark'
+		nitz = 'widgets/switch-bg-on-dark' if nitz_update == True else 'widgets/switch-bg-off-dark'
 		self.tc.navigate("Settings")
 		self.tc.select("Time and date")
 
@@ -191,7 +191,7 @@ class SettingUtil(uitestcase.UITestCase):
 		return r1, r2, r3
 
 	def check_phone_network_ui(self, auto_update=False):
-		auto_update_opt = 'widgets/switch-bg-on-dark' if auto_update == True or auto_update == "true" else 'widgets/switch-bg-off-dark'
+		auto_update_opt = 'widgets/switch-bg-on-dark' if auto_update == True else 'widgets/switch-bg-off-dark'
 		self.tc.navigate("Settings")
 		self.tc.select("Phone update")
 		# Phone ui updated from 'Get update' to "check via mobile data"
@@ -202,7 +202,7 @@ class SettingUtil(uitestcase.UITestCase):
 		return r
 
 	def check_phone_sms_ui(self, delivery_report=True, num_lock=False, sim1=False, sim2=False):
-		delivery_report_opt = "widgets/switch-bg-on-dark" if delivery_report == True or delivery_report == "true" else "widgets/switch-bg-off-dark"
+		delivery_report_opt = "widgets/switch-bg-on-dark" if delivery_report == True else "widgets/switch-bg-off-dark"
 		self.tc.navigate("Settings")
 		self.tc.select("Messaging")
 		# check if DS or SS
@@ -215,7 +215,7 @@ class SettingUtil(uitestcase.UITestCase):
 		if not r1:
 			self.tc.fail("[fail] sms delivery report incorrect")
 
-		if num_lock == False or num_lock == 'false':
+		if num_lock == False:
 			num_lock_opt = "Add number"
 			r2 = self.tc.check(num_lock_opt, relatedTo="Message center")
 			if not r2:
@@ -225,8 +225,8 @@ class SettingUtil(uitestcase.UITestCase):
 		return r1, r2
 
 	def check_phone_mms_ui(self, delivery_report=True, allow_adverts=True, reception=1):
-		delivery_report_opt = "widgets/switch-bg-on-dark" if delivery_report == True or delivery_report == "true" else "widgets/switch-bg-off-dark"
-		allow_adverts_opt = "widgets/switch-bg-on-dark" if allow_adverts == True or allow_adverts == "true"	else "widgets/switch-bg-off-dark"
+		delivery_report_opt = "widgets/switch-bg-on-dark" if delivery_report == True else "widgets/switch-bg-off-dark"
+		allow_adverts_opt = "widgets/switch-bg-on-dark" if allow_adverts == True else "widgets/switch-bg-off-dark"
 		reception_opt = {1:"Automatic", 2:"Manual", 3:"Off", 4:"Off"}
 		self.tc.navigate("Settings")
 		self.tc.select("Messaging")
@@ -263,7 +263,7 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.navigate("Settings")
 		self.tc.select("Operator messages")
 		r1 = r2 = True
-		opt = "widgets/switch-bg-on-dark" if flag == True or flag == "true" else "widgets/switch-bg-off-dark"
+		opt = "widgets/switch-bg-on-dark" if flag == True else "widgets/switch-bg-off-dark"
 		r1 = self.tc.check(opt, relatedTo="Operator messages")
 		if not r1:
 			self.tc.comment("[fail] Cell broadcast reception is incorrect")

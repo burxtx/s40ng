@@ -250,8 +250,14 @@ class SettingTest(uitestcase.UITestCase):
             self.comment("[group] %s" % group)
             for feature in f_ss[group]:
                 self.comment("--[feature] %s" % feature)
+                if "Customer certificates" in feature:
+                    continue
                 for setting in f_ss[group][feature]:
-                    # if len(f_ref_ss[group][feature][setting]) == 1:
+                    # handle if new setting is added, but tc not developed
+                    if not f_ref_ss[group][feature].has_key(setting):
+                        self.comment("----[setting] New setting test case not developed, please manually check, %s" % f_ss[group][feature][setting][0]["value"])
+                        manual_tc.append((setting, f_ss[group][feature][setting][0]["value"]))
+                        continue
                     sequence = f_ref_ss[group][feature][setting][0]
                     if sequence.has_key("ref"):
                         value = sequence["ref"]
