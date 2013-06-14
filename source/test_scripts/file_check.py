@@ -91,7 +91,7 @@ class SettingTest(uitestcase.UITestCase):
                         tone_files_sys=[]
                         tone_files_non_sys=[]
                         for f in f_ss[group][feature][setting]:
-                            if f["System File"] == "true":
+                            if f["System File"] == True:
                                 tone_files_sys.append({"file": f["Tone file"], "type": f["Tone Type"]})
                             else:
                                 tone_files_non_sys.append(f["Tone file"])
@@ -128,7 +128,7 @@ class SettingTest(uitestcase.UITestCase):
                         graphic_files_non_sys=[]
                         graphic_files_sys=[]
                         for f in f_ss[group][feature][setting]:
-                            if f["System File"] == "false":
+                            if f["System File"] == False:
                                 graphic_files_non_sys.append(f["Graphic file"])
                             else:
                                 graphic_files_sys.append(f["Graphic file"])
@@ -264,7 +264,7 @@ class SettingTest(uitestcase.UITestCase):
                         p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % value)
                         # this setting value range is 0 and 2
                         if value == "./platform/INFO_PP_CODEC_ORDER2" and p_v == "2":
-                            p_v = "true"
+                            p_v = True
 
                     for f in f_ss[group][feature][setting]:
                         if sequence.has_key("value"):

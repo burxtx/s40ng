@@ -45,7 +45,8 @@
   </testcase>
   <testcase name="preloaded media files check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_media_files" relativetotestset="false" />
-    <testresult result="Passed" time="06/09/2013 11:01:55" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/14/2013 17:16:55" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_1.xml" errorreason="'[Result] Check media files failed'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/14/2013 17:37:25" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media files check_2.xml" errorreason="'[Result] Check media files failed'" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="Preloaded apps check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_app_list" relativetotestset="false" />
@@ -53,6 +54,6 @@
   </testcase>
   <testcase name="config.db settings check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_settings_compare" relativetotestset="false" />
-    <testresult result="Failed" time="06/13/2013 10:06:19" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_1.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/14/2013 17:05:15" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_1.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
   </testcase>
 </testset>
