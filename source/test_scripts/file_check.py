@@ -257,6 +257,7 @@ class SettingTest(uitestcase.UITestCase):
                     if not f_ref_ss[group][feature].has_key(setting):
                         self.comment("----[setting] New setting test case not developed, please manually check, %s" % f_ss[group][feature][setting][0]["value"])
                         manual_tc.append((setting, f_ss[group][feature][setting][0]["value"]))
+                        m_count += 1
                         continue
                     sequence = f_ref_ss[group][feature][setting][0]
                     if sequence.has_key("ref"):
@@ -272,10 +273,11 @@ class SettingTest(uitestcase.UITestCase):
                             # handle profile settings which is different from others
                             if "Profile Settings" in feature or "Graphic UI Settings" in feature:
                                 f_v = "file://"+f_ss[group][feature][setting][1]["value"]+f_ss[group][feature][setting][0]["value"]
-                            # if f_v == "true" or f_v == "false":
-                            #     f_v == bool(f_v)
                             if f_v == True or f_v == False:
                                 f_v = str(f_v).lower()
+                            # prevent if phone value is upper started
+                            if p_v == True or p_v == False:
+                                p_v = str(p_v).lower()
                             r = cmp(str(f_v), str(p_v))
                     # failed using util func
                     # r = self.settingutil.compare_settings(f_v, p_v)

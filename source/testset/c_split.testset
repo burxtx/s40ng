@@ -4,15 +4,21 @@
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_bluetooth_ui" relativetotestset="false" />
     <testresult result="Passed" time="06/09/2013 11:10:09" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_1.xml" errorreason="" errortraceback="" originalresult="" />
     <testresult result="Passed" time="06/13/2013 10:18:34" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_2.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="06/18/2013 14:26:34" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_3.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/18/2013 14:33:49" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_4.xml" errorreason="'[fail] bluetooth visible incorrect'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/18/2013 14:38:50" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Bluetooth ui_5.xml" errorreason="'[fail] bluetooth device name is incorrect'" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="Time and Date ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_time_date_ui" relativetotestset="false" />
     <testresult result="Passed" time="06/09/2013 11:10:58" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Time and Date ui_1.xml" errorreason="" errortraceback="" originalresult="" />
     <testresult result="Passed" time="06/13/2013 10:21:51" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Time and Date ui_2.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="06/18/2013 14:27:06" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Time and Date ui_3.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="N/A" time="06/18/2013 14:38:04" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Time and Date ui_4.xml" errorreason="Execution aborted by user" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone update ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_network_ui" relativetotestset="false" />
     <testresult result="Passed" time="06/09/2013 11:11:43" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone update ui_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="06/18/2013 14:27:16" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone update ui_2.xml" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone sms ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_sms_ui" relativetotestset="false" />
@@ -20,24 +26,29 @@
     <testresult result="Failed" time="06/08/2013 11:54:00" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_2.xml" errorreason="'[fail] sms delivery report incorrect'" errortraceback="" originalresult="" />
     <testresult result="Failed" time="06/08/2013 11:57:57" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_3.xml" errorreason="'[Result] SMS Settings: Failed'" errortraceback="" originalresult="" />
     <testresult result="Failed" time="06/09/2013 11:12:45" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_4.xml" errorreason="'[Result] SMS Settings: Failed'" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="06/18/2013 14:27:25" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_5.xml" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone mms ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_mms_ui" relativetotestset="false" />
     <testresult result="Passed" time="06/09/2013 11:13:45" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone mms ui_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="06/18/2013 14:27:35" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone mms ui_2.xml" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone voice mailbox number ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_voice_mail_ui" relativetotestset="false" />
     <testresult result="Passed" time="06/09/2013 11:14:41" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone voice mailbox number ui_1.xml" errorreason="" errortraceback="" originalresult="" />
     <testresult result="Failed" time="06/13/2013 10:22:44" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone voice mailbox number ui_2.xml" errorreason="'[fail] voice mailbox number incorrect'" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="06/18/2013 14:27:45" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone voice mailbox number ui_3.xml" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone certificates ui" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_certificate" relativetotestset="false" />
     <testresult result="Passed" time="06/09/2013 11:18:29" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone certificates ui_1.xml" errorreason="" errortraceback="" originalresult="" />
     <testresult result="Failed" time="06/13/2013 10:26:06" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone certificates ui_2.xml" errorreason="'[Result] Customer certificates: Failed'" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="06/18/2013 14:27:53" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone certificates ui_3.xml" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="operator messages" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_operator_messages" relativetotestset="false" />
     <testresult result="Passed" time="06/09/2013 11:19:26" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\operator messages_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="06/18/2013 14:28:03" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\operator messages_2.xml" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="tile content" feature="Phone UI" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_main_menu" relativetotestset="false" />
@@ -55,5 +66,14 @@
   <testcase name="config.db settings check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_settings_compare" relativetotestset="false" />
     <testresult result="Failed" time="06/14/2013 17:05:15" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_1.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="06/18/2013 14:16:58" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_2.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/18/2013 15:01:31" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_3.xml" errorreason="WARNING: Unable to send message to phone: Timeout" errortraceback="" originalresult="" />
+    <testresult result="N/A" time="06/18/2013 15:06:23" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_4.xml" errorreason="Test execution terminated" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/18/2013 15:11:02" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_5.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/18/2013 15:16:07" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_6.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/18/2013 15:18:10" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_7.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/18/2013 15:21:33" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_8.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/18/2013 15:23:51" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_9.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/18/2013 15:36:10" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_10.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
   </testcase>
 </testset>
