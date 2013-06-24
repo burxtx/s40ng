@@ -231,7 +231,7 @@ class SettingTest(uitestcase.UITestCase):
     def test_settings_compare(self):
         """config.db settings check
         @tcId config.db settings check
-        """        
+        """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
@@ -253,22 +253,32 @@ class SettingTest(uitestcase.UITestCase):
                 if "Customer certificates" in feature:
                     continue
                 for setting in f_ss[group][feature]:
+                    # --------------- skip tc ---------------------------
+                    # run in func and UI test case
+                    if "Operator message" in setting:
+                        self.comment("----[setting][skip] %s" % setting)
+                        continue
                     # handle if new setting is added, but tc not developed
                     if not f_ref_ss[group][feature].has_key(setting):
-                        self.comment("----[setting] New setting test case not developed, please manually check, %s" % f_ss[group][feature][setting][0]["value"])
                         manual_tc.append((setting, f_ss[group][feature][setting][0]["value"]))
                         m_count += 1
+                        self.comment("----[setting][skip] %s" % setting)
                         continue
+                    # move to the bitmask setting tesc case
+                    if "GSM A5" in setting or "GPRS GEA" in setting:
+                        self.comment("----[setting][skip] %s" % setting)
+                        continue
+                    # ---------------------------------------------------
                     sequence = f_ref_ss[group][feature][setting][0]
                     if sequence.has_key("ref"):
-                        value = sequence["ref"]
-                        p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % value)
+                        ref_value = sequence["ref"]
+                        p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % ref_value)
                         # this setting value range is 0 and 2
-                        if value == "./platform/INFO_PP_CODEC_ORDER2" and p_v == "2":
+                        if ref_value == "./platform/INFO_PP_CODEC_ORDER2" and p_v == "2":
                             p_v = True
 
                     for f in f_ss[group][feature][setting]:
-                        if sequence.has_key("value"):
+                        if f.has_key("value"):
                             f_v = f["value"]
                             # handle profile settings which is different from others
                             if "Profile Settings" in feature or "Graphic UI Settings" in feature:
@@ -288,8 +298,89 @@ class SettingTest(uitestcase.UITestCase):
                                 count += 1
                                 failed_tc.append((setting, f_v, p_v))
 
+        self.comment("---------------- settings failed: %d -------------------" % count)
+        if len(failed_tc) != count:
+            self.comment("[CRITICAL] you should not see this, pls contact developer.")
+        if len(failed_tc):
+            for i, tc in enumerate(failed_tc):
+                self.comment("%d. %s: expect[%s] actual[%s]" % (i+1,tc[0],tc[1],tc[2]))
 
-        self.comment("---------------- settings check failed: %d -------------------" % count)
+        self.comment("---------------- settings check manual: %d -------------------" % m_count)
+        if len(manual_tc) != m_count:
+            self.comment("[CRITICAL] you should not see this, pls contact developer.")
+        if len(manual_tc):
+            for i, tc in enumerate(manual_tc):
+                self.comment("%d. %s. %s" % (i+1,tc[0],tc[1]))
+        if count > 0:
+            self.fail("[Result] Check config.db settings failed")
+
+    def test_bitmask_settings_compare(self):
+        """config.db bitmask settings check
+        @tcId config.db bitmask settings check
+        """
+        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)
+        # f_ss = json.loads(xml2json(source))
+        # read configuration items mapping file, for reference
+        f_ref = os.path.join(os.path.dirname(__file__), "ref.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ref_ss = self.settingutil.converter(f_ref)
+
+        count = 0
+        failed_tc = []
+        m_count = 0
+        manual_tc = []
+        # a5_bits = int("101", 2)
+        a5_bits = 0b101
+        self.comment(a5_bits)
+        # gea_bits = int("0000111", 2)
+        gea_bits = 0b0000111
+        a5_ref_value = "./platform/INFO_PP_A5_CIPHER_ALGORITHMS"
+        gea_ref_value = "./platform/INFO_PP_GEA_ALGORITHMS"
+        a5_setting = "GSM A5 ciphering algorithm support"
+        gea_setting = "GPRS GEA algorithm support"
+        # py dict from json file
+        for group in f_ss:
+            self.comment("[group] %s" % group)
+            for feature in f_ss[group]:
+                self.comment("--[feature] %s" % feature)
+                for setting in f_ss[group][feature]:
+                    if "GSM A5" in setting:
+                        for f in f_ss[group][feature][setting]:
+                            if f.has_key("value"):
+                                f_v = f["value"]
+                                a5_bits = self.settingutil.bhdconvert(setting, f_v, a5_bits)
+                                continue
+
+                    if "GPRS GEA" in setting:
+                        for f in f_ss[group][feature][setting]:
+                            if f.has_key("value"):
+                                f_v = f["value"]
+                                gea_bits = self.settingutil.bhdconvert(setting, f_v, gea_bits)
+                                continue
+
+        a5_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % a5_ref_value)
+        gea_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % gea_ref_value)
+        self.comment(bin(a5_bits))
+        self.comment(bin(gea_bits))
+        r_a5 = cmp(str(a5_bits), str(a5_p_v))
+        r_gea = cmp(str(gea_bits), str(gea_p_v))
+                    # failed using util func
+                    # r = self.settingutil.compare_settings(f_v, p_v)
+                    # p_v = self.settingutil.get_phone_setting(setting)
+        status = "pass" if r_a5 == 0 else "fail"
+        self.comment("----[setting][%s]%s " % (status, a5_setting))
+        if status == "fail":
+            count += 1
+            failed_tc.append((a5_setting, a5_bits, a5_p_v))
+        status = "pass" if r_gea == 0 else "fail"
+        self.comment("----[setting][%s]%s " % (status, gea_setting))
+        if status == "fail":
+            count += 1
+            failed_tc.append((gea_setting, gea_bits, gea_p_v))
+
+        self.comment("---------------- settings failed: %d -------------------" % count)
         if len(failed_tc) != count:
             self.comment("[CRITICAL] you should not see this, pls contact developer.")
         if len(failed_tc):

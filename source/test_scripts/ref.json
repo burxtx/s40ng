@@ -635,16 +635,16 @@
         "Calling Network settings": {
             "GSM L2 Fill Bit Randomization": [
                 {
-                    "ref": "", 
-                    "value": "true"
-                }
-            ], 
-            "GSM L2 Fill Bit Randomization": [
-                {
                     "ref": "./platform/INFO_PP_RANDOM_L2_FILL_BITS", 
                     "value": "true"
                 }
             ],
+            "GPRS GEA algorithm support": [
+                {
+                    "ref": "./platform/INFO_PP_GEA_ALGORITHMS", 
+                    "value": "false"
+                }
+            ], 
             "GPRS GEA1 algorithm support": [
                 {
                     "ref": "", 
@@ -703,6 +703,12 @@
                 {
                     "ref": "./platform/INFO_PP_CODEC_ORDER2", 
                     "value": "true"
+                }
+            ], 
+            "GSM A5 ciphering algorithm support": [
+                {
+                    "ref": "./platform/INFO_PP_A5_CIPHER_ALGORITHMS", 
+                    "value": "false"
                 }
             ], 
             "GSM A5/1 ciphering algorithm support": [
