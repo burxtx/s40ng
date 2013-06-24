@@ -27,8 +27,6 @@ class SettingUtil(uitestcase.UITestCase):
 		return " ".join(new_words)
 	
 	def bhdconvert(self, setting, value, bits):
-		# convert networking settings bool settings to bits
-		# shallow copy
 		if "GSM A5" in setting:
 			bit_index = re.findall(r"GSM A5/(\d+) ciphering algorithm support", setting)[0]
 		if "GPRS GEA" in setting:
@@ -40,12 +38,6 @@ class SettingUtil(uitestcase.UITestCase):
 			swap = ~(1 << int(bit_index)-1)
 			bits = bits & swap
 		return bits
-	# def bhdconvert(self, bits):
-		# if not isinstance(bits, list):
-		# 	self.tc.comment("Please manually calculate")
-		# 	return
-		# self.tc.comment(bits)
-		# return int("".join(bits), 2)
 
 	def get_phone_setting(self, setting):
 	    # read phone config.db

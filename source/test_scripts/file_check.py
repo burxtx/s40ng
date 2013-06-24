@@ -43,7 +43,6 @@ class SettingTest(uitestcase.UITestCase):
                         # profile_tone_files.append({"file": f_name["value"], "type": setting})
                         # for f in f_ss[group][feature][setting]:
                         #     profile_tone_files.append({"file": f["value"], "type": f["type"]})
-                        self.comment(setting)
                         r = self.settingutil.check_phone_profile_tone(f["value"], setting)
                         status = "pass" if r == 0 else "fail"
                         self.comment("----[setting][%s]profile: %s " % (status, f["value"]))
@@ -331,10 +330,7 @@ class SettingTest(uitestcase.UITestCase):
         failed_tc = []
         m_count = 0
         manual_tc = []
-        # a5_bits = int("101", 2)
         a5_bits = 0b101
-        self.comment(a5_bits)
-        # gea_bits = int("0000111", 2)
         gea_bits = 0b0000111
         a5_ref_value = "./platform/INFO_PP_A5_CIPHER_ALGORITHMS"
         gea_ref_value = "./platform/INFO_PP_GEA_ALGORITHMS"
@@ -362,8 +358,6 @@ class SettingTest(uitestcase.UITestCase):
 
         a5_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % a5_ref_value)
         gea_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % gea_ref_value)
-        self.comment(bin(a5_bits))
-        self.comment(bin(gea_bits))
         r_a5 = cmp(str(a5_bits), str(a5_p_v))
         r_gea = cmp(str(gea_bits), str(gea_p_v))
                     # failed using util func
