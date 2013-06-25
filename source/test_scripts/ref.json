@@ -734,6 +734,12 @@
                     "ref": "./yapas/update-manager/auto-check", 
                     "value": "false"
                 }
+            ],
+            "Flexible PLMN indicator support": [
+                {
+                    "ref": "./yapas/operator/eons-overrides-spn", 
+                    "value": true
+                }
             ]
         }, 
         "Voicemail box Settings": {
@@ -749,7 +755,7 @@
         "SMS Settings": {
             "Timestamp type to be used in messaging": [
                 {
-                    "ref": "./platform/ISM_MSG_PLATFORM_MSG_MSG_TIMESTAMP", 
+                    "ref": "./platform/INFO_PP_MSG_TIMESTAMP", 
                     "value": ""
                 }
             ], 
