@@ -5,7 +5,7 @@ import json, os.path
 from cs_util import *
 
 class UiTest(uitestcase.UITestCase):
-    subarea = "Customization"
+    subarea = "UI & Func"
     feature = "Phone UI"
     # def setUp(self):
     #     """ Set up function. """
@@ -17,7 +17,7 @@ class UiTest(uitestcase.UITestCase):
     #     uitestcase.UITestCase.tearDown(self)
     # f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
     def test_bluetooth_ui(self):
-        """Check phone bluetooth UI settings
+        """Phone bluetooth UI settings
         @tcId Bluetooth ui
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
@@ -49,7 +49,7 @@ class UiTest(uitestcase.UITestCase):
                         self.fail("[Result] %s: Failed" % feature)
 
     def test_time_date_ui(self):
-        """Check phone time and date UI settings
+        """Phone time and date UI settings
         @tcId Time and Date ui
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
@@ -84,7 +84,7 @@ class UiTest(uitestcase.UITestCase):
                         self.fail("[Result] %s: Failed" % feature)
 
     def test_phone_network_ui(self):
-        """Check phone network UI settings
+        """Phone network UI settings
         @tcId phone update ui
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
@@ -111,7 +111,7 @@ class UiTest(uitestcase.UITestCase):
                         self.fail("[Result] %s: Failed" % feature)
 
     def test_phone_sms_ui(self):
-        """Check phone sms UI settings
+        """Phone sms UI settings
         @tcId phone sms ui
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
@@ -154,7 +154,7 @@ class UiTest(uitestcase.UITestCase):
                         self.fail("[Result] %s: Failed" % feature)
 
     def test_phone_mms_ui(self):
-        """Check phone mms UI settings
+        """Phone mms UI settings
         @tcId phone mms ui
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
@@ -189,7 +189,7 @@ class UiTest(uitestcase.UITestCase):
                         self.fail("[Result] %s: Failed" % feature)
 
     def test_phone_voice_mail_ui(self):
-        """Check phone voice mailbox number
+        """Phone voice mailbox number
         @tcId phone voice mailbox number ui
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
@@ -217,7 +217,7 @@ class UiTest(uitestcase.UITestCase):
                         self.fail("[Result] %s: Failed" % feature)
 
     def test_phone_certificate(self):
-        """Check phone certificates
+        """Phone certificates
         @tcId phone certificates ui
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")

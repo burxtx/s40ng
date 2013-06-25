@@ -3,9 +3,9 @@ from core import uitestcase
 import json, os.path
 from cs_util import *
 
-class SettingTest(uitestcase.UITestCase):
-    subarea = "Customization"
-    feature = "Nuage settings"
+class MediaFilesTest(uitestcase.UITestCase):
+    subarea = "Application and Content"
+    feature = "Preloaded Media & UI"
     # def setUp(self):
     #     """ Set up function. """
     #     uitestcase.UITestCase.setUp(self)
@@ -17,8 +17,8 @@ class SettingTest(uitestcase.UITestCase):
     # f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
 
     def test_media_files(self):
-        """preloaded media files check
-        @tcId preloaded media files check
+        """preloaded media
+        @tcId preloaded media, Profile Settings
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
@@ -159,9 +159,23 @@ class SettingTest(uitestcase.UITestCase):
         if count > 0:
             self.fail("[Result] Check media files failed")
 
+
+class ApplicationsTest(uitestcase.UITestCase):
+    subarea = "Application and Content"
+    feature = "Preloaded Applications"
+    # def setUp(self):
+    #     """ Set up function. """
+    #     uitestcase.UITestCase.setUp(self)
+    #     self.settingutil = SettingUtil(self)
+
+    # def tearDown(self):
+    #     """ Tear down function. """
+    #     uitestcase.UITestCase.tearDown(self)
+    # f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
+
     def test_app_list(self):
-        """Preloaded apps check
-        @tcId Preloaded apps check
+        """Preloaded Applications
+        @tcId Preloaded Applications, Bookmarks, Customer Folder, Homepage URL
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
@@ -226,6 +240,20 @@ class SettingTest(uitestcase.UITestCase):
                 self.comment("%d. %s. %s" % (i+1,tc[0],tc[1]))
         if count > 0:
             self.fail("[Result] Check applications failed")
+
+
+class ConfigSettingsTest(uitestcase.UITestCase):
+    subarea = "Config.db"
+    feature = "All features"
+    # def setUp(self):
+    #     """ Set up function. """
+    #     uitestcase.UITestCase.setUp(self)
+    #     self.settingutil = SettingUtil(self)
+
+    # def tearDown(self):
+    #     """ Tear down function. """
+    #     uitestcase.UITestCase.tearDown(self)
+    # f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
 
     def test_settings_compare(self):
         """config.db settings check
@@ -315,7 +343,7 @@ class SettingTest(uitestcase.UITestCase):
 
     def test_bitmask_settings_compare(self):
         """config.db bitmask settings check
-        @tcId config.db bitmask settings check
+        @tcId Calling Network settings: GEA, A5 algorithm support 
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)

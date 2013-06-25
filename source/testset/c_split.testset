@@ -1,31 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <testset>
-  <testcase name="preloaded media files check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_media_files" relativetotestset="false" />
-    <testresult result="" time="06/24/2013 12:05:34" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  <testcase name="preloaded media, Profile Settings" feature="Preloaded Media &amp; UI" subarea="Application and Content" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="MediaFilesTest" method="test_media_files" relativetotestset="false" />
+    <testresult result="Passed" time="06/24/2013 15:20:40" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\preloaded media, Profile Settings_1.xml" errorreason="" errortraceback="" originalresult="" />
   </testcase>
-  <testcase name="Preloaded apps check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_app_list" relativetotestset="false" />
-    <testresult result="" time="06/24/2013 12:05:34" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  <testcase name="Preloaded Applications, Bookmarks, Customer Folder, Homepage URL" feature="Preloaded Applications" subarea="Application and Content" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="ApplicationsTest" method="test_app_list" relativetotestset="false" />
+    <testresult result="Passed" time="06/24/2013 15:24:16" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Preloaded Applications, Bookmarks, Customer Folder, Homepage URL_1.xml" errorreason="" errortraceback="" originalresult="" />
   </testcase>
-  <testcase name="config.db settings check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_settings_compare" relativetotestset="false" />
-    <testresult result="Failed" time="06/24/2013 14:41:44" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_1.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
+  <testcase name="config.db settings check" feature="All features" subarea="Config.db" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="ConfigSettingsTest" method="test_settings_compare" relativetotestset="false" />
+    <testresult result="Failed" time="06/24/2013 15:12:31" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_1.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
   </testcase>
-  <testcase name="config.db bitmask settings check" feature="Nuage settings" subarea="Customization" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="SettingTest" method="test_bitmask_settings_compare" relativetotestset="false" />
-    <testresult result="N/A" time="06/24/2013 12:07:56" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_1.xml" errorreason="Test execution terminated" errortraceback="" originalresult="" />
-    <testresult result="Failed" time="06/24/2013 12:08:29" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_2.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
-    <testresult result="Failed" time="06/24/2013 12:09:35" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_3.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
-    <testresult result="Failed" time="06/24/2013 12:09:57" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_4.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
-    <testresult result="Failed" time="06/24/2013 12:10:49" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_5.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
-    <testresult result="Failed" time="06/24/2013 12:11:32" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_6.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
-    <testresult result="Failed" time="06/24/2013 12:12:28" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_7.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
-    <testresult result="Failed" time="06/24/2013 13:36:18" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_8.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
-    <testresult result="Passed" time="06/24/2013 14:34:19" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_9.xml" errorreason="" errortraceback="" originalresult="" />
-    <testresult result="Passed" time="06/24/2013 14:34:47" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_10.xml" errorreason="" errortraceback="" originalresult="" />
-    <testresult result="Passed" time="06/24/2013 14:35:28" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_11.xml" errorreason="" errortraceback="" originalresult="" />
-    <testresult result="No Result" time="06/24/2013 14:37:15" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_12.xml" errorreason="global name 'a5_f_v' is not defined" errortraceback="" originalresult="" />
-    <testresult result="Failed" time="06/24/2013 14:38:10" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db bitmask settings check_13.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
+  <testcase name="Calling Network settings: GEA, A5 algorithm support" feature="All features" subarea="Config.db" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="ConfigSettingsTest" method="test_bitmask_settings_compare" relativetotestset="false" />
+    <testresult result="Passed" time="06/24/2013 15:12:40" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\Calling Network settings_ GEA, A5 algorithm support_1.xml" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Bluetooth ui" feature="Phone UI" subarea="UI &amp; Func" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_bluetooth_ui" relativetotestset="false" />
+    <testresult result="" time="06/24/2013 15:10:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Time and Date ui" feature="Phone UI" subarea="UI &amp; Func" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_time_date_ui" relativetotestset="false" />
+    <testresult result="" time="06/24/2013 15:10:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="phone update ui" feature="Phone UI" subarea="UI &amp; Func" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_network_ui" relativetotestset="false" />
+    <testresult result="" time="06/24/2013 15:10:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="phone sms ui" feature="Phone UI" subarea="UI &amp; Func" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_sms_ui" relativetotestset="false" />
+    <testresult result="" time="06/24/2013 15:10:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="phone mms ui" feature="Phone UI" subarea="UI &amp; Func" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_mms_ui" relativetotestset="false" />
+    <testresult result="" time="06/24/2013 15:10:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="phone voice mailbox number ui" feature="Phone UI" subarea="UI &amp; Func" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_voice_mail_ui" relativetotestset="false" />
+    <testresult result="" time="06/24/2013 15:10:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="phone certificates ui" feature="Phone UI" subarea="UI &amp; Func" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_certificate" relativetotestset="false" />
+    <testresult result="" time="06/24/2013 15:10:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="operator messages" feature="Phone UI" subarea="UI &amp; Func" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_operator_messages" relativetotestset="false" />
+    <testresult result="" time="06/24/2013 15:10:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
   </testcase>
 </testset>
