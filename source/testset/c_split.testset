@@ -11,6 +11,7 @@
   <testcase name="config.db settings check" feature="All features" subarea="Config.db" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="ConfigSettingsTest" method="test_settings_compare" relativetotestset="false" />
     <testresult result="Failed" time="06/24/2013 15:12:31" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_1.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="06/26/2013 13:56:39" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\config.db settings check_2.xml" errorreason="'[Result] Check config.db settings failed'" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="Calling Network settings: GEA, A5 algorithm support" feature="All features" subarea="Config.db" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="ConfigSettingsTest" method="test_bitmask_settings_compare" relativetotestset="false" />

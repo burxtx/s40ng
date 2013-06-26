@@ -781,25 +781,25 @@
         "MMS Settings": {
             "Allow adverts for SIM1": [
                 {
-                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_ALLOW_ADVERTS", 
+                    "ref": "./platform/INFO_PP_MMS_MSG_MMS_ALLOW_ADVERTS", 
                     "value": "true"
                 }
             ], 
             "Allow adverts for SIM2": [
                 {
-                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_ALLOW_ADVERTS_2", 
+                    "ref": "./platform/INFO_PP_MMS_MSG_MMS_ALLOW_ADVERTS_2", 
                     "value": "true"
                 }
             ], 
             "MMS Retrieval mode for SIM1": [
                 {
-                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_RETRIEVAL_MODE", 
+                    "ref": "./platform/INFO_PP_MMS_MSG_MMS_RETRIEVAL_MODE", 
                     "value": "1"
                 }
             ],  
             "MMS Retrieval mode for SIM2": [
                 {
-                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_MSG_MMS_RETRIEVAL_MODE_2", 
+                    "ref": "./platform/INFO_PP_MMS_MSG_MMS_RETRIEVAL_MODE_2", 
                     "value": "4"
                 }
             ], 
@@ -817,7 +817,7 @@
             ],
             "Maximum size for received MMS message": [
                 {
-                    "ref": "./platform/ISM_MSG_PLATFORM_MMS_RECEIVED_MMS_MAX_SIZE", 
+                    "ref": "./platform/INFO_PP_MMS_MAX_SIZE", 
                     "value": "102400"
                 }
             ]
