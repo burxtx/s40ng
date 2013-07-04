@@ -235,7 +235,9 @@ class SettingUtil(uitestcase.UITestCase):
 			if not r2:
 				self.tc.fail("[fail] sms center number locked")
 		else:
-			r2 = True if self.tc.check("Message center") else False
+			r2 = False if self.tc.check("Message center") else True
+			if not r2:
+				self.tc.fail("[fail] sms center number unlocked")
 		return r1, r2
 
 	def check_phone_mms_ui(self, delivery_report=True, allow_adverts=True, reception=1):

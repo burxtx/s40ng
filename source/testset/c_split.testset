@@ -30,7 +30,9 @@
   </testcase>
   <testcase name="phone sms ui" feature="Phone UI" subarea="UI &amp; Func" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_sms_ui" relativetotestset="false" />
-    <testresult result="" time="06/24/2013 15:10:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="07/04/2013 12:06:57" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_1.xml" errorreason="'[Result] SMS Settings: Failed'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="07/04/2013 12:10:43" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_2.xml" errorreason="'[Result] SMS Settings: Failed'" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="07/04/2013 12:14:59" author="ettian" isblackboxmodeon="false" reportpath="..\..\..\..\s40ng\source\testset\c_split_results\xml\phone sms ui_3.xml" errorreason="" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="phone mms ui" feature="Phone UI" subarea="UI &amp; Func" ucid="" totalruncount="1">
     <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="func_check_new" class="UiTest" method="test_phone_mms_ui" relativetotestset="false" />
