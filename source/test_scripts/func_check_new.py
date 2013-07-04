@@ -133,7 +133,6 @@ class UiTest(uitestcase.UITestCase):
             for feature in f_ss[group]:
                 if "SMS Settings" in feature:
                     for setting in f_ss[group][feature]:
-                        self.comment(setting)
                         if "SMS Delivery Reports" == setting:
                             delivery_report_ss = f_ss[group][feature][setting][0]["value"]
 
