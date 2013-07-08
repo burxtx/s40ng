@@ -21,6 +21,14 @@
                 }
             ]
         }, 
+        "Device Activation Client": {
+            "Auto Send SMS in startup": [
+                {
+                    "ref": "./yapas/cherry/send-sms", 
+                    "value": true
+                }
+            ]
+        }, 
         "Preloaded Media": {
             "Video Files": [
                 {
