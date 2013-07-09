@@ -286,7 +286,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                         self.comment("----[setting][skip] %s" % setting)
                         continue
                     # handle if new setting is added, but tc not developed
-                    if not f_ref_ss[group][feature].has_key(setting):
+                    if not f_ref_ss[group].has_key(feature) or not f_ref_ss[group][feature].has_key(setting):
                         manual_tc.append((setting, f_ss[group][feature][setting][0]["value"]))
                         m_count += 1
                         self.comment("----[setting][skip] %s" % setting)
