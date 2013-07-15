@@ -277,7 +277,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
             self.comment("[group] %s" % group)
             for feature in f_ss[group]:
                 self.comment("--[feature] %s" % feature)
-                if "Customer certificates" in feature:
+                if "Customer certificates" in feature or "Memory Card Content" in feature or "Browser Settings" in feature:
                     continue
                 for setting in f_ss[group][feature]:
                     # --------------- skip tc ---------------------------
