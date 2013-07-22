@@ -334,6 +334,12 @@
                     "Package data / WLAN Access Point": "Test_net", 
                     "WAP Homepage": "http://wap.monternet.com/?cp22=v22monternet"
                 }
+            ], 
+            "Prepay / Postpay data settings auto selection via SIM, Probe for NAPs": [
+                {
+                    "ref": "./platform/INFO_PP_OPERATOR_NAP_PROBE", 
+                    "value": true
+                }
             ]
         }
     }, 
@@ -777,6 +783,12 @@
                 {
                     "ref": "./SimSlot/1/SMS/0/Ext/Nokia/request-delivery-report", 
                     "value": "true"
+                }
+            ], 
+            "SMS Encoding Support": [
+                {
+                    "ref": "./SMS/0/Ext/Nokia/sms-character-support", 
+                    "value": "1"
                 }
             ], 
             "Message center number locked": [
