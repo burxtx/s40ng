@@ -287,7 +287,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                         continue
                     # handle if new setting is added, but tc not developed
                     if not f_ref_ss[group].has_key(feature) or not f_ref_ss[group][feature].has_key(setting):
-                        manual_tc.append((setting, f_ss[group][feature][setting][0]["value"]))
+                        manual_tc.append((setting, f_ss[group][feature][setting][0]))
                         m_count += 1
                         self.comment("----[setting][skip] %s" % setting)
                         continue
@@ -343,7 +343,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
 
     def test_bitmask_settings_compare(self):
         """config.db bitmask settings check
-        @tcId Calling Network settings: GEA, A5 algorithm support 
+        @tcId Calling Network settings: GEA, A5 algorithm support
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
