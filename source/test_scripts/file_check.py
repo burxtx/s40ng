@@ -303,27 +303,26 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                         # this setting value range is 0 and 2
                         if ref_value == "./platform/INFO_PP_CODEC_ORDER2" and p_v == "2":
                             p_v = True
-
-                    for f in f_ss[group][feature][setting]:
-                        if f.has_key("value"):
-                            f_v = f["value"]
-                            # handle profile settings which is different from others
-                            if "Profile Settings" in feature or "Graphic UI Settings" in feature:
-                                f_v = "file://"+f_ss[group][feature][setting][1]["value"]+f_ss[group][feature][setting][0]["value"]
-                            if f_v == True or f_v == False:
-                                f_v = str(f_v).lower()
-                            # prevent if phone value is upper started
-                            if p_v == True or p_v == False:
-                                p_v = str(p_v).lower()
-                            r = cmp(str(f_v), str(p_v))
+                    f = f_ss[group][feature][setting][0]
+                    if f.has_key("value"):
+                        f_v = f["value"]
+                        # handle profile settings which is different from others
+                        if "Profile Settings" in feature or "Graphic UI Settings" in feature:
+                            f_v = "file://"+f_ss[group][feature][setting][1]["value"]+f_ss[group][feature][setting][0]["value"]
+                        if f_v == True or f_v == False:
+                            f_v = str(f_v).lower()
+                        # prevent if phone value is upper started
+                        if p_v == True or p_v == False:
+                            p_v = str(p_v).lower()
+                        r = cmp(str(f_v), str(p_v))
                     # failed using util func
                     # r = self.settingutil.compare_settings(f_v, p_v)
                     # p_v = self.settingutil.get_phone_setting(setting)
-                            status = "pass" if r == 0 else "fail"
-                            self.comment("----[setting][%s]%s " % (status, setting))
-                            if status == "fail":
-                                count += 1
-                                failed_tc.append((setting, f_v, p_v))
+                        status = "pass" if r == 0 else "fail"
+                        self.comment("----[setting][%s]%s " % (status, setting))
+                        if status == "fail":
+                            count += 1
+                            failed_tc.append((setting, f_v, p_v))
 
         self.comment("---------------- settings failed: %d -------------------" % count)
         if len(failed_tc) != count:
