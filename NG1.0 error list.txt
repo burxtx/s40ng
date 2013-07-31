@@ -1,0 +1,3 @@
+1. Customer certificates not incorrect. Test script need to be changed.
+2. Profile setting: if file not uploaded, then file check is failed.
+3. Preloaded app name ui check: Check midlet name but not customer name.
