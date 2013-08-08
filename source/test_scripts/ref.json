@@ -277,6 +277,14 @@
         }
     }, 
     "Connectivity": {
+    		"Mobile Data Settings": {
+            "Mobile Data Usage When no Wi-Fi available": [
+                {
+                    "ref": "./yapas/mobile/internet", 
+                    "value": true
+                }
+            ]
+        }, 
         "Bluetooth settings": {
             "Device name": [
                 {

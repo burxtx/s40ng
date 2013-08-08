@@ -255,23 +255,85 @@ class UiTest(uitestcase.UITestCase):
         m_count = 0
         manual_tc = []
         flag = False
-        channel_num = ""
+        #cb_channels = ""
+        pb_channels = ""
         # py dict from json file
         for group in f_ss:
-            self.comment("[group] %s" % group)
+            
             for feature in f_ss[group]:
-                if "Other Messaging Settings" in feature:
+                if "Other Messaging Settings" in feature :
+                    self.comment("[group] %s -->[feature] %s" % (group,feature))
                     for setting in f_ss[group][feature]:
-                        if "Operator message channel" in setting:
-                            channel_num = f_ss[group][feature][setting][0]["value"]
                         if "Cell Broadcast Reception" in setting:
                             flag = f_ss[group][feature][setting][0]["value"]
-                    r1, r2 = self.settingutil.check_operator_channel(channel_num, flag)
+                        if "Cell Broadcast Channels configuration" in setting:
+                            cb_channels = f_ss[group][feature][setting][0]["value"]
+                        if "The identifiers of CMAS CB and their display priority." in setting:
+                            pb_channels = f_ss[group][feature][setting][0]["value"]                                                        
+                    r1, r2, r3= self.settingutil.check_operator_channel(flag, cb_channels, pb_channels)
                     status = "pass" if r1 and r2 else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
                     if status == "fail":
                         self.fail("[Result] %s: Failed" % feature)
-
+    
+    def test_nokia_improvement_program(self):
+        """Nokia improvement program
+        @tcId nokia improvement program ui
+        """
+        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)
+        # f_ss = json.loads(xml2json(source))
+        # read configuration items mapping file, for reference
+        count = 0
+        failed_tc = []
+        m_count = 0
+        manual_tc = []
+        # py dict from json file
+        for group in f_ss:            
+            for feature in f_ss[group]:
+                if "Device Activation Client" in feature:
+                    self.comment("[group] %s -->[feature] %s" % (group,feature))
+                    for setting in f_ss[group][feature]:
+                        if "Nokia Improvement Program" in setting:
+                            is_improvement = f_ss[group][feature][setting][0]["value"]
+                    r = self.settingutil.check_nokia_improvement(is_improvement = is_improvement)
+                    status = "pass" if r else "fail"
+                    self.comment("--[feature][%s]%s" % (status, feature))
+                    if status == "fail":
+                        self.fail("[Result] %s: Failed" % feature)            
+    
+    def test_mobile_data_settings(self):
+        """mobile_data_settings
+        @tcId mobile data settings ui
+        """
+        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)
+        # f_ss = json.loads(xml2json(source))
+        # read configuration items mapping file, for reference
+        count = 0
+        failed_tc = []
+        m_count = 0
+        manual_tc = []
+        flag2 = False
+        # py dict from json file
+        for group in f_ss:            
+            for feature in f_ss[group]:
+                if "Mobile Data Settings" in feature:
+                    self.comment("[group] %s -->[feature] %s" % (group,feature))
+                    for setting in f_ss[group][feature]:
+                        if "Mobile Data Usage When no Wi-Fi available" in setting:
+                            flag = f_ss[group][feature][setting][0]["value"]                        
+                        if "Mobile Data Connection Mode" in setting:
+                            flag2 = True            
+                            flag2_v = f_ss[group][feature][setting][0]["value"]
+                    r , r2 = self.settingutil.check_mobile_data_settings(flag = flag, flag2 = flag2, flag2_v = flag2_v)
+                    status = "pass" if r else "fail"
+                    self.comment("--[feature][%s]%s" % (status, feature))
+                    if status == "fail":
+                        self.fail("[Result] %s: Failed" % feature)     
+    
     # def test_main_menu(self):
     #     """Check main menu
     #     @tcId tile content

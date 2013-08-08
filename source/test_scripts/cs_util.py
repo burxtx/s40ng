@@ -275,30 +275,107 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.exit()
 		return r
 
-	def check_operator_channel(self, channel="", flag=False):
+	def check_operator_channel(self, flag=False, cb_channels="", pb_channels = ""  ):
 		self.tc.navigate("Settings")
 		self.tc.select("Operator messages")
-		r1 = r2 = True
+		r1 = r2 = r3 = True
 		opt = "widgets/switch-bg-on-dark" if flag == True else "widgets/switch-bg-off-dark"
-		r1 = self.tc.check(opt, relatedTo="Operator messages")
+		r1 = self.tc.check(opt)
 		if not r1:
 			self.tc.comment("[fail] Cell broadcast reception is incorrect")
-		if channel != "":
-			if not self.tc.check("Channels"):
-				# self.tc.select("Operator messages")
-				self.tc.select("*Receive messages*", relatedTo="Operator messages")
-			r2 = self.tc.check("*"+channel+"*", relatedTo="Channels")
+		
+		# check CB channels
+		if cb_channels != "":
+			r2 = False
+			l = cb_channels.split (",")
+			self.tc.comment(l)
+			if not flag:
+				self.tc.select (opt)
+			if self.tc.check("Channels"):
+				self.tc.select("Channels")
+				for ch in l:
+					r2 = self.tc.check (ch)
+					if not r2: 
+						self.tc.comment ("Channel %s is not found" % ch)
+						break
 			if not r2:
-				self.tc.comment("[fail] Channel is incorrect")
+				self.tc.comment("[fail] CB Channels checking failed")
+			self.tc.back()
+			if not flag:
+				opt = "widgets/switch-bg-on-dark"
+				self.tc.select (opt)			
+		
+		# check PB channels
+		if pb_channels != "":
+			r3 = False
+			if not flag:
+				self.tc.select (opt)		
+			l1 = []
+			l = pb_channels.split(',')
+			for m in l:
+				l1.append(m.split (':'))
+			d = dict (l1)
+			self.tc.comment(d)
+			if self.tc.check("Channels"):
+				self.tc.select("Channels")
+				for ch in d:
+					r3 = self.tc.check (ch)
+					if not r3: 
+						self.tc.comment ("Channel %s is not found" % ch)
+						break
+			if not r3:
+				self.tc.comment("[fail] PB Channels checking failed")			
+			self.tc.back()
+			if not flag:
+				opt = "widgets/switch-bg-on-dark"	
+				self.tc.select (opt)
+				
+						
 		self.tc.exit()
-		return r1, r2
+		return r1, r2, r3
 
 	def check_main_menu(self):
 		# r = self.tc.check(item, occurrence=int(position))
 		for item in self.tc.read.texts():
 			self.tc.comment(item)
 
-
+	def check_nokia_improvement(self, is_improvement = False):
+		status_opt = "widgets/switch-bg-on-dark" if is_improvement == True else "widgets/switch-bg-off-dark"
+		self.tc.navigate("Settings")
+		self.tc.select("Improvement program")
+		r = self.tc.check(status_opt)
+		if not r:
+			self.tc.fail("[failed] Improvement program wrong result")
+		self.tc.exit()
+		return r			
+	
+	def check_mobile_data_settings(self, flag=False, flag2=False, flag2_v=False):
+		r = r2 = True
+		status_opt = "widgets/switch-bg-on-dark" if flag==True else "widgets/switch-bg-off-dark"
+		self.tc.navigate("Settings")
+		# Dual SIM 
+		if self.tc.check ("Dual SIM"):
+			self.tc.select("Dual SIM")
+		# Single SIM
+		elif self.tc.check ("Mobile data"):
+			self.tc.select("Mobile data")
+		# Check mobile data switch
+		r = self.tc.check(status_opt)
+		if not r:
+			self.tc.fail("[failed] Mobile data usage status wrong")
+		# Check mobile data connection mode
+		if flag2:
+			if not flag:
+				self.tc.select (status_opt) 				
+			r2 = self.tc.check ("When needed", relatedTo = "Data connection mode") if flag2_v==False else self.tc.check ("Always online", relatedTo = "Data connection mode")
+			if not flag: 
+				status_opt = "widgets/switch-bg-on-dark"
+				self.tc.select (status_opt)
+			if not r2: 
+				self.tc.fail ("[failed] Mobile data connection mode wrong")
+		self.tc.exit()
+		return r , r2
+	
 	# def compare_settings(self, fv, pv):
 	# 	# convert True to true
 	# 	if fv == True or False:
