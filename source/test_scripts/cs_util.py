@@ -43,7 +43,7 @@ class SettingUtil(uitestcase.UITestCase):
 	    # read phone config.db
 	    value = self.sx('(send (send config-manager get-setting "%s") ->string)' % setting)
 	    return value
-	# check files from phone
+	# check media files from phone
 	def get_phone_music(self, f=None):
 		# get non system music files from Music
 		self.tc.navigate('Music')

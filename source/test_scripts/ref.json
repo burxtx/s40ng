@@ -277,11 +277,14 @@
         }
     }, 
     "Connectivity": {
-    		"Mobile Data Settings": {
+<<<<<<< HEAD
+=======
+        "Mobile Data Settings": {
             "Mobile Data Usage When no Wi-Fi available": [
                 {
                     "ref": "./yapas/mobile/internet", 
-                    "value": true
+                    "value": false
+>>>>>>> origin/NG1.1
                 }
             ]
         }, 
