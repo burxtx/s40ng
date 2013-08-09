@@ -945,6 +945,12 @@
                     "value": "1:100,2:5,3:60,4:90,5:20,6:10"
                 }
             ],
+             "3G Cell Broadcast support": [
+                {
+                    "ref": "./platform/INFO_PP_3G_BMC_SUPPORT", 
+                    "value": true
+                }
+            ], 
             "Cell Broadcast Channels configuration": [
                 {
                     "ref": "./yapas/cell-broadcast/channels", 
@@ -955,6 +961,12 @@
                 {
                     "ref": "./yapas/cell-broadcast/active", 
                     "value": "true"
+                }
+            ],
+            "RCSe (Joyn) support": [
+                {
+                    "ref": "./yapas/rcse/configuration", 
+                    "value": "1"
                 }
             ], 
             "Operator message channel": [
