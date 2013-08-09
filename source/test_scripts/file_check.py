@@ -277,10 +277,12 @@ class ConfigSettingsTest(uitestcase.UITestCase):
             self.comment("[group] %s" % group)
             for feature in f_ss[group]:
                 self.comment("--[feature] %s" % feature)
-                if "Customer certificates" in feature or "Memory Card Content" in feature or "Browser Settings" in feature:
+                # --------------- skip feature check ---------------------------
+                if "Customer certificates" in feature or "Memory Card Content" in feature \
+                    or "Browser Settings" in feature or "Emergency Calls" in feature:
                     continue
                 for setting in f_ss[group][feature]:
-                    # --------------- skip tc ---------------------------
+                    # --------------- skip setting check ---------------------------
                     # run in func and UI test case
                     if "Operator message" in setting:
                         self.comment("----[setting][skip] %s" % setting)
@@ -342,7 +344,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
 
     def test_bitmask_settings_compare(self):
         """config.db bitmask settings check
-        @tcId Calling Network settings: GEA, A5 algorithm support 
+        @tcId Calling Network settings: GEA, A5 algorithm support
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
