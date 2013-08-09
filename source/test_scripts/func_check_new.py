@@ -334,6 +334,31 @@ class UiTest(uitestcase.UITestCase):
                     if status == "fail":
                         self.fail("[Result] %s: Failed" % feature)     
     
+    def test_emergency_call(self):
+        """emergency call
+        @tcId emergency call func
+        """
+        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)
+        # f_ss = json.loads(xml2json(source))
+        # read configuration items mapping file, for reference
+        count = 0
+        failed_tc = []
+        m_count = 0
+        manual_tc = []
+        # py dict from json file
+        for group in f_ss:            
+            for feature in f_ss[group]:
+                if "Emergency Calls" in feature:
+                    self.comment("[group] %s -->[feature] %s" % (group,feature))
+                    for setting in f_ss[group][feature]:
+                        number = f_ss[group][feature][setting][0]["value"]
+                        r = self.settingutil.check_emergency_call(number)
+                    status = "pass" if r else "fail"
+                    self.comment("--[feature][%s]%s" % (status, feature))
+                    if status == "fail":
+                        self.fail("[Result] %s: Failed" % feature)
     # def test_main_menu(self):
     #     """Check main menu
     #     @tcId tile content

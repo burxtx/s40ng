@@ -282,7 +282,8 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                 for setting in f_ss[group][feature]:
                     # --------------- skip tc ---------------------------
                     # run in func and UI test case
-                    if "Customer certificates" in feature or "Memory Card Content" in feature or "Browser Settings" in feature:
+                    if "Customer certificates" in feature or "Memory Card Content" in feature \
+                        or "Browser Settings" in feature or "Emergency Calls" in feature:
                         self.comment("----[setting][skip] %s" % setting)
                         continue
                     # handle if new setting is added, but tc not developed - Manual checking cases

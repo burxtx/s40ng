@@ -376,6 +376,20 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.exit()
 		return r , r2
 	
+	def check_emergency_call(self, number=None):
+		self.tc.navigate('Phone')
+		self.tc.input.write(number)
+		self.tc.expect(number, timeout = 2000)#verify the input is displaying correctly.
+		self.tc.select('voice-call-application/answer-call')
+		if not self.tc.check('Emergency call', timeout = 2000):
+			self.tc.fail('[fail] Dial emergency call: %s' % number)
+			self.tc.exit()
+			return False
+		else:
+			self.tc.select('voice-call-application/reject-call')
+			self.tc.exit()
+			return True
+		
 	# def compare_settings(self, fv, pv):
 	# 	# convert True to true
 	# 	if fv == True or False:
