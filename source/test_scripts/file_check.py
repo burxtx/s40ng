@@ -279,7 +279,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                 self.comment("--[feature] %s" % feature)
                 # --------------- skip feature check ---------------------------
                 if "Customer certificates" in feature or "Memory Card Content" in feature \
-                    or "Browser Settings" in feature or "Emergency Calls" in feature:
+                   or "Browser Settings" in feature or "Emergency Calls" in feature:
                     continue
                 for setting in f_ss[group][feature]:
                     # --------------- skip setting check ---------------------------
@@ -294,7 +294,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                         self.comment("----[setting][skip] %s" % setting)
                         continue
                     # move to the bitmask setting tesc case
-                    if "GSM A5" in setting or "GPRS GEA" in setting:
+                    if "GSM A5" in setting or "GPRS GEA" in setting or "wide-band AMR speech" in setting:
                         self.comment("----[setting][skip] %s" % setting)
                         continue
                     # ---------------------------------------------------
@@ -302,27 +302,23 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                     if sequence.has_key("ref"):
                         ref_value = sequence["ref"]
                         p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % ref_value)
-                        # this setting value range is 0 and 2
-                        if ref_value == "./platform/INFO_PP_CODEC_ORDER2" and p_v == "2":
-                            p_v = True
-
                     f = f_ss[group][feature][setting][0]
                     if f.has_key("value"):
-                    	f_v = f["value"]
-                      	# handle profile settings which is different from others
-                      	if "Profile Settings" in feature or "Graphic UI Settings" in feature:
-                      		f_v = "file://"+f_ss[group][feature][setting][1]["value"]+f_ss[group][feature][setting][0]["value"]
-                      	if f_v == True or f_v == False:
-                      		f_v = str(f_v).lower()
-                      	# prevent if phone value is upper started
-                      	if p_v == True or p_v == False:
-                      		p_v = str(p_v).lower()
-                      	r = cmp(str(f_v), str(p_v))
-                      	status = "pass" if r == 0 else "fail"
-                      	self.comment("----[setting][%s]%s " % (status, setting))
-                      	if status == "fail":
-                      		count += 1
-                      		failed_tc.append((setting, f_v, p_v))
+                        f_v = f["value"]
+                        # handle profile settings which is different from others
+                        if "Profile Settings" in feature or "Graphic UI Settings" in feature:
+                            f_v = "file://"+f_ss[group][feature][setting][1]["value"]+f_ss[group][feature][setting][0]["value"]
+                        if f_v == True or f_v == False:
+                            f_v = str(f_v).lower()
+                        # prevent if phone value is upper started
+                        if p_v == True or p_v == False:
+                            p_v = str(p_v).lower()
+                        r = cmp(str(f_v), str(p_v))
+                        status = "pass" if r == 0 else "fail"
+                        self.comment("----[setting][%s]%s " % (status, setting))
+                        if status == "fail":
+                            count += 1
+                            failed_tc.append((setting, f_v, p_v))
 
         self.comment("---------------- settings failed: %d -------------------" % count)
         if len(failed_tc) != count:
@@ -342,7 +338,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
 
     def test_bitmask_settings_compare(self):
         """config.db bitmask settings check
-        @tcId Calling Network settings: GEA, A5 algorithm support
+        @tcId Calling Network settings: GEA, A5, AMR_speech algorithm support
         """
         f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
@@ -363,43 +359,64 @@ class ConfigSettingsTest(uitestcase.UITestCase):
         gea_ref_value = "./platform/INFO_PP_GEA_ALGORITHMS"
         a5_setting = "GSM A5 ciphering algorithm support"
         gea_setting = "GPRS GEA algorithm support"
+        amr_f_value = 0
+        amr_ref_value = "./platform/INFO_PP_CODEC_ORDER2"
+        amr_setting = "Support for wide-band AMR speech"
         # py dict from json file
-        for group in f_ss:
-            self.comment("[group] %s" % group)
+        for group in f_ss:            
             for feature in f_ss[group]:
-                self.comment("--[feature] %s" % feature)
                 for setting in f_ss[group][feature]:
                     if "GSM A5" in setting:
+                        self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
                         for f in f_ss[group][feature][setting]:
                             if f.has_key("value"):
                                 f_v = f["value"]
                                 a5_bits = self.settingutil.bhdconvert(setting, f_v, a5_bits)
                                 continue
-
                     if "GPRS GEA" in setting:
+                        self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
                         for f in f_ss[group][feature][setting]:
                             if f.has_key("value"):
                                 f_v = f["value"]
                                 gea_bits = self.settingutil.bhdconvert(setting, f_v, gea_bits)
                                 continue
-
+                    if "AMR speech in 2G network" in setting:
+                        self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
+                        f_v = f_ss[group][feature][setting][0]["value"]
+                        if f_v:
+                            amr_f_value = amr_f_value + 2
+                    if "AMR speech in 3G network" in setting:
+                        self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
+                        f_v = f_ss[group][feature][setting][0]["value"]
+                        if f_v:
+                            amr_f_value = amr_f_value + 4
         a5_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % a5_ref_value)
         gea_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % gea_ref_value)
+        amr_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % amr_ref_value)
         r_a5 = cmp(str(a5_bits), str(a5_p_v))
         r_gea = cmp(str(gea_bits), str(gea_p_v))
+        r_amr = cmp(str(amr_f_value), str(amr_p_v))
                     # failed using util func
                     # r = self.settingutil.compare_settings(f_v, p_v)
                     # p_v = self.settingutil.get_phone_setting(setting)
+        #comp a5
         status = "pass" if r_a5 == 0 else "fail"
         self.comment("----[setting][%s]%s " % (status, a5_setting))
         if status == "fail":
             count += 1
             failed_tc.append((a5_setting, a5_bits, a5_p_v))
+        #comp gea
         status = "pass" if r_gea == 0 else "fail"
         self.comment("----[setting][%s]%s " % (status, gea_setting))
         if status == "fail":
             count += 1
             failed_tc.append((gea_setting, gea_bits, gea_p_v))
+        #comp amr
+        status = "pass" if r_amr == 0 else "fail"
+        self.comment("----[setting][%s]%s " % (status, amr_setting))
+        if status == "fail":
+            count += 1
+            failed_tc.append((amr_setting, amr_f_value, amr_p_v))	
 
         self.comment("---------------- settings failed: %d -------------------" % count)
         if len(failed_tc) != count:
