@@ -255,8 +255,9 @@ class UiTest(uitestcase.UITestCase):
         m_count = 0
         manual_tc = []
         flag = False
-        #cb_channels = ""
+        cb_channels = ""
         pb_channels = ""
+        customer_account = ""
         # py dict from json file
         for group in f_ss:
             
@@ -269,13 +270,17 @@ class UiTest(uitestcase.UITestCase):
                         if "Cell Broadcast Channels configuration" in setting:
                             cb_channels = f_ss[group][feature][setting][0]["value"]
                         if "The identifiers of CMAS CB and their display priority." in setting:
-                            pb_channels = f_ss[group][feature][setting][0]["value"]                                                        
+                            pb_channels = f_ss[group][feature][setting][0]["value"]
+                        if "Customer Account" in setting:
+                            if f_ss[group][feature][setting][0].has_key('Account Name'):
+                                customer_account = f_ss[group][feature][setting][0]["Account Name"]
                     r1, r2, r3= self.settingutil.check_operator_channel(flag, cb_channels, pb_channels)
-                    status = "pass" if r1 and r2 and r3 else "fail"
+                    r4 = self.settingutil.check_customer_account(customer_account)
+                    status = "pass" if r1 and r2 and r3 and r4 else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
                     if status == "fail":
                         self.fail("[Result] %s: Failed" % feature)
-    
+                        
     def test_nokia_improvement_program(self):
         """Nokia improvement program
         @tcId nokia improvement program ui
