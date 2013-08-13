@@ -271,7 +271,7 @@ class UiTest(uitestcase.UITestCase):
                         if "The identifiers of CMAS CB and their display priority." in setting:
                             pb_channels = f_ss[group][feature][setting][0]["value"]                                                        
                     r1, r2, r3= self.settingutil.check_operator_channel(flag, cb_channels, pb_channels)
-                    status = "pass" if r1 and r2 else "fail"
+                    status = "pass" if r1 and r2 and r3 else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
                     if status == "fail":
                         self.fail("[Result] %s: Failed" % feature)
