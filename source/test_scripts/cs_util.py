@@ -282,7 +282,7 @@ class SettingUtil(uitestcase.UITestCase):
 		opt = "widgets/switch-bg-on-dark" if flag == True else "widgets/switch-bg-off-dark"
 		r1 = self.tc.check(opt)
 		if not r1:
-			self.tc.comment("[fail] Cell broadcast reception is incorrect")
+			self.tc.fail("[fail] Cell broadcast reception is incorrect")
 		
 		# check CB channels
 		if cb_channels != "":
@@ -299,7 +299,7 @@ class SettingUtil(uitestcase.UITestCase):
 						self.tc.comment ("Channel %s is not found" % ch)
 						break
 			if not r2:
-				self.tc.comment("[fail] CB Channels checking failed")
+				self.tc.fail("[fail] CB Channels checking failed")
 			self.tc.back()
 			if not flag:
 				opt = "widgets/switch-bg-on-dark"
@@ -324,7 +324,7 @@ class SettingUtil(uitestcase.UITestCase):
 						self.tc.comment ("Channel %s is not found" % ch)
 						break
 			if not r3:
-				self.tc.comment("[fail] PB Channels checking failed")			
+				self.tc.fail("[fail] PB Channels checking failed")
 			self.tc.back()
 			if not flag:
 				opt = "widgets/switch-bg-on-dark"	
