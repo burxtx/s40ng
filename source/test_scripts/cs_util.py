@@ -389,7 +389,16 @@ class SettingUtil(uitestcase.UITestCase):
 			self.tc.select('voice-call-application/reject-call')
 			self.tc.exit()
 			return True
-		
+
+	def check_customer_account (self, cc_account):
+                self.tc.navigate("Accounts")
+                self.tc.select("toolbar/toolbar-bg-light")
+                r = self.tc.check(cc_account)
+                if not r:
+                        self.tc.fail("[fail] customer account checking failed")
+                self.tc.exit()
+                return r
+        
 	# def compare_settings(self, fv, pv):
 	# 	# convert True to true
 	# 	if fv == True or False:
