@@ -322,6 +322,7 @@ class UiTest(uitestcase.UITestCase):
         m_count = 0
         manual_tc = []
         flag2 = False
+        flag2_v = False
         # py dict from json file
         for group in f_ss:            
             for feature in f_ss[group]:
@@ -334,7 +335,7 @@ class UiTest(uitestcase.UITestCase):
                             flag2 = True            
                             flag2_v = f_ss[group][feature][setting][0]["value"]
                     r , r2 = self.settingutil.check_mobile_data_settings(flag = flag, flag2 = flag2, flag2_v = flag2_v)
-                    status = "pass" if r else "fail"
+                    status = "pass" if r and r2 else "fail"
                     self.comment("--[feature][%s]%s" % (status, feature))
                     if status == "fail":
                         self.fail("[Result] %s: Failed" % feature)     
