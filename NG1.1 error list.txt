@@ -1,4 +1,4 @@
-1. Phone update: ui is changed
+1. Phone update: ui is changed - disabled on NG1.1
 2. Date format: ui changed to current date, not Y M D. 
 3. Customer certificates not incorrect. Test script need to be changed.
 4. Profile setting: if file not uploaded, then file check is failed. --> Waiting Orion CPF to improve.

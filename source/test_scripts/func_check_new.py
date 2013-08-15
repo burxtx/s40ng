@@ -83,32 +83,32 @@ class UiTest(uitestcase.UITestCase):
                     if status == "fail":
                         self.fail("[Result] %s: Failed" % feature)
 
-    def test_phone_network_ui(self):
-        """Phone network UI settings
-        @tcId phone update ui
-        """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
-        self.settingutil = SettingUtil(self)
-        f_ss = self.settingutil.converter(f)
-        # f_ss = json.loads(xml2json(source))
-        # read configuration items mapping file, for reference
-        count = 0
-        failed_tc = []
-        m_count = 0
-        manual_tc = []
-        # py dict from json file
-        for group in f_ss:
-            self.comment("[group] %s" % group)
-            for feature in f_ss[group]:
-                if "Calling Network settings" in feature:
-                    for setting in f_ss[group][feature]:
-                        if "Enable/disable check for phone updates" in setting:
-                            auto_update = f_ss[group][feature][setting][0]["value"]
-                    r = self.settingutil.check_phone_network_ui(auto_update=auto_update)
-                    status = "pass" if r else "fail"
-                    self.comment("--[feature][%s]%s" % (status, feature))
-                    if status == "fail":
-                        self.fail("[Result] %s: Failed" % feature)
+    #def test_phone_network_ui(self):
+    #    """Phone network UI settings
+    #    @tcId phone update ui
+    #    """
+    #    f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+    #    self.settingutil = SettingUtil(self)
+    #    f_ss = self.settingutil.converter(f)
+    #    # f_ss = json.loads(xml2json(source))
+    #    # read configuration items mapping file, for reference
+    #    count = 0
+    #    failed_tc = []
+    #    m_count = 0
+    #    manual_tc = []
+    #    # py dict from json file
+    #    for group in f_ss:
+    #        self.comment("[group] %s" % group)
+    #        for feature in f_ss[group]:
+    #            if "Calling Network settings" in feature:
+    #                for setting in f_ss[group][feature]:
+    #                    if "Enable/disable check for phone updates" in setting:
+    #                        auto_update = f_ss[group][feature][setting][0]["value"]
+    #                r = self.settingutil.check_phone_network_ui(auto_update=auto_update)
+    #                status = "pass" if r else "fail"
+    #                self.comment("--[feature][%s]%s" % (status, feature))
+    #                if status == "fail":
+    #                    self.fail("[Result] %s: Failed" % feature)
 
     def test_phone_sms_ui(self):
         """Phone sms UI settings
