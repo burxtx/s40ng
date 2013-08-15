@@ -290,26 +290,25 @@ class SettingUtil(uitestcase.UITestCase):
 			l = cb_channels.split (",")
 			self.tc.comment(l)
 			if not flag:
-				self.tc.select (opt)
+				self.tc.select ("widgets/switch-bg-off-dark")
 			if self.tc.check("Channels"):
 				self.tc.select("Channels")
 				for ch in l:
 					r2 = self.tc.check (ch)
 					if not r2: 
 						self.tc.comment ("Channel %s is not found" % ch)
-						break
-			if not r2:
-				self.tc.fail("[fail] CB Channels checking failed")
+						break			
 			self.tc.back()
-			if not flag:
-				opt = "widgets/switch-bg-on-dark"
-				self.tc.select (opt)			
+			if not flag:				
+				self.tc.select ("widgets/switch-bg-on-dark")
+			if not r2:
+				self.tc.fail("[fail] CB Channels checking failed")			
 		
 		# check PB channels
 		if pb_channels != "":
 			r3 = False
 			if not flag:
-				self.tc.select (opt)		
+				self.tc.select ("widgets/switch-bg-off-dark")		
 			l1 = []
 			l = pb_channels.split(',')
 			for m in l:
@@ -322,15 +321,12 @@ class SettingUtil(uitestcase.UITestCase):
 					r3 = self.tc.check (ch)
 					if not r3: 
 						self.tc.comment ("Channel %s is not found" % ch)
-						break
-			if not r3:
-				self.tc.fail("[fail] PB Channels checking failed")
+						break			
 			self.tc.back()
-			if not flag:
-				opt = "widgets/switch-bg-on-dark"	
-				self.tc.select (opt)
-				
-						
+			if not flag:					
+				self.tc.select ("widgets/switch-bg-on-dark")
+			if not r3:
+				self.tc.fail("[fail] PB Channels checking failed")						
 		self.tc.exit()
 		return r1, r2, r3
 
