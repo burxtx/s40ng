@@ -20,7 +20,7 @@ class MediaFilesTest(uitestcase.UITestCase):
         """preloaded media
         @tcId preloaded media, Profile Settings
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         count = 0
@@ -177,7 +177,7 @@ class ApplicationsTest(uitestcase.UITestCase):
         """Preloaded Applications
         @tcId Preloaded Applications, Bookmarks, Customer Folder, Homepage URL
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         count = 0
@@ -259,7 +259,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
         """config.db settings check
         @tcId config.db settings check
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -340,7 +340,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
         """config.db bitmask settings check
         @tcId Calling Network settings: GEA, A5, AMR_speech algorithm support
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))

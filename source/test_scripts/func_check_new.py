@@ -20,7 +20,7 @@ class UiTest(uitestcase.UITestCase):
         """Phone bluetooth UI settings
         @tcId Bluetooth ui
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -52,7 +52,7 @@ class UiTest(uitestcase.UITestCase):
         """Phone time and date UI settings
         @tcId Time and Date ui
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -87,7 +87,7 @@ class UiTest(uitestcase.UITestCase):
     #    """Phone network UI settings
     #    @tcId phone update ui
     #    """
-    #    f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+    #    f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
     #    self.settingutil = SettingUtil(self)
     #    f_ss = self.settingutil.converter(f)
     #    # f_ss = json.loads(xml2json(source))
@@ -114,7 +114,7 @@ class UiTest(uitestcase.UITestCase):
         """Phone sms UI settings
         @tcId phone sms ui
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -156,7 +156,7 @@ class UiTest(uitestcase.UITestCase):
         """Phone mms UI settings
         @tcId phone mms ui
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -191,7 +191,7 @@ class UiTest(uitestcase.UITestCase):
         """Phone voice mailbox number
         @tcId phone voice mailbox number ui
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -219,7 +219,7 @@ class UiTest(uitestcase.UITestCase):
         """Phone certificates
         @tcId phone certificates ui
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -246,7 +246,7 @@ class UiTest(uitestcase.UITestCase):
         """
         @tcId operator messages
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -285,7 +285,7 @@ class UiTest(uitestcase.UITestCase):
         """Nokia improvement program
         @tcId nokia improvement program ui
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -312,7 +312,7 @@ class UiTest(uitestcase.UITestCase):
         """mobile_data_settings
         @tcId mobile data settings ui
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -344,7 +344,7 @@ class UiTest(uitestcase.UITestCase):
         """emergency call
         @tcId emergency call func
         """
-        f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
         # f_ss = json.loads(xml2json(source))
@@ -369,7 +369,7 @@ class UiTest(uitestcase.UITestCase):
     #     """Check main menu
     #     @tcId tile content
     #     """
-    #     f = os.path.join(os.path.dirname(__file__), "auto_test_config.json").replace("\\", "/")
+    #     f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
     #     self.settingutil = SettingUtil(self)
     #     f_ss = self.settingutil.converter(f)
     #     # f_ss = json.loads(xml2json(source))
