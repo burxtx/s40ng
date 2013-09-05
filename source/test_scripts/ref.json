@@ -800,6 +800,12 @@
                     "ref": "./yapas/voip/configuration", 
                     "value": "none"
                 }
+            ],
+            "Call barring menu visibility": [
+                {
+                    "ref": "./yapas/calls/call-barring-menu",
+                    "value": true
+                }
             ]
         }, 
         "Voicemail box Settings": {
