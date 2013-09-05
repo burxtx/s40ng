@@ -684,6 +684,12 @@
                     "ref": "./yapas/region/number-matching/number-of-digits", 
                     "value": "10"
                 }
+            ],
+            "Exact number matching": [
+                {
+                    "ref": "./yapas/region/number-matching/exact-match",
+                    "value": "false"
+                }
             ]
         }, 
         "Calling Network settings": {
