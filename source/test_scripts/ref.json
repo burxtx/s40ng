@@ -812,6 +812,12 @@
                     "ref": "./yapas/calls/call-barring-menu",
                     "value": true
                 }
+            ],
+            "3G Fast Dormancy support": [
+                {
+                    "ref": "./platform/INFO_PP_WCDMA_3GPP_FAST_DORMANCY_SUPPORT",
+                    "value": false
+                }
             ]
         }, 
         "Voicemail box Settings": {
