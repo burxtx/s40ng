@@ -398,11 +398,13 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                                 gea_bits = self.settingutil.bhdconvert(setting, f_v, gea_bits)
                                 continue
                     if "AMR speech in 2G network" in setting:
+                        amr_f_value = int(below_f_ss["Calling and Contact"]["Calling Network settings"]["Support for wide-band AMR speech in 2G network"][0]["value"])
                         self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
                         f_v = f_ss[group][feature][setting][0]["value"]
                         if f_v:
                             amr_f_value = amr_f_value + 2
                     if "AMR speech in 3G network" in setting:
+                        amr_f_value = int(below_f_ss["Calling and Contact"]["Calling Network settings"]["Support for wide-band AMR speech in 3G network"][0]["value"])
                         self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
                         f_v = f_ss[group][feature][setting][0]["value"]
                         if f_v:
