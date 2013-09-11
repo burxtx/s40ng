@@ -265,7 +265,6 @@ class ConfigSettingsTest(uitestcase.UITestCase):
         # f_ss = json.loads(xml2json(source))
         # read configuration items mapping file, for reference
         f_ref = os.path.join(os.path.dirname(__file__), "ref.json").replace("\\", "/")
-        self.settingutil = SettingUtil(self)
         f_ref_ss = self.settingutil.converter(f_ref)
 
         count = 0
@@ -341,20 +340,23 @@ class ConfigSettingsTest(uitestcase.UITestCase):
         @tcId Calling Network settings: GEA, A5, AMR_speech algorithm support
         """
         f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
+        below_f = os.path.join(os.path.dirname(__file__), "below_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
+        below_f_ss = self.settingutil.converter(below_f)
         # f_ss = json.loads(xml2json(source))
         # read configuration items mapping file, for reference
         f_ref = os.path.join(os.path.dirname(__file__), "ref.json").replace("\\", "/")
-        self.settingutil = SettingUtil(self)
         f_ref_ss = self.settingutil.converter(f_ref)
 
         count = 0
         failed_tc = []
         m_count = 0
         manual_tc = []
-        a5_bits = 0b101
-        gea_bits = 0b0000111
+        # hardcoded default value
+        # a5_bits = 0b101
+        # gea_bits = 0b0000111
+
         a5_ref_value = "./platform/INFO_PP_A5_CIPHER_ALGORITHMS"
         gea_ref_value = "./platform/INFO_PP_GEA_ALGORITHMS"
         a5_setting = "GSM A5 ciphering algorithm support"
@@ -362,8 +364,23 @@ class ConfigSettingsTest(uitestcase.UITestCase):
         amr_f_value = 0
         amr_ref_value = "./platform/INFO_PP_CODEC_ORDER2"
         amr_setting = "Support for wide-band AMR speech"
+        # get default values: a5, gea
+        a5_lst = [below_f_ss["Calling and Contact"]["Calling Network settings"]["GSM A5/3 ciphering algorithm support"][0]["value"],
+        below_f_ss["Calling and Contact"]["Calling Network settings"]["GSM A5/2 ciphering algorithm support"][0]["value"],
+        below_f_ss["Calling and Contact"]["Calling Network settings"]["GSM A5/1 ciphering algorithm support"][0]["value"]
+        ]
+        gea_lst = [below_f_ss["Calling and Contact"]["Calling Network settings"]["GPRS GEA7 algorithm support"][0]["value"],
+        below_f_ss["Calling and Contact"]["Calling Network settings"]["GPRS GEA6 algorithm support"][0]["value"],
+        below_f_ss["Calling and Contact"]["Calling Network settings"]["GPRS GEA5 algorithm support"][0]["value"],
+        below_f_ss["Calling and Contact"]["Calling Network settings"]["GPRS GEA4 algorithm support"][0]["value"],
+        below_f_ss["Calling and Contact"]["Calling Network settings"]["GPRS GEA3 algorithm support"][0]["value"],
+        below_f_ss["Calling and Contact"]["Calling Network settings"]["GPRS GEA2 algorithm support"][0]["value"],
+        below_f_ss["Calling and Contact"]["Calling Network settings"]["GPRS GEA1 algorithm support"][0]["value"]
+        ]
+        a5_bits = reduce(lambda x,y: int(x)<<1|int(y), a5_lst)
+        gea_bits = reduce(lambda x,y: int(x)<<1|int(y), gea_lst)
         # py dict from json file
-        for group in f_ss:            
+        for group in f_ss:
             for feature in f_ss[group]:
                 for setting in f_ss[group][feature]:
                     if "GSM A5" in setting:

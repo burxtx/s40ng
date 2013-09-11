@@ -38,7 +38,7 @@ class SettingUtil(uitestcase.UITestCase):
 			swap = ~(1 << int(bit_index)-1)
 			bits = bits & swap
 		return bits
-
+		
 	def get_phone_setting(self, setting):
 	    # read phone config.db
 	    value = self.sx('(send (send config-manager get-setting "%s") ->string)' % setting)
