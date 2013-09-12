@@ -23,6 +23,8 @@ class UiTest(uitestcase.UITestCase):
         f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
+        below_f = os.path.join(os.path.dirname(__file__), "below_config.json").replace("\\", "/")
+        below_f_ss = self.settingutil.converter(below_f)
         # f_ss = json.loads(xml2json(source))
         # read configuration items mapping file, for reference
         count = 0
@@ -30,8 +32,10 @@ class UiTest(uitestcase.UITestCase):
         m_count = 0
         manual_tc = []
         # default NDT value
-        device_name = "Nokia 501"
-        visible = True
+        # device_name = "Nokia 501"
+        # visible = True
+        device_name = below_f_ss["Connectivity"]["Bluetooth settings"]["Device name"][0]["value"]
+        visible = below_f_ss["Connectivity"]["Bluetooth settings"]["Bluetooth visibility"][0]["value"]
         # py dict from json file
         for group in f_ss:
             self.comment("[group] %s" % group)
