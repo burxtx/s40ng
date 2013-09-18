@@ -80,7 +80,7 @@ def layerParser(layer, output):
 										if sub_value.text and setting_name and feature and group:
 											py_all[group][feature][setting_name][i][sub_setting_name]=sub_value.text
 								else:
-									print "error"
+									print "error in :", ref
 									# if folder name is '1' or '0'?
 								# Leave to implement. First, check app list, if wanted bmk not found, then check folder with this name, return. 
 
