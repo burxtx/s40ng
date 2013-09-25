@@ -379,6 +379,15 @@ class ConfigSettingsTest(uitestcase.UITestCase):
         ]
         a5_bits = reduce(lambda x,y: int(x)<<1|int(y), a5_lst)
         gea_bits = reduce(lambda x,y: int(x)<<1|int(y), gea_lst)
+        # get default value for amr
+        if below_f_ss["Calling and Contact"]["Calling Network settings"].has_key("Support for wide-band AMR speech in 2G network"):
+            f_v_1 = below_f_ss["Calling and Contact"]["Calling Network settings"]["Support for wide-band AMR speech in 2G network"][0]["value"] 
+            if f_v_1:
+                amr_f_value = amr_f_value | 2
+        if below_f_ss["Calling and Contact"]["Calling Network settings"].has_key("Support for wide-band AMR speech in 3G network"):
+            f_v_2 = below_f_ss["Calling and Contact"]["Calling Network settings"]["Support for wide-band AMR speech in 3G network"][0]["value"]
+            if f_v_2:
+                amr_f_value = amr_f_value | 4            
         # py dict from json file
         for group in f_ss:
             for feature in f_ss[group]:
@@ -398,17 +407,15 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                                 gea_bits = self.settingutil.bhdconvert(setting, f_v, gea_bits)
                                 continue
                     if "AMR speech in 2G network" in setting:
-                        f_v_0 = below_f_ss["Calling and Contact"]["Calling Network settings"]["Support for wide-band AMR speech in 2G network"][0]["value"]
                         self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
                         f_v = f_ss[group][feature][setting][0]["value"]
-                        if f_v or f_v_0:
-                            amr_f_value = amr_f_value + 2
+                        if f_v:
+                            amr_f_value = amr_f_value | 2
                     if "AMR speech in 3G network" in setting:
-                        f_v_0 = below_f_ss["Calling and Contact"]["Calling Network settings"]["Support for wide-band AMR speech in 3G network"][0]["value"]
                         self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
                         f_v = f_ss[group][feature][setting][0]["value"]
-                        if f_v or f_v_0:
-                            amr_f_value = amr_f_value + 4
+                        if f_v:
+                            amr_f_value = amr_f_value | 4
         a5_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % a5_ref_value)
         gea_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % gea_ref_value)
         amr_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % amr_ref_value)
