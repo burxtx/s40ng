@@ -398,16 +398,16 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                                 gea_bits = self.settingutil.bhdconvert(setting, f_v, gea_bits)
                                 continue
                     if "AMR speech in 2G network" in setting:
-                        amr_f_value = int(below_f_ss["Calling and Contact"]["Calling Network settings"]["Support for wide-band AMR speech in 2G network"][0]["value"])
+                        f_v_0 = below_f_ss["Calling and Contact"]["Calling Network settings"]["Support for wide-band AMR speech in 2G network"][0]["value"]
                         self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
                         f_v = f_ss[group][feature][setting][0]["value"]
-                        if f_v:
+                        if f_v or f_v_0:
                             amr_f_value = amr_f_value + 2
                     if "AMR speech in 3G network" in setting:
-                        amr_f_value = int(below_f_ss["Calling and Contact"]["Calling Network settings"]["Support for wide-band AMR speech in 3G network"][0]["value"])
+                        f_v_0 = below_f_ss["Calling and Contact"]["Calling Network settings"]["Support for wide-band AMR speech in 3G network"][0]["value"]
                         self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
                         f_v = f_ss[group][feature][setting][0]["value"]
-                        if f_v:
+                        if f_v or f_v_0:
                             amr_f_value = amr_f_value + 4
         a5_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % a5_ref_value)
         gea_p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % gea_ref_value)
