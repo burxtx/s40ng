@@ -260,7 +260,7 @@ class SettingUtil(uitestcase.UITestCase):
 	def check_phone_voicemail_ui(self, voicemail_num="123"):
 		self.tc.navigate("Settings")
 		self.tc.select("Calls")
-		r = self.tc.check(voicemail_num, relatedTo="Voice mailbox")
+		r = self.tc.check(voicemail_num, relatedTo="Voice mailbox", timeout=30000)
 		if not r:
 			self.tc.fail("[fail] voice mailbox number incorrect")
 		self.tc.exit()
