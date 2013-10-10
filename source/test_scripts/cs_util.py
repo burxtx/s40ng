@@ -215,29 +215,46 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.exit()
 		return r
 
-	def check_phone_sms_ui(self, delivery_report=True, num_lock=False, sim1=False, sim2=False):
-		delivery_report_opt = "widgets/switch-bg-on-dark" if delivery_report == True else "widgets/switch-bg-off-dark"
+	def check_phone_sms_ui(self, delivery_report_1, num_lock, delivery_report_2=None, dual=False):
+		delivery_report_opt_1 = "widgets/switch-bg-on-dark" if delivery_report_1 else "widgets/switch-bg-off-dark"
+		delivery_report_opt_2 = "widgets/switch-bg-on-dark" if delivery_report_2 else "widgets/switch-bg-off-dark"
+		# delivery_report_opt_1 = "Yes" if delivery_report_1 else "No"
+		# delivery_report_opt_2 = "Yes" if delivery_report_2 else "No"
+
 		self.tc.navigate("Settings")
 		self.tc.select("Messaging")
 		# check if DS or SS
-		if sim1:
-			r1 = self.tc.check(delivery_report_opt, relatedTo="SIM1//Delivery reports")
-		if sim2:
-			r1 = self.tc.check(delivery_report_opt, relatedTo="SIM2//Delivery reports")
+		if dual:
+			# if SIM card is empty, give message
+			unempty_1 = self.tc.tryExpect("Delivery reports", relatedTo="Text message settings//SIM1")
+			if unempty_1:
+				r1_1 = self.tc.tryExpect(delivery_report_opt_1, relatedTo="Text message settings//SIM1//Delivery reports")
+			else:
+				self.tc.comment("[Oops] SIM1 delivery report setting not found, maybe SIM1 is empty")
+				r1_1 = False
+			unempty_2 = self.tc.tryExpect("SIM2//Delivery reports")
+			if unempty_2:
+				r1_2 = self.tc.tryExpect(delivery_report_opt_2, relatedTo="Text message settings//SIM2//Delivery reports")
+			else:
+				self.tc.comment("[Oops] SIM2 delivery report setting not found, maybe SIM2 is empty")
+				r1_2 = False
+			if r1_1 & r1_2:
+				r1 = True
+			else:
+				if not r1_1:
+					self.tc.comment("[fail] SIM1 sms delivery report incorrect")
+				if not r1_2:
+					self.tc.comment("[fail] SIM2 sms delivery report incorrect")
+				self.tc.fail("sms delivery reports check failed")
 		else:
-			r1 = self.tc.check(delivery_report_opt, relatedTo="Delivery reports")
-		if not r1:
-			self.tc.fail("[fail] sms delivery report incorrect")
-
-		if num_lock == False:
-			num_lock_opt = "Add number"
-			r2 = self.tc.check(num_lock_opt, relatedTo="Message center")
-			if not r2:
-				self.tc.fail("[fail] sms center number locked")
-		else:
-			r2 = False if self.tc.check("Message center") else True
-			if not r2:
-				self.tc.fail("[fail] sms center number unlocked")
+			r1 = self.tc.expect(delivery_report_opt_1, relatedTo='Text message settings//Delivery reports')
+			if not r1:
+				self.tc.comment("[fail] SS sms delivery report incorrect")
+		# check message centre
+		mc = self.tc.check("Message centre")
+		r2 = mc^num_lock
+		if not r2:
+			self.tc.comment("[fail] sms center number lock is incorrect")
 		return r1, r2
 
 	def check_phone_mms_ui(self, delivery_report=True, allow_adverts=True, reception=1):
