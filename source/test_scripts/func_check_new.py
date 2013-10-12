@@ -385,6 +385,7 @@ class UiTest(uitestcase.UITestCase):
                     self.comment("--[feature][%s]%s" % (status, feature))
                     if status == "fail":
                         self.fail("[Result] %s: Failed" % feature)
+
     # def test_main_menu(self):
     #     """Check main menu
     #     @tcId tile content

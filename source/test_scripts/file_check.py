@@ -16,7 +16,7 @@ class MediaFilesTest(uitestcase.UITestCase):
     #     uitestcase.UITestCase.tearDown(self)
     # f = os.path.join(os.path.dirname(__file__), "all.json").replace("\\", "/")
 
-    def test_media_files(self):
+    def test_preloaded_media_files(self):
         """preloaded media
         @tcId preloaded media, Profile Settings
         """
@@ -159,6 +159,112 @@ class MediaFilesTest(uitestcase.UITestCase):
         if count > 0:
             self.fail("[Result] Check media files failed")
 
+    def test_mmc_preloaded_files(self):
+        """preloaded memory card media files & app
+        @tcId memory card media & app file check
+        """
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
+        below_f = os.path.join(os.path.dirname(__file__), "below_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)
+        below_f_ss = self.settingutil.converter(below_f)
+        # f_ss = json.loads(xml2json(source))
+        # read configuration items mapping file, for reference
+        count = 0
+        failed_tc = []
+        m_count = 0
+        manual_tc = []
+        # py dict from json file
+        for group in f_ss:
+            self.comment("[group] %s" % group)          
+            for feature in f_ss[group]:
+                self.comment("--[feature] %s" % feature)
+                for setting in f_ss[group][feature]:
+                    # files check
+                    # for sequence in setting:
+                    if "Pre-loaded Music clips to Memory Card" == setting:
+                        ftype = "music"
+                        music_files=[]
+                        for f in f_ss[group][feature][setting]:
+                            music_files.append(f["Pre-loaded music clips file"])
+                        results = self.settingutil.check_mmc_content(ftype, music_files)
+                        for r in results:
+                            self.comment("----[setting][fail] mmc preloaded music file: %s" % r)
+                            count += 1
+                            failed_tc.append((setting, r, 'NA'))
+
+                    # elif "profile files" in setting:
+                    #     profile_tone_files=[]
+                    #     for f in f_ss[group][feature][setting]:
+                    #         profile_tone_files.append({"file": f["value"], "type": f["type"]})
+                    #     for f in profile_tone_files:
+                    #         r = self.settingutil.check_phone_profile_tone(f["file"])
+                    #         # self.settingutil.addlog(setting, r)
+                    #         status = "pass" if r == 0 else "fail"
+                    #         self.comment("---[setting][%s]profile: %s " % (status, f))
+                    #         if status == "fail":
+                    #             count += 1
+                    #             failed_tc.append((setting, f["file"], 'NA'))
+
+                    elif "Pre-loaded lockscreen images to Memory Card" == setting:
+                        ftype = "wallpaper"
+                        img_files=[]
+                        for f in f_ss[group][feature][setting]:
+                            img_files.append(f["Pre-loaded images file for lockscreen"])
+                        results = self.settingutil.check_mmc_content(ftype, img_files)
+                        for r in results:
+                            self.comment("----[setting][fail] mmc preloaded image file: %s" % r)
+                            count += 1
+                            failed_tc.append((setting, r, 'NA'))
+
+                    elif "Pre-loaded Video clips to Memory Card" == setting:
+                        ftype = "videos"
+                        video_files=[]
+                        for f in f_ss[group][feature][setting]:
+                            video_files.append(f["Pre-loaded video clips file"])
+                        results = self.settingutil.check_mmc_content(ftype, video_files)
+                        for r in results:
+                            self.comment("----[setting][fail] mmc preloaded video file: %s" % r)
+                            count += 1
+                            failed_tc.append((setting, r, 'NA'))
+
+                    elif "Pre-loaded Tone clips to Memory Card" == setting:
+                        ftype = "tones"
+                        tone_files=[]
+                        for f in f_ss[group][feature][setting]:
+                            tone_files.append(f["Pre-loaded Tone file"])
+                        results = self.settingutil.check_mmc_content(ftype, tone_files)
+                        for r in results:
+                            self.comment("----[setting][fail] mmc preloaded tone file: %s" % r)
+                            count += 1
+                            failed_tc.append((setting, r, 'NA'))
+
+                    elif "Preloaded Applications on Memory Card" == setting:
+                        ftype = "applications"
+                        java_files=[]
+                        for f in f_ss[group][feature][setting]:
+                            java_files.append(f["Jar File"])
+                        results = self.settingutil.check_mmc_content(ftype, java_files)
+                        for r in results:
+                            self.comment("----[setting][fail] mmc preloaded app java file: %s" % r)
+                            count += 1
+                            failed_tc.append((setting, r, 'NA'))
+
+        self.comment("---------------- media files failed: %d -------------------" % count)
+        if len(failed_tc) != count:
+            self.comment("[CRITICAL] you should not see this, pls contact developer.")
+        if len(failed_tc):
+            for i, tc in enumerate(failed_tc):
+                self.comment("%d. %s: expect[%s] actual[%s]" % (i+1,tc[0],tc[1],tc[2]))
+
+        self.comment("---------------- media files manual: %d -------------------" % m_count)
+        if len(manual_tc) != m_count:
+            self.comment("[CRITICAL] you should not see this, pls contact developer.")
+        if len(manual_tc):
+            for i, tc in enumerate(manual_tc):
+                self.comment("%d. %s. %s" % (i+1,tc[0],tc[1]))
+        if count > 0:
+            self.fail("[Result] Check media files failed")
 
 class ApplicationsTest(uitestcase.UITestCase):
     subarea = "Application and Content"

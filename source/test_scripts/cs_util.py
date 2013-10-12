@@ -90,9 +90,7 @@ class SettingUtil(uitestcase.UITestCase):
 	def check_phone_profile_tone(self, f=None, ft=None):
 		self.tc.navigate('Settings')
 		self.tc.select('Sounds and vibra')
-		self.tc.comment(ft)
 		ft = self.cpf2phone(ft)
-		self.tc.comment(ft)
 		r = -1 if self.tc.check(f, relatedTo=ft) == False else 0
 		self.tc.exit()
 		return r
@@ -404,14 +402,29 @@ class SettingUtil(uitestcase.UITestCase):
 			return True
 
 	def check_customer_account (self, cc_account):
-                self.tc.navigate("Accounts")
-                self.tc.select("toolbar/toolbar-bg-light")
-                r = self.tc.check(cc_account)
-                if not r:
-                        self.tc.fail("[fail] customer account checking failed")
-                self.tc.exit()
-                return r
-        
+		self.tc.navigate("Accounts")
+		self.tc.select("toolbar/toolbar-bg-light")
+		r = self.tc.check(cc_account)
+		if not r:
+			self.tc.fail("[fail] customer account checking failed")
+		self.tc.exit()
+		return r
+	
+	def check_mmc_content(self, ftype, f_list):
+		results = []
+		self.tc.navigate("Files")
+		self.tc.select("Memory card")
+		self.tc.select("extra")
+		self.tc.select(ftype)
+		for f in f_list:
+			r = self.tc.check(f)
+			if not r:
+				self.tc.comment("[fail] %s not found from %s folder" % (f, ftype))
+				results.append(f)
+			else:
+				self.tc.comment("[pass] %s found from %s folder" % (f, ftype))
+		self.tc.exit()
+		return results
 	# def compare_settings(self, fv, pv):
 	# 	# convert True to true
 	# 	if fv == True or False:
