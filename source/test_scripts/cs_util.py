@@ -221,29 +221,30 @@ class SettingUtil(uitestcase.UITestCase):
 
 		self.tc.navigate("Settings")
 		self.tc.select("Messaging")
+		self.tc.check("Text message settings")
 		# check if DS or SS
 		if dual:
 			# if SIM card is empty, give message
-			unempty_1 = self.tc.tryExpect("Delivery reports", relatedTo="Text message settings//SIM1")
+			unempty_1 = self.tc.tryExpect("SIM1")
 			if unempty_1:
-				r1_1 = self.tc.tryExpect(delivery_report_opt_1, relatedTo="Text message settings//SIM1//Delivery reports")
+				r1_1 = self.tc.tryExpect(delivery_report_opt_1, relatedTo="SIM1//Delivery reports")
 			else:
-				self.tc.comment("[Oops] SIM1 delivery report setting not found, maybe SIM1 is empty")
+				self.tc.comment("[Oops] Maybe SIM1 is empty")
 				r1_1 = False
-			unempty_2 = self.tc.tryExpect("SIM2//Delivery reports")
+			unempty_2 = self.tc.tryExpect("SIM2")
 			if unempty_2:
-				r1_2 = self.tc.tryExpect(delivery_report_opt_2, relatedTo="Text message settings//SIM2//Delivery reports")
+				r1_2 = self.tc.tryExpect(delivery_report_opt_2, relatedTo="SIM2//Delivery reports")
 			else:
-				self.tc.comment("[Oops] SIM2 delivery report setting not found, maybe SIM2 is empty")
+				self.tc.comment("[Oops] Maybe SIM2 is empty")
 				r1_2 = False
-			if r1_1 & r1_2:
+			if r1_1 and r1_2:
 				r1 = True
 			else:
 				if not r1_1:
 					self.tc.comment("[fail] SIM1 sms delivery report incorrect")
 				if not r1_2:
 					self.tc.comment("[fail] SIM2 sms delivery report incorrect")
-				self.tc.fail("sms delivery reports check failed")
+				r1 = False
 		else:
 			r1 = self.tc.expect(delivery_report_opt_1, relatedTo='Text message settings//Delivery reports')
 			if not r1:
@@ -255,21 +256,68 @@ class SettingUtil(uitestcase.UITestCase):
 			self.tc.comment("[fail] sms center number lock is incorrect")
 		return r1, r2
 
-	def check_phone_mms_ui(self, delivery_report=True, allow_adverts=True, reception=1):
-		delivery_report_opt = "widgets/switch-bg-on-dark" if delivery_report == True else "widgets/switch-bg-off-dark"
-		allow_adverts_opt = "widgets/switch-bg-on-dark" if allow_adverts == True else "widgets/switch-bg-off-dark"
-		reception_opt = {1:"Automatic", 2:"Manual", 3:"Off", 4:"Off"}
+	def check_phone_mms_ui(self, delivery_report_1, allow_adverts_1, reception_1,\
+                    	delivery_report_2=None, allow_adverts_2=None, reception_2=None, dual=False):
+		delivery_report_opt_1 = "widgets/switch-bg-on-dark" if delivery_report_1 else "widgets/switch-bg-off-dark"
+		allow_adverts_opt_1 = "widgets/switch-bg-on-dark" if allow_adverts_1 else "widgets/switch-bg-off-dark"
+		delivery_report_opt_2 = "widgets/switch-bg-on-dark" if delivery_report_2 else "widgets/switch-bg-off-dark"
+		allow_adverts_opt_2 = "widgets/switch-bg-on-dark" if allow_adverts_2 else "widgets/switch-bg-off-dark"
+		reception_opt = {"1":"Automatic", "2":"Manual", "3":"Off", "4":"Off"}
 		self.tc.navigate("Settings")
 		self.tc.select("Messaging")
-		r1 = self.tc.check(allow_adverts_opt, relatedTo="Allow adverts")
-		if not r1:
-			self.tc.fail("[fail] allow adverts incorrect")
-		r2 = self.tc.check(delivery_report_opt, relatedTo="Delivery reports")
-		if not r2:
-			self.tc.fail("[fail] mms delivery report incorrect")
-		r3 = self.tc.check(reception_opt[reception], relatedTo="MMS reception")
-		if not r3:
-			self.tc.fail("[fail] mms reception incorrect")
+		self.tc.check("MMS settings")
+		if dual:
+			unempty_1 = self.tc.tryExpect("SIM1")
+			if unempty_1:
+				r1_1 = self.tc.tryExpect(delivery_report_opt_1, relatedTo="SIM1//Delivery reports")
+				r2_1 = self.tc.tryExpect(reception_opt[reception_1], relatedTo="SIM1//MMS reception")
+				r3_1 = self.tc.tryExpect(allow_adverts_opt_1, relatedTo="SIM1//Allow adverts")
+			else:
+				self.tc.comment("[Oops] Maybe SIM1 is empty")
+				r1_1 = r2_1 = r3_1 = False
+			self.tc.gesture.swipe((60,319),(60,10))
+			unempty_2 = self.tc.tryExpect("SIM2")
+			if unempty_2:
+				r3_2 = self.tc.check(allow_adverts_opt_2, relatedTo="MMS settings//SIM2//Allow adverts")
+				r2_2 = self.tc.check(reception_opt[reception_2], relatedTo="MMS settings//SIM2//MMS reception")
+				r1_2 = self.tc.check(delivery_report_opt_2, relatedTo="MMS settings//SIM2//Delivery reports")
+			else:
+				self.tc.comment("[Oops] Maybe SIM2 is empty")
+				r1_2 = r2_2 = r3_2 = False
+			if r1_1 and r1_2:
+				r1 = True
+			else:
+				if not r1_1:
+					self.tc.comment("[fail] SIM1 MMS delivery report incorrect")
+				if not r1_2:
+					self.tc.comment("[fail] SIM2 MMS delivery report incorrect")
+				r1 = False
+			if r2_1 and r2_2:
+				r2 = True
+			else:
+				if not r2_1:
+					self.tc.comment("[fail] SIM1 MMS reception incorrect")
+				if not r2_2:
+					self.tc.comment("[fail] SIM2 MMS reception incorrect")
+				r2 = False
+			if r3_1 and r3_2:
+				r3 = True
+			else:
+				if not r3_1:
+					self.tc.comment("[fail] SIM1 MMS adverts incorrect")
+				if not r3_2:
+					self.tc.comment("[fail] SIM2 MMS adverts incorrect")
+				r3 = False
+		else:
+			r1 = self.tc.check(delivery_report_opt_1, relatedTo="MMS settings//Delivery reports")
+			r2 = self.tc.check(reception_opt[reception_1], relatedTo="MMS settings//MMS reception")
+			r3 = self.tc.check(allow_adverts_opt_1, relatedTo="MMS settings//Allow adverts")
+			if not r1:
+				self.tc.comment("[fail] SS MMS delivery report incorrect")
+			if not r2:
+				self.tc.comment("[fail] SS MMS reception incorrect")
+			if not r3:
+				self.tc.comment("[fail] SS MMS adverts incorrect")
 		return r1, r2, r3
 		
 	def check_phone_voicemail_ui(self, voicemail_num="123"):
@@ -345,11 +393,6 @@ class SettingUtil(uitestcase.UITestCase):
 		self.tc.exit()
 		return r1, r2, r3
 
-	def check_main_menu(self):
-		# r = self.tc.check(item, occurrence=int(position))
-		for item in self.tc.read.texts():
-			self.tc.comment(item)
-
 	def check_nokia_improvement(self, is_improvement = False):
 		status_opt = "widgets/switch-bg-on-dark" if is_improvement == True else "widgets/switch-bg-off-dark"
 		self.tc.navigate("Settings")
@@ -414,7 +457,7 @@ class SettingUtil(uitestcase.UITestCase):
 		results = []
 		self.tc.navigate("Files")
 		self.tc.select("Memory card")
-		self.tc.select("extra")
+		self.tc.select("?xtra")
 		self.tc.select(ftype)
 		for f in f_list:
 			r = self.tc.check(f)

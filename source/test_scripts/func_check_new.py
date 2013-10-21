@@ -130,8 +130,6 @@ class UiTest(uitestcase.UITestCase):
         m_count = 0
         manual_tc = []
         # Default NDT value
-        # delivery_report_ss = delivery_report1 = delivery_report2 = True
-        # num_lock = False
         dual_sim = False
         
         num_lock = below_f_ss["Messaging"]["SMS Settings"]["Message center number locked"][0]["value"]
@@ -146,66 +144,91 @@ class UiTest(uitestcase.UITestCase):
             delivery_report2 = below_f_ss["Messaging"]["SMS Settings"]["SMS Delivery Reports for SIM2"][0]["value"]
 
         # rework
-        delivery_report1 = f_ss["Messaging"]["SMS Settings"]["SMS Delivery Reports for SIM1"][0]["value"]
-        if not f_ss["Messaging"]["SMS Settings"].has_key("SMS Delivery Reports for SIM2"):
-            # delivery_report1 = f_ss["Messaging"]["SMS Settings"]["SMS Delivery Reports for SIM1"][0]["value"]
-            r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report_1=delivery_report1, num_lock=num_lock, dual=dual_sim)
-        else:
-            delivery_report2 = f_ss["Messaging"]["SMS Settings"]["SMS Delivery Reports for SIM2"][0]["value"]
-            r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report_1=delivery_report1, delivery_report_2=delivery_report2, num_lock=num_lock, dual=dual_sim)
-        # for group in f_ss:
-        #     self.comment("[group] %s" % group)
-        #     for feature in f_ss[group]:
-        #         if "SMS Settings" in feature:
-        #             for setting in f_ss[group][feature]:
-        #                 if "SMS Delivery Reports for SIM1" == setting:
-        #                     delivery_report1 = f_ss[group][feature][setting][0]["value"]
-        #                 if "SMS Delivery Reports for SIM2" == setting:
-        #                     delivery_report2 = f_ss[group][feature][setting][0]["value"]
-        #                 if "Message center number locked" in setting:
-        #                     num_lock = f_ss[group][feature][setting][0]["value"]
-        #             r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report_1=delivery_report1, delivery_report_2=delivery_report2, num_lock=num_lock, dual=dual_sim)
-        status = "pass" if r1 and r2 else "fail"
-        # self.comment("--[feature][%s]%s" % (status, feature))
-        self.comment("--[feature][%s]%s" % (status, 'SMS settings'))
-        if status == "fail":
-            # self.fail("[Result] %s: Failed" % feature)
-            self.fail("[Result] %s: Failed" % 'SMS settings')
+        for group in f_ss:
+            self.comment("[group] %s" % group)
+            for feature in f_ss[group]:
+                if "SMS Settings" in feature:
+                    for setting in f_ss[group][feature]:
+                        if "SMS Delivery Reports for SIM1" == setting:
+                            delivery_report1 = f_ss[group][feature][setting][0]["value"]
+                        if "SMS Delivery Reports for SIM2" == setting:
+                            delivery_report2 = f_ss[group][feature][setting][0]["value"]
+                        if "Message center number locked" in setting:
+                            num_lock = f_ss[group][feature][setting][0]["value"]
+                    if dual_sim:
+                    	r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report_1=delivery_report1, delivery_report_2=delivery_report2, num_lock=num_lock, dual=dual_sim)
+                    else:
+                		r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report_1=delivery_report1, num_lock=num_lock, dual=dual_sim)
+                    status = "pass" if r1 and r2 else "fail"
+                    # self.comment("--[feature][%s]%s" % (status, feature))
+                    self.comment("--[feature][%s]%s" % (status, 'SMS settings'))
+                    if status == "fail":
+                        # self.fail("[Result] %s: Failed" % feature)
+                        self.fail("[Result] %s: Failed" % 'SMS settings')
 
     def test_phone_mms_ui(self):
-        """Phone mms UI settings
+        """Phone sms UI settings
         @tcId phone mms ui
         """
         f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
         self.settingutil = SettingUtil(self)
         f_ss = self.settingutil.converter(f)
+        below_f = os.path.join(os.path.dirname(__file__), "below_config.json").replace("\\", "/")
+        below_f_ss = self.settingutil.converter(below_f)
         # f_ss = json.loads(xml2json(source))
         # read configuration items mapping file, for reference
         count = 0
         failed_tc = []
         m_count = 0
         manual_tc = []
-        # default NDT value
-        delivery_report = True
-        allow_adverts = True
-        reception = 1
-        # py dict from json file
+        # Default NDT value
+        dual_sim = False
+        max_size = below_f_ss["Messaging"]["MMS Settings"]["Maximum size for received MMS message"][0]["value"]
+        # note: this is common to ss and dual sim1
+        try:
+            delivery_report1 = below_f_ss["Messaging"]["MMS Settings"]["Request MMS Delivery Report for SIM1"][0]["value"]
+            retrival_mode1 = below_f_ss["Messaging"]["MMS Settings"]["MMS Retrieval mode for SIM1"][0]["value"]
+            allow_advert1 = below_f_ss["Messaging"]["MMS Settings"]["Allow adverts for SIM1"][0]["value"]
+        except:
+            self.comment("[Oops] You should not see this, pls contact developer")
+        # if SIM2 is supported
+        if below_f_ss["Messaging"]["MMS Settings"].has_key("Request MMS Delivery Report for SIM2"):
+            dual_sim = True
+            delivery_report2 = below_f_ss["Messaging"]["MMS Settings"]["Request MMS Delivery Report for SIM2"][0]["value"]
+            retrival_mode2 = below_f_ss["Messaging"]["MMS Settings"]["MMS Retrieval mode for SIM2"][0]["value"]
+            allow_advert2 = below_f_ss["Messaging"]["MMS Settings"]["Allow adverts for SIM2"][0]["value"]
         for group in f_ss:
             self.comment("[group] %s" % group)
             for feature in f_ss[group]:
                 if "MMS Settings" in feature:
                     for setting in f_ss[group][feature]:
-                        if "MMS Delivery Report" in setting:
-                            delivery_report = f_ss[group][feature][setting][0]["value"]
-                        if "Allow adverts" in setting:
-                            allow_adverts = f_ss[group][feature][setting][0]["value"]
-                        if "MMS Retrieval mode" in setting:
-                            reception = int(f_ss[group][feature][setting][0]["value"])
-                    r1, r2, r3 = self.settingutil.check_phone_mms_ui(delivery_report=delivery_report, allow_adverts=allow_adverts, reception=reception)
+                        if "MMS Delivery Report for SIM1" in setting:
+                        	delivery_report1 = f_ss[group][feature][setting][0]["value"]
+                        elif "MMS Delivery Report for SIM2" in setting:
+                        	delivery_report2 = f_ss[group][feature][setting][0]["value"]
+                        elif "MMS Retrieval mode for SIM1" in setting:
+                        	retrival_mode1 = f_ss[group][feature][setting][0]["value"]
+                        elif "MMS Retrieval mode for SIM2" in setting:
+                        	retrival_mode2 = f_ss[group][feature][setting][0]["value"]
+                        elif "Allow adverts for SIM1" in setting:
+                        	allow_advert1 = f_ss[group][feature][setting][0]["value"]
+                        elif "Allow adverts for SIM2" in setting:
+                        	allow_advert2 = f_ss[group][feature][setting][0]["value"]
+                   	if dual_sim:
+	                    r1, r2, r3 = self.settingutil.check_phone_mms_ui(
+	                    	delivery_report_1=delivery_report1, allow_adverts_1=allow_advert1, reception_1=retrival_mode1,\
+	                    	delivery_report_2=delivery_report2, allow_adverts_2=allow_advert2, reception_2=retrival_mode2,\
+	                    	dual=dual_sim)
+	                else:
+	                	r1, r2, r3 = self.settingutil.check_phone_mms_ui(
+	                    	delivery_report_1=delivery_report1, allow_adverts_1=allow_advert1, reception_1=retrival_mode1,\
+	                    	dual=dual_sim)
                     status = "pass" if r1 and r2 and r3 else "fail"
-                    self.comment("--[feature][%s]%s" % (status, feature))
+                    # self.comment("--[feature][%s]%s" % (status, feature))
+                    self.comment("--[feature][%s]%s" % (status, 'MMS settings'))
                     if status == "fail":
-                        self.fail("[Result] %s: Failed" % feature)
+                        # self.fail("[Result] %s: Failed" % feature)
+                        self.fail("[Result] %s: Failed" % 'MMS settings')
 
     def test_phone_voice_mail_ui(self):
         """Phone voice mailbox number
@@ -430,34 +453,3 @@ class UiTest(uitestcase.UITestCase):
                 self.comment("%d. Tile content: expect[%s, %s] actual[%s]" % (i+1,tc[0][0],tc[0][1],tc[1]))
         if count > 0:
             self.fail("[Result] Check customized menu order failed")
-
-
-    # def test_main_menu(self):
-    #     """Check main menu
-    #     @tcId tile content
-    #     """
-    #     f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
-    #     self.settingutil = SettingUtil(self)
-    #     f_ss = self.settingutil.converter(f)
-    #     # f_ss = json.loads(xml2json(source))
-    #     # read configuration items mapping file, for reference
-    #     failed_tc = []
-    #     m_count = 0
-    #     manual_tc = []
-    #     # py dict from json file
-    #     for group in f_ss:
-    #         self.comment("[group] %s" % group)
-    #         for feature in f_ss[group]:
-    #             for setting in f_ss[group][feature]:
-    #                 if "Tile content" in setting:
-    #                     self.comment("--[feature] %s" % feature)
-    #                     # if "Voice mail" in setting:
-    #                     item = f_ss[group][feature][setting][0]["Content item"]
-    #                     position = f_ss[group][feature][setting][0]["Position"]
-    #                     r = self.settingutil.check_main_menu()
-    #                     self.comment(r)
-    #                     status = "pass" if r else "fail"
-    #                     self.comment("----[setting][%s]%s" % (status, setting))
-    #                     if status == "fail":
-    #                         self.fail("[Result] %s: Failed" % feature)
-
