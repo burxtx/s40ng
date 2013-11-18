@@ -295,6 +295,12 @@
                     "ref": "./yapas/mobile/internet", 
                     "value": false
                 }
+            ],
+            "Roaming mobile data usage": [
+                {
+                    "ref": "./yapas/network/data-behaviour", 
+                    "value": "allow"
+                }
             ]
         }, 
         "Bluetooth settings": {
