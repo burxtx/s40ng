@@ -916,6 +916,12 @@
                     "ref": "./platform/INFO_PP_MMS_MAX_SIZE", 
                     "value": "102400"
                 }
+            ],
+            "SMS to MMS conversion threshold value": [
+                {
+                    "ref": "./yapas/messaging/editor/mo-sms-max-parts", 
+                    "value": "2"
+                }
             ]
         }, 
         "Other Messaging Settings": {
