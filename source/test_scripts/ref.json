@@ -327,11 +327,11 @@
         }, 
         "Configuration Settings": {
             "OMA-CP provisioning": [
-                 {
-                     "ref": "./yapas/provisioning/ota-auth-mandatory",
-                     "value": true
-                 }
-             ],
+                {
+                    "ref": "./yapas/provisioning/ota-auth-mandatory",
+                    "value": true
+                }
+            ],
             "Packet Data Access Points": [
                 {
                     "Proxy port": "80", 
