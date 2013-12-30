@@ -295,8 +295,14 @@
                     "ref": "./yapas/mobile/internet", 
                     "value": false
                 }
+            ],
+            "Roaming mobile data usage": [
+                {
+                    "ref": "./yapas/network/data-behaviour",
+                    "value": "allow"
+                }
             ]
-        }, 
+        },
         "Bluetooth settings": {
             "Device name": [
                 {
@@ -320,6 +326,12 @@
             ]
         }, 
         "Configuration Settings": {
+            "OMA-CP provisioning": [
+                 {
+                     "ref": "./yapas/provisioning/ota-auth-mandatory",
+                     "value": true
+                 }
+             ],
             "Packet Data Access Points": [
                 {
                     "Proxy port": "80", 
@@ -804,7 +816,7 @@
              "Enable or Disable VOIP": [
                 {
                     "ref": "./yapas/voip/configuration", 
-                    "value": "none"
+                    "value": ""
                 }
             ],
             "Call barring menu visibility": [
@@ -904,6 +916,12 @@
                     "ref": "./platform/INFO_PP_MMS_MAX_SIZE", 
                     "value": "102400"
                 }
+            ],
+            "SMS to MMS conversion threshold value": [
+                {
+                    "ref": "./yapas/messaging/editor/mo-sms-max-parts",
+                    "value": "2"
+                }
             ]
         }, 
         "Other Messaging Settings": {
@@ -975,7 +993,7 @@
                     "value": "1:100,2:5,3:60,4:90,5:20,6:10"
                 }
             ],
-             "3G Cell Broadcast support": [
+            "3G Cell Broadcast support": [
                 {
                     "ref": "./platform/INFO_PP_3G_BMC_SUPPORT", 
                     "value": true

@@ -156,9 +156,9 @@ class UiTest(uitestcase.UITestCase):
                         if "Message center number locked" in setting:
                             num_lock = f_ss[group][feature][setting][0]["value"]
                     if dual_sim:
-                    	r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report_1=delivery_report1, delivery_report_2=delivery_report2, num_lock=num_lock, dual=dual_sim)
+                        r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report_1=delivery_report1, delivery_report_2=delivery_report2, num_lock=num_lock, dual=dual_sim)
                     else:
-                		r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report_1=delivery_report1, num_lock=num_lock, dual=dual_sim)
+                        r1, r2 = self.settingutil.check_phone_sms_ui(delivery_report_1=delivery_report1, num_lock=num_lock, dual=dual_sim)
                     status = "pass" if r1 and r2 else "fail"
                     # self.comment("--[feature][%s]%s" % (status, feature))
                     self.comment("--[feature][%s]%s" % (status, 'SMS settings'))
@@ -203,26 +203,27 @@ class UiTest(uitestcase.UITestCase):
                 if "MMS Settings" in feature:
                     for setting in f_ss[group][feature]:
                         if "MMS Delivery Report for SIM1" in setting:
-                        	delivery_report1 = f_ss[group][feature][setting][0]["value"]
+                            delivery_report1 = f_ss[group][feature][setting][0]["value"]
                         elif "MMS Delivery Report for SIM2" in setting:
-                        	delivery_report2 = f_ss[group][feature][setting][0]["value"]
+                            delivery_report2 = f_ss[group][feature][setting][0]["value"]
                         elif "MMS Retrieval mode for SIM1" in setting:
-                        	retrival_mode1 = f_ss[group][feature][setting][0]["value"]
+                            retrival_mode1 = f_ss[group][feature][setting][0]["value"]
                         elif "MMS Retrieval mode for SIM2" in setting:
-                        	retrival_mode2 = f_ss[group][feature][setting][0]["value"]
+                            retrival_mode2 = f_ss[group][feature][setting][0]["value"]
                         elif "Allow adverts for SIM1" in setting:
-                        	allow_advert1 = f_ss[group][feature][setting][0]["value"]
+                            allow_advert1 = f_ss[group][feature][setting][0]["value"]
                         elif "Allow adverts for SIM2" in setting:
-                        	allow_advert2 = f_ss[group][feature][setting][0]["value"]
-                   	if dual_sim:
-	                    r1, r2, r3 = self.settingutil.check_phone_mms_ui(
-	                    	delivery_report_1=delivery_report1, allow_adverts_1=allow_advert1, reception_1=retrival_mode1,\
-	                    	delivery_report_2=delivery_report2, allow_adverts_2=allow_advert2, reception_2=retrival_mode2,\
-	                    	dual=dual_sim)
-	                else:
-	                	r1, r2, r3 = self.settingutil.check_phone_mms_ui(
-	                    	delivery_report_1=delivery_report1, allow_adverts_1=allow_advert1, reception_1=retrival_mode1,\
-	                    	dual=dual_sim)
+                            allow_advert2 = f_ss[group][feature][setting][0]["value"]
+                    self.comment(dual_sim)
+                    if dual_sim:
+                        r1, r2, r3 = self.settingutil.check_phone_mms_ui(
+                            delivery_report_1=delivery_report1, allow_adverts_1=allow_advert1, reception_1=retrival_mode1,\
+                            delivery_report_2=delivery_report2, allow_adverts_2=allow_advert2, reception_2=retrival_mode2,\
+                            dual=dual_sim)
+                    else:
+                        r1, r2, r3 = self.settingutil.check_phone_mms_ui(
+                            delivery_report_1=delivery_report1, allow_adverts_1=allow_advert1, reception_1=retrival_mode1,\
+                            dual=dual_sim)
                     status = "pass" if r1 and r2 and r3 else "fail"
                     # self.comment("--[feature][%s]%s" % (status, feature))
                     self.comment("--[feature][%s]%s" % (status, 'MMS settings'))
@@ -425,21 +426,22 @@ class UiTest(uitestcase.UITestCase):
         sub_list = f_ss["User Interface"]["Main menu settings"]["Tile content"]
         for sub in sub_list:
             pos = int(sub["Position"])
-            app = sub["Content item"]
-            n_x = pos % 4
-            n_y = pos / 4
-            while pos > 11:
-                # capture exceed one screen, drag down 2 lines first
-                self.gesture.swipe((5, 81+86*2), (5, 81))
-                n_y -= 2
-                pos -= 8
-            target_area = (5+n_x*58, 81+n_y*86, 56, 17)
-            r = self.tryExpect(app, fromArea=target_area)
-            if not r:
-                results.append((app, pos))
-            # restore screen
-            self.gesture.swipe((12,90), (200,90))
-            self.gesture.swipe((12,90), (200,90))
+            if sub.has_key('Content item'):
+                app = sub["Content item"]
+                n_x = pos % 4
+                n_y = pos / 4
+                while pos > 11:
+                    # capture exceed one screen, drag down 2 lines first
+                    self.gesture.swipe((5, 81+86*2), (5, 81))
+                    n_y -= 2
+                    pos -= 8
+                target_area = (5+n_x*58, 81+n_y*86, 56, 17)
+                r = self.tryExpect(app, fromArea=target_area)
+                if not r:
+                    results.append((app, pos))
+                # restore screen
+                self.gesture.swipe((12,90), (200,90))
+                self.gesture.swipe((12,90), (200,90))
         for r in results:
             self.comment("----[setting][fail] %s position incorrect" % r[0])
             count += 1
