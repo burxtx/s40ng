@@ -250,7 +250,7 @@ class SettingUtil(uitestcase.UITestCase):
             if not r1:
                 self.tc.comment("[fail] SS sms delivery report incorrect")
         # check message centre
-        mc = self.tc.check("Message cent??")
+        mc = self.tc.check("n1YQSAhckQkKel4i22xY3kg")#(Message centre)
         r2 = mc^num_lock
         if not r2:
             self.tc.comment("[fail] sms center number lock is incorrect")
