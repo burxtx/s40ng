@@ -25,7 +25,26 @@ class SettingUtil(uitestcase.UITestCase):
             new_word = word.lower()
             new_words.append(new_word)
         return " ".join(new_words)
-    
+    def cpf2phone2(self, s):
+        # another version for cpf2phone(), translate en to textID
+        if "Email" in s:
+            s = "nEspZfTVd1aMGuhRiLrr4OZ"
+        elif "Message" in s:
+            s = "naJBfedkDqkWCF5fRgefg0Q"
+        elif "Alarm" in s:
+            s = "n4kdK77AlNT9csHoHUu5eZe"
+        elif "Reminder" in s:
+            s = "nvuTOvN44pThHOsZXah1yQV"
+        elif "Push" in s:
+            s = "nvNXFy0mTTMbsMMLvTxVahQ"
+        elif "SIM1 Ringtone" == s:
+            s = "nQ3GdAgPc2hctWzezJkNFlp"
+        elif "SIM2 Ringtone" == s:
+            s = "nIdiICvyqaL7angsKBL4J9v"
+        elif "Ringtone" == s:
+            s = "nKSmLJn7WZD0UXH8fxOToFQ"
+        return s
+
     def bhdconvert(self, setting, value, bits):
         if "GSM A5" in setting:
             bit_index = re.findall(r"GSM A5/(\d+) ciphering algorithm support", setting)[0]
@@ -53,7 +72,8 @@ class SettingUtil(uitestcase.UITestCase):
         r = -1 if self.tc.check(f) == False else 0
         self.tc.exit()
         return r
-
+    def get_phone_memory_music(self, f=None):
+        pass
     def get_phone_tone_non_sys(self, f=None):
         self.tc.navigate('nTcnBNaw1uP6xnG1qtrpbtA') # (Files)
         self.tc.select('nuYCeSjyprUScP5eyLL-zqw') # (Phone memory)
@@ -66,9 +86,9 @@ class SettingUtil(uitestcase.UITestCase):
         self.tc.navigate('nP6YDmTdaqE2U0eXQBadWwg') # (Settings)
         self.tc.select('nHRsBbwRbmQJkNHowX6zSW8') # (Sounds and vibra)
         # select tone type
-        if "nPUk5XHrGu0_UrW_ryuAOVw" in ft: # (Alarm)
+        if "Alarm" in ft: # (Alarm)
             ft = "n4kdK77AlNT9csHoHUu5eZe" # (Alarm tone)
-        if "njXyu06ix3kyO3qSMAdXrHg" in ft: # (Message)
+        if "Message" in ft: # (Message)
             ft = "naJBfedkDqkWCF5fRgefg0Q" # (Message tone)
         if "Ring" in ft:
             if self.tc.check("nKSmLJn7WZD0UXH8fxOToFQ"): # (Ringtone)
@@ -90,7 +110,7 @@ class SettingUtil(uitestcase.UITestCase):
     def check_phone_profile_tone(self, f=None, ft=None):
         self.tc.navigate('nP6YDmTdaqE2U0eXQBadWwg') # (Settings)
         self.tc.select('nHRsBbwRbmQJkNHowX6zSW8') # (Sounds and vibra)
-        ft = self.cpf2phone(ft)
+        ft = self.cpf2phone2(ft)
         r = -1 if self.tc.check(f, relatedTo=ft) == False else 0
         self.tc.exit()
         return r
@@ -194,7 +214,7 @@ class SettingUtil(uitestcase.UITestCase):
             self.tc.fail("[fail] nitz incorrect")
         r1 = self.tc.check(dateformat, relatedTo="nL0fIeyzTLECEY-I4Cgq3hQ") # (Date format)
         if not r1:
-            self.tc.fail("[fail] date format incorrect")
+            self.tc.fail("[manual] please manually check date format")
         r2 = self.tc.check(tf24h, relatedTo="noSQOOdIy4kG4OYvp7urJ_w") # (Time format)
         if not r2:
             self.tc.fail("[fail] time format incorrect")
