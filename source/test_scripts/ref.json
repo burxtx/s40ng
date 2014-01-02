@@ -661,6 +661,18 @@
                     "ref": "./yapas/calls/two-digit-dialing", 
                     "value": "true"
                 }
+            ],
+            "2g RAT info": [
+                {
+                    "ref": "./yapas/network/2g-rat-info", 
+                    "value": true
+                }
+            ], 
+            "PDP context activation restriction enabled": [
+                {
+                    "ref": "./yapas/mobile/pdp-context-activation-restriction-enabled", 
+                    "value": true
+                }
             ]
         }, 
         "Contact Settings": {
