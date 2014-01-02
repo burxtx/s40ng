@@ -1033,13 +1033,19 @@
                 }
             ]
         }
-    }, 
+    },
     "Variant Management": {
-        "MemoryCard": {
-            "Size of the Memory Card": [
+        "Multivariant": {
+            "Variant Version for operator approval request": [
                 {
-                    "ref": "", 
-                    "value": "4"
+                    "ref": "./yapas/variant/version", 
+                    "value": "0.00"
+                }
+            ], 
+            "Variant Version description for operator approval request": [
+                {
+                    "ref": "./yapas/variant/version-description", 
+                    "value": "test"
                 }
             ]
         }
