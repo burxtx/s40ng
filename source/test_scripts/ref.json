@@ -401,7 +401,16 @@
                     "value": "ru-RU"
                 }
             ]
+            
         }, 
+        "Other UI Settings": {
+            "Screen double tap": [
+                {
+                    "ref": "./yapas/privacy/tap-to-wake", 
+                    "value": true
+                }
+            ]
+        },
         "Time and Date Settings": {
             "NITZ ( Network Identity and Time Zone) ": [
                 {
