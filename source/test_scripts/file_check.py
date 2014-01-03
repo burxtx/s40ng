@@ -412,7 +412,8 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                         f_v = f["value"]
                         # handle profile settings which is different from others
                         if "Profile Settings" in feature or "Graphic UI Settings" in feature:
-                            f_v = "file://"+f_ss[group][feature][setting][1]["value"]+f_ss[group][feature][setting][0]["value"]
+                            if setting != 'Key Tone':
+                                f_v = "file://"+f_ss[group][feature][setting][1]["value"]+f_ss[group][feature][setting][0]["value"]
                         if f_v == True or f_v == False:
                             f_v = str(f_v).lower()
                         # prevent if phone value is upper started

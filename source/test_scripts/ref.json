@@ -521,6 +521,12 @@
                     "ref": "./yapas/sound/ringtone", 
                     "value": "testing tone.wav"
                 }
+            ],
+            "Key Tone": [
+                {
+                    "ref": "./yapas/sound/screensounds", 
+                    "value": false
+                }
             ]
         }, 
         "Graphic UI Settings": {
