@@ -301,6 +301,12 @@
                     "ref": "./yapas/network/data-behaviour",
                     "value": "allow"
                 }
+            ],
+            "Enable to hide data connection mode menu settings with When Needed.": [
+                {
+                    "ref": "./yapas/mobile/settings-hide-always-online-setting", 
+                    "value": true
+                }
             ]
         },
         "Bluetooth settings": {
