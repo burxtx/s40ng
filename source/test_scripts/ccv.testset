@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testset timedrunenabled="False" repeattime="00:00:00" shuffle="False" nexttestsetpath="">
+  <testcase name="preloaded media, Profile Settings" feature="Preloaded Media &amp; UI" subarea="Application and Content" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="MediaFilesTest" method="test_preloaded_media_files" relativetotestset="false" />
+    <testresult result="" time="01/06/2014 16:42:08" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="memory card media &amp; app file check" feature="Preloaded Media &amp; UI" subarea="Application and Content" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="MediaFilesTest" method="test_mmc_preloaded_files" relativetotestset="false" />
+    <testresult result="" time="01/06/2014 16:42:08" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Preloaded Applications, Bookmarks, Customer Folder, Homepage URL" feature="Preloaded Applications" subarea="Application and Content" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="ApplicationsTest" method="test_app_list" relativetotestset="false" />
+    <testresult result="" time="01/06/2014 16:42:08" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="config.db settings check" feature="All features" subarea="Config.db" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="ConfigSettingsTest" method="test_settings_compare" relativetotestset="false" />
+    <testresult result="" time="01/06/2014 16:42:08" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Calling Network settings: GEA, A5, AMR_speech algorithm support" feature="All features" subarea="Config.db" ucid="" totalruncount="1">
+    <testscript directory="..\..\..\..\s40ng\source\test_scripts" file="file_check" class="ConfigSettingsTest" method="test_bitmask_settings_compare" relativetotestset="false" />
+    <testresult result="" time="01/06/2014 16:42:08" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+</testset>
