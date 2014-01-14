@@ -390,6 +390,18 @@
                     "ref": "./platform/INFO_PP_OPERATOR_NAP_PROBE", 
                     "value": true
                 }
+            ],
+            "Enable MVNO": [
+                {
+                    "ref": "/yapas/provisioning/mvno-valid", 
+                    "value": true
+                }
+            ], 
+            "Prepay/Postpay operator ID": [
+                {
+                    "ref": "./yapas/provisioning/pay-nap-setting", 
+                    "value": "460:00|China CMCC; 460:01|China Unicom"
+                }
             ]
         }
     }, 
