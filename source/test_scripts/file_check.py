@@ -35,8 +35,8 @@ class MediaFilesTest(uitestcase.UITestCase):
                 if "Profile Settings" in feature:
                     for setting in f_ss[group][feature]:
                         profile_tone_files=[]
-                        if len(f_ss[group][feature][setting]) > 2:
-                            self.comment("[Oops] Something went wrong...")
+                        if len(f_ss[group][feature][setting]) != 2:
+                            self.comment("[Skip] %s will be covered in config.db check..." % setting)
                             continue
                         f = f_ss[group][feature][setting][0]
                         # f_path = f_ss[group][feature][setting][1]
