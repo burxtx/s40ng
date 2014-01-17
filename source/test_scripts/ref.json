@@ -393,7 +393,7 @@
             ],
             "Enable MVNO": [
                 {
-                    "ref": "/yapas/provisioning/mvno-valid", 
+                    "ref": "./yapas/provisioning/mvno-valid", 
                     "value": true
                 }
             ], 
