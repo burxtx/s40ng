@@ -214,11 +214,10 @@ class SettingUtil(uitestcase.UITestCase):
             self.tc.fail("[fail] nitz incorrect")
         r1 = self.tc.check(dateformat, relatedTo="nL0fIeyzTLECEY-I4Cgq3hQ") # (Date format)
         if not r1:
-            self.tc.fail("[manual] please manually check date format")
+            self.tc.comment("[manual] please manually check date format")
         r2 = self.tc.check(tf24h, relatedTo="noSQOOdIy4kG4OYvp7urJ_w") # (Time format)
         if not r2:
             self.tc.fail("[fail] time format incorrect")
-            
         self.tc.exit()
         return r1, r2, r3
 
