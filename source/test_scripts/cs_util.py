@@ -281,7 +281,7 @@ class SettingUtil(uitestcase.UITestCase):
         allow_adverts_opt_1 = "widgets/switch-bg-on-dark" if allow_adverts_1 else "widgets/switch-bg-off-dark"
         delivery_report_opt_2 = "widgets/switch-bg-on-dark" if delivery_report_2 else "widgets/switch-bg-off-dark"
         allow_adverts_opt_2 = "widgets/switch-bg-on-dark" if allow_adverts_2 else "widgets/switch-bg-off-dark"
-        reception_opt = {"1":"nqBPhVgbiu0i9Ifqh5Ykv6A", "2":"nmZT1qcoew0a6F2EpOdYGzA", "3":"nk3O_tC198US-hSpK7XDHNA", "4":"nk3O_tC198US-hSpK7XDHNA"} # (Automatic) # (Manual) # (Off) # (Off)
+        reception_opt = {"1":"nqiS2Sc0CqEiVtVzDK_lrZw", "2":"nPFIakEhTT8egavEUCbHJrV", "3":"nS6_XgM9yIUWDnPkuArBdJQ", "4":"nk3O_tC198US-hSpK7XDHNA"} # (Always) # (Only when mobile data is on) # (Manually) # (Off)
         self.tc.navigate("nP6YDmTdaqE2U0eXQBadWwg") # (Settings)
         self.tc.select("nopeC8kE_okiWerqcmwYDbA") # (Messaging)
         self.tc.check("nxU8aiSOxDDFx6pTEKnI2iH") # (MMS settings)
