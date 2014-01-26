@@ -306,7 +306,7 @@ class ApplicationsTest(uitestcase.UITestCase):
                     #         if status == "fail":
                     #             count += 1
                     #             failed_tc.append((setting, f["Midlet name"], 'NA'))
-                    elif "Midlet removal" in setting:
+                    if "Midlet removal" in setting:
                         for f in f_ss[group][feature][setting]:
                             r = self.settingutil.check_phone_app(f["Midlet name"], remove=True)
                             status = "pass" if r == 0 else "fail"
