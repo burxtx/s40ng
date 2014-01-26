@@ -52,40 +52,49 @@ class UiTest(uitestcase.UITestCase):
                     if status == "fail":
                         self.fail("[Result] %s: Failed" % feature)
 
-    def test_time_date_ui(self):
-        """Phone time and date UI settings
-        @tcId Time and Date ui
-        """
-        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
-        self.settingutil = SettingUtil(self)
-        f_ss = self.settingutil.converter(f)
-        # f_ss = json.loads(xml2json(source))
-        # read configuration items mapping file, for reference
-        count = 0
-        failed_tc = []
-        m_count = 0
-        manual_tc = []
-        # default NDT value
-        timeformat24h = True
-        nitz_update = True
-        dateformat = "DD-MM-YYYY"
-        # py dict from json file
-        for group in f_ss:
-            self.comment("[group] %s" % group)
-            for feature in f_ss[group]:
-                if "Time and Date Settings" in feature:
-                    for setting in f_ss[group][feature]:
-                        if "NITZ" in setting:
-                            nitz_update = f_ss[group][feature][setting][0]["value"]
-                        if "Date" in setting:
-                            dateformat = f_ss[group][feature][setting][0]["value"]
-                        if "Time" in setting:
-                            timeformat24h = f_ss[group][feature][setting][0]["value"]
-                    r1, r2, r3 = self.settingutil.check_phone_time_date_ui(timeformat24h=timeformat24h, nitz_update=nitz_update, dateformat=dateformat)
-                    status = "pass" if r1 and r2 and r3 else "fail"
-                    self.comment("--[feature][%s]%s" % (status, feature))
-                    if status == "fail":
-                        self.fail("[Result] %s: Failed" % feature)
+    # def test_time_date_ui(self):
+    #     """Phone time and date UI settings
+    #     @tcId Time and Date ui
+    #     """
+    #     f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
+    #     self.settingutil = SettingUtil(self)
+    #     f_ss = self.settingutil.converter(f)
+    #     below_f = os.path.join(os.path.dirname(__file__), "below_config.json").replace("\\", "/")
+    #     below_f_ss = self.settingutil.converter(below_f)
+    #     # f_ss = json.loads(xml2json(source))
+    #     # read configuration items mapping file, for reference
+    #     count = 0
+    #     failed_tc = []
+    #     m_count = 0
+    #     manual_tc = []
+    #     # default NDT value
+    #     timeformat24h = below_f_ss["User Interface"]["Time and Date Settings"]["Time Format"][0]["value"]
+    #     nitz_update = below_f_ss["User Interface"]["Time and Date Settings"]["NITZ ( Network Identity and Time Zone) "][0]["value"]
+    #     dateformat = below_f_ss["User Interface"]["Time and Date Settings"]["Date format"][0]["value"]
+    #     # py dict from json file
+    #     for group in f_ss:
+    #         self.comment("[group] %s" % group)
+    #         for feature in f_ss[group]:
+    #             if "Time and Date Settings" in feature:
+    #                 for setting in f_ss[group][feature]:
+    #                     if "NITZ" in setting:
+    #                         nitz_update = f_ss[group][feature][setting][0]["value"]
+    #                     if "Date" in setting:
+    #                         dateformat = f_ss[group][feature][setting][0]["value"]
+    #                     if "Time" in setting:
+    #                         timeformat24h = f_ss[group][feature][setting][0]["value"]
+    #                 self.comment(timeformat24h)
+    #                 r1, r2, r3 = self.settingutil.check_phone_time_date_ui(timeformat24h=timeformat24h, nitz_update=nitz_update, dateformat=dateformat)
+    #                 if not r1:
+    #                     self.comment("---[Setting][%s]%s" % ('manual', 'date format'))
+    #                 if not r2:
+    #                     self.comment("---[Setting][%s]%s" % ('fail', 'time format'))
+    #                 if not r3:
+    #                     self.comment("---[Setting][%s]%s" % ('fail', 'NITZ'))        
+    #                 status = "pass" if r1 and r2 and r3 else "fail"
+    #                 # self.comment("--[feature][%s]%s" % (status, feature))
+    #                 if status == "fail":
+    #                     self.fail("[Result] %s: Failed" % feature)
 
     #def test_phone_network_ui(self):
     #    """Phone network UI settings
@@ -214,7 +223,7 @@ class UiTest(uitestcase.UITestCase):
                             allow_advert1 = f_ss[group][feature][setting][0]["value"]
                         elif "Allow adverts for SIM2" in setting:
                             allow_advert2 = f_ss[group][feature][setting][0]["value"]
-                    self.comment(dual_sim)
+                    self.comment('[Warning]SIM2 is: %s' % dual_sim)
                     if dual_sim:
                         r1, r2, r3 = self.settingutil.check_phone_mms_ui(
                             delivery_report_1=delivery_report1, allow_adverts_1=allow_advert1, reception_1=retrival_mode1,\

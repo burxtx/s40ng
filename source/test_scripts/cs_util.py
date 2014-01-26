@@ -181,7 +181,7 @@ class SettingUtil(uitestcase.UITestCase):
         return r
 
     # check phone UI
-    def check_phone_bluetooth_ui(self, visible=True, device_name="Nokia 501"):
+    def check_phone_bluetooth_ui(self, visible, device_name):
         img = "widgets/bool-on-dark" if visible == True else "widgets/bool-off-dark"
         self.tc.navigate("nP6YDmTdaqE2U0eXQBadWwg") # (Settings)
         self.tc.select("nSKlSLpTSAEGpb_3DSouY7w") # (Bluetooth)
@@ -203,8 +203,9 @@ class SettingUtil(uitestcase.UITestCase):
         self.tc.exit()
         return r
 
-    def check_phone_time_date_ui(self, timeformat24h=True, nitz_update=True, dateformat="noVHqRB4XLeZJfiGPRiREsH"): # (DD-MM-YYYY)
-        tf24h = 'widgets/switch-bg-on-dark' if timeformat24h == True else 'widgets/switch-bg-off-dark'
+    def check_phone_time_date_ui(self, timeformat24h, nitz_update, dateformat):
+        tf24h = '24-hour clock' if timeformat24h == True else '12-hour clock'
+        # tf24h = 'widgets/switch-bg-on-dark' if timeformat24h == True else 'widgets/switch-bg-off-dark'
         nitz = 'widgets/switch-bg-on-dark' if nitz_update == True else 'widgets/switch-bg-off-dark'
         self.tc.navigate("nP6YDmTdaqE2U0eXQBadWwg") # (Settings)
         self.tc.select("nK8Fa6ELAX0_Q0lqZHRYuQA") # (Time and date)
@@ -275,8 +276,7 @@ class SettingUtil(uitestcase.UITestCase):
             self.tc.comment("[fail] sms center number lock is incorrect")
         return r1, r2
 
-    def check_phone_mms_ui(self, delivery_report_1, allow_adverts_1, reception_1,\
-                        delivery_report_2=None, allow_adverts_2=None, reception_2=None, dual=False):
+    def check_phone_mms_ui(self, delivery_report_1, allow_adverts_1, reception_1, delivery_report_2=None, allow_adverts_2=None, reception_2=None, dual=False):
         delivery_report_opt_1 = "widgets/switch-bg-on-dark" if delivery_report_1 else "widgets/switch-bg-off-dark"
         allow_adverts_opt_1 = "widgets/switch-bg-on-dark" if allow_adverts_1 else "widgets/switch-bg-off-dark"
         delivery_report_opt_2 = "widgets/switch-bg-on-dark" if delivery_report_2 else "widgets/switch-bg-off-dark"
@@ -293,7 +293,7 @@ class SettingUtil(uitestcase.UITestCase):
                 r2_1 = self.tc.tryExpect(reception_opt[reception_1], relatedTo="nLWWCDTGszODgKbCqvl511g//n32sMoMMXMT75yENRBRsSsL")#(SIM1)#(MMS reception)
                 r3_1 = self.tc.tryExpect(allow_adverts_opt_1, relatedTo="nLWWCDTGszODgKbCqvl511g//niHrIvI97C6oyb7XnOp7qDr")#(SIM1)#(Allow adverts)
             else:
-                self.tc.comment("[Oops] Maybe SIM1 is empty")
+                self.tc.comment("[Oops] Maybe SIM1 slot is empty")
                 r1_1 = r2_1 = r3_1 = False
             self.tc.gesture.swipe((60,319),(60,10))
             unempty_2 = self.tc.tryExpect("nGG3fTuTHN7PXE5DeIQqU5R") # (SIM2)
@@ -302,7 +302,7 @@ class SettingUtil(uitestcase.UITestCase):
                 r2_2 = self.tc.check(reception_opt[reception_2], relatedTo="nxU8aiSOxDDFx6pTEKnI2iH//nGG3fTuTHN7PXE5DeIQqU5R//n32sMoMMXMT75yENRBRsSsL")#(MMS settings)#(SIM2)#(MMS reception)
                 r1_2 = self.tc.check(delivery_report_opt_2, relatedTo="nxU8aiSOxDDFx6pTEKnI2iH//nGG3fTuTHN7PXE5DeIQqU5R//n1ocIwPRxc91sODUhFnz21o")#(MMS settings)#(SIM2)#(Delivery reports)
             else:
-                self.tc.comment("[Oops] Maybe SIM2 is empty")
+                self.tc.comment("[Oops] Maybe SIM2 slot is empty")
                 r1_2 = r2_2 = r3_2 = False
             if r1_1 and r1_2:
                 r1 = True

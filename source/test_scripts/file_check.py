@@ -296,15 +296,16 @@ class ApplicationsTest(uitestcase.UITestCase):
             for feature in f_ss[group]:
                 self.comment("--[feature] %s" % feature)
                 for setting in f_ss[group][feature]:
+                    # Comment out this preloaded midlet check, because midlet name maybe different between Nuage ALE and Device.
                     # if "midlet files" in setting:
-                    if "Midlet Files" in setting:
-                        for f in f_ss[group][feature][setting]:
-                            r = self.settingutil.check_phone_app(f["Midlet name"])
-                            status = "pass" if r == 0 else "fail"
-                            self.comment("----[setting][%s]Preloaded midlet: %s " % (status, f["Midlet name"]))
-                            if status == "fail":
-                                count += 1
-                                failed_tc.append((setting, f["Midlet name"], 'NA'))
+                    # if "Midlet Files" in setting:
+                    #     for f in f_ss[group][feature][setting]:
+                    #         r = self.settingutil.check_phone_app(f["Midlet name"])
+                    #         status = "pass" if r == 0 else "fail"
+                    #         self.comment("----[setting][%s]Preloaded midlet: %s " % (status, f["Midlet name"]))
+                    #         if status == "fail":
+                    #             count += 1
+                    #             failed_tc.append((setting, f["Midlet name"], 'NA'))
                     elif "Midlet removal" in setting:
                         for f in f_ss[group][feature][setting]:
                             r = self.settingutil.check_phone_app(f["Midlet name"], remove=True)
