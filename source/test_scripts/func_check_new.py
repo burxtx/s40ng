@@ -418,48 +418,48 @@ class UiTest(uitestcase.UITestCase):
     #                if status == "fail":
     #                    self.fail("[Result] %s: Failed" % feature)
 
-    def test_main_menu_order(self):
-        """customized main menu order
-        @tcId customized main menu order check
-        """
-        count = 0
-        failed_tc = []
-        m_count = 0
-        manual_tc = []
-        origin_cod = (33, 90)
-        results = []
-        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
-        self.settingutil = SettingUtil(self)
-        f_ss = self.settingutil.converter(f)
-        sub_list = f_ss["User Interface"]["Main menu settings"]["Tile content"]
-        for sub in sub_list:
-            pos = int(sub["Position"])
-            if sub.has_key('Content item'):
-                app = sub["Content item"]
-                n_x = pos % 4
-                n_y = pos / 4
-                while pos > 11:
-                    # capture exceed one screen, drag down 2 lines first
-                    self.gesture.swipe((5, 81+86*2), (5, 81))
-                    n_y -= 2
-                    pos -= 8
-                target_area = (5+n_x*58, 81+n_y*86, 56, 17)
-                r = self.tryExpect(app, fromArea=target_area)
-                if not r:
-                    results.append((app, pos))
-                # restore screen
-                self.gesture.swipe((12,90), (200,90))
-                self.gesture.swipe((12,90), (200,90))
-        for r in results:
-            self.comment("----[setting][fail] %s position incorrect" % r[0])
-            count += 1
-            failed_tc.append((r, 'NA'))
+    # def test_main_menu_order(self):
+    #     """customized main menu order
+    #     @tcId customized main menu order check
+    #     """
+    #     count = 0
+    #     failed_tc = []
+    #     m_count = 0
+    #     manual_tc = []
+    #     origin_cod = (33, 90)
+    #     results = []
+    #     f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
+    #     self.settingutil = SettingUtil(self)
+    #     f_ss = self.settingutil.converter(f)
+    #     sub_list = f_ss["User Interface"]["Main menu settings"]["Tile content"]
+    #     for sub in sub_list:
+    #         pos = int(sub["Position"])
+    #         if sub.has_key('Content item'):
+    #             app = sub["Content item"]
+    #             n_x = pos % 4
+    #             n_y = pos / 4
+    #             while pos > 11:
+    #                 # capture exceed one screen, drag down 2 lines first
+    #                 self.gesture.swipe((5, 81+86*2), (5, 81))
+    #                 n_y -= 2
+    #                 pos -= 8
+    #             target_area = (5+n_x*58, 81+n_y*86, 56, 17)
+    #             r = self.tryExpect(app, fromArea=target_area)
+    #             if not r:
+    #                 results.append((app, pos))
+    #             # restore screen
+    #             self.gesture.swipe((12,90), (200,90))
+    #             self.gesture.swipe((12,90), (200,90))
+    #     for r in results:
+    #         self.comment("----[setting][fail] %s position incorrect" % r[0])
+    #         count += 1
+    #         failed_tc.append((r, 'NA'))
         
-        self.comment("---------------- customized app order failed: %d -------------------" % count)
-        if len(failed_tc) != count:
-            self.comment("[CRITICAL] you should not see this, pls contact developer.")
-        if len(failed_tc):
-            for i, tc in enumerate(failed_tc):
-                self.comment("%d. Tile content: expect[%s, %s] actual[%s]" % (i+1,tc[0][0],tc[0][1],tc[1]))
-        if count > 0:
-            self.fail("[Result] Check customized menu order failed")
+    #     self.comment("---------------- customized app order failed: %d -------------------" % count)
+    #     if len(failed_tc) != count:
+    #         self.comment("[CRITICAL] you should not see this, pls contact developer.")
+    #     if len(failed_tc):
+    #         for i, tc in enumerate(failed_tc):
+    #             self.comment("%d. Tile content: expect[%s, %s] actual[%s]" % (i+1,tc[0][0],tc[0][1],tc[1]))
+    #     if count > 0:
+    #         self.fail("[Result] Check customized menu order failed")
