@@ -385,7 +385,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                 self.comment("--[feature] %s" % feature)
                 # --------------- skip feature check ---------------------------
                 if "Customer certificates" in feature or "Memory Card Content" in feature \
-                   or "Browser Settings" in feature or "Emergency Calls" in feature:
+                   or "Browser Settings" in feature:
                     continue
                 for setting in f_ss[group][feature]:
                     # --------------- skip setting check ---------------------------

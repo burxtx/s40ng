@@ -642,34 +642,34 @@
     }, 
     "Calling and Contact": {
         "Emergency Calls": {
-            "Emergency number 5 (Can be edited in Nuage)": [
+            "Country and Operator variant Emergency number 1 with and without SIM (Can be edited in Nuage)": [
                 {
-                    "ref": "./yapas/operator/emergency/emergency-number/4/number", 
-                    "value": "23456"
-                }
-            ], 
-            "Emergency number 2 (Can be edited in Nuage)": [
-                {
-                    "ref": "./yapas/operator/emergency/emergency-number/1/number", 
-                    "value": "1234"
-                }
-            ], 
-            "Emergency number 3 (Can be edited in Nuage)": [
-                {
-                    "ref": "./yapas/operator/emergency/emergency-number/2/number", 
+                    "ref": "./yapas/operator/emergency/emergency-number/0/number", 
                     "value": "2999"
                 }
             ], 
-            "Emergency number 1 (Can be edited in Nuage)": [
+            "Country and Operator variant Emergency number 2 with and without SIM (Can be edited in Nuage)": [
                 {
-                    "ref": "./yapas/operator/emergency/emergency-number/0/number", 
-                    "value": "223"
+                    "ref": "./yapas/operator/emergency/emergency-number/1/number", 
+                    "value": "3999"
                 }
             ], 
-            "Emergency number 4 (Can be edited in Nuage)": [
+            "Country and Operator variant Emergency number 3 with and without SIM (Can be edited in Nuage)": [
+                {
+                    "ref": "./yapas/operator/emergency/emergency-number/2/number", 
+                    "value": "12345"
+                }
+            ], 
+            "Country and Operator variant Emergency number 4 with and without SIM (Can be edited in Nuage)": [
                 {
                     "ref": "./yapas/operator/emergency/emergency-number/3/number", 
-                    "value": "3999"
+                    "value": "23456"
+                }
+            ], 
+            "Country and Operator variant Emergency number 5 with and without SIM (Can be edited in Nuage)": [
+                {
+                    "ref": "./yapas/operator/emergency/emergency-number/4/number", 
+                    "value": "888"
                 }
             ]
         }, 
