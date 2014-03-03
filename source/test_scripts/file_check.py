@@ -390,7 +390,8 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                 for setting in f_ss[group][feature]:
                     # --------------- skip setting check ---------------------------
                     # run in func and UI test case
-                    if "Operator message" in setting:
+                    if "Operator message" in setting or "Removal of WhatsApp" in setting or "Connection Settings" in setting \
+                       or "Customer Account" in setting:
                         self.comment("----[setting][skip] %s" % setting)
                         continue
                     # handle if new setting is added, but tc not developed - Manual checking cases

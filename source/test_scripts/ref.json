@@ -697,7 +697,31 @@
                     "ref": "./yapas/mobile/pdp-context-activation-restriction-enabled", 
                     "value": true
                 }
-            ]
+            ],
+            "HS-SCCH less operation": [
+                {
+                    "ref": "./platform/INFO_PP_HS_SCCHLESS_SUPPORT", 
+                    "value": true
+                }
+            ],
+            "Enhanced fractional DPCH": [
+                {
+                    "ref": "./platform/INFO_PP_ENH_FDPCH_SUPPORT", 
+                    "value": true
+                }
+            ],
+            "Enable Continuous Packet Connectivity features": [
+                {
+                    "ref": "./platform/INFO_PP_CPC_SUPPORT", 
+                    "value": true
+                }
+            ],
+            "Vamos level support": [
+                {
+                    "ref": "./platform/INFO_PP_VAMOS_LEVEL", 
+                    "value": "1"
+                }
+            ] 
         }, 
         "Contact Settings": {
             "Intelligent digits in CLI matching": [
@@ -821,7 +845,13 @@
                     "ref": "./platform/INFO_PP_CODEC_ORDER2", 
                     "value": "true"
                 }
-            ], 
+            ],
+            "Support for wide-band AMR speech in 3G network": [
+                {
+                    "ref": "./platform/INFO_PP_CODEC_ORDER2", 
+                    "value": "true"
+                }
+            ],  
             "GSM A5 ciphering algorithm support": [
                 {
                     "ref": "./platform/INFO_PP_A5_CIPHER_ALGORITHMS", 
