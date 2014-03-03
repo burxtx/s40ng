@@ -404,6 +404,24 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                         self.comment("----[setting][skip] %s" % setting)
                         continue
                     # ---------------------------------------------------
+                    # ------------------special handling emergency number--------------
+                    if "Country and Operator variant Emergency" in setting:                        
+                        if len(f_ss[group][feature][setting])>0:
+                            found_it = False
+                            f_e_v = f_ss[group][feature][setting][0]["value"]
+                            for st in f_ref_ss[group][feature]:
+                                ref_value = f_ref_ss[group][feature][st][0]["ref"]
+                                p_e_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % ref_value)
+                                if p_e_v == f_e_v:
+                                    found_it = True
+                                    continue
+                            status = "pass" if found_it ==True else "fail"
+                            self.comment("----[setting][%s]%s " % (status, setting))
+                            if status == "fail":
+                                count += 1
+                                failed_tc.append((setting, f_e_v, ''))
+                        continue 
+                    #--------------------------------------------------------------------
                     sequence = f_ref_ss[group][feature][setting][0]
                     if sequence.has_key("ref"):
                         ref_value = sequence["ref"]
