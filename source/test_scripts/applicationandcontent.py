@@ -1,7 +1,7 @@
 import core
 from core import uitestcase
 import json, os.path
-from cs_util_media import *
+from cs_util import *
 class CommonSettingCompare(uitestcase.UITestCase):
     # subarea = "Connectivity"
     # feature = "Bluetooth"
