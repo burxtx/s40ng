@@ -391,7 +391,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                     # --------------- skip setting check ---------------------------
                     # run in func and UI test case
                     if "Operator message" in setting or "Removal of WhatsApp" in setting or "Connection Settings" in setting \
-                       or "Customer Account" in setting:
+                       or "Customer Account" in setting or 'Call Waiting Tone Customization' in setting:
                         self.comment("----[setting][skip] %s" % setting)
                         continue
                     # handle if new setting is added, but tc not developed - Manual checking cases
@@ -432,7 +432,7 @@ class ConfigSettingsTest(uitestcase.UITestCase):
                         f_v = f["value"]
                         # handle profile settings which is different from others
                         if "Profile Settings" in feature or "Graphic UI Settings" in feature:
-                            if setting != 'Key Tone':
+                            if setting != 'Key Tone' and setting !='Call Waiting Tone Sequence':
                                 f_v = "file://"+f_ss[group][feature][setting][1]["value"]+f_ss[group][feature][setting][0]["value"]
                         if f_v == True or f_v == False:
                             f_v = str(f_v).lower()

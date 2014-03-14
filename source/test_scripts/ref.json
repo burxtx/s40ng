@@ -539,6 +539,12 @@
                     "ref": "./yapas/sound/screensounds", 
                     "value": false
                 }
+            ],
+            "Call Waiting Tone Sequence": [
+                {
+                    "ref": "./yapas/calls/call-waiting-tone-sequence", 
+                    "value": "440,600,0,300"
+                }
             ]
         }, 
         "Graphic UI Settings": {
