@@ -2,294 +2,100 @@
 <testset timedrunenabled="False" repeattime="00:00:00" shuffle="False" nexttestsetpath="">
   <testcase name="device name check" feature="Bluetooth" subarea="Connectivity" ucid="" totalruncount="1">
     <testscript directory="..\..\..\s40ng\source\test_scripts" file="connectivity" class="BluetoothTest" method="testBluetoothDeviceName" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:53:15" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\device name check_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="03/12/2014 22:29:40" author="" isblackboxmodeon="false" reportpath="..\..\..\s40ng\source\test_scripts\connectivity_results\xml\device name check_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="03/12/2014 10:38:31 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/12/2014 10:41:45 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/12/2014 10:43:34 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/12/2014 10:45:58 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/12/2014 10:50:18 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:02:07 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:05:33 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:09:45 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="Passed" time="03/13/2014 02:10:22 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:11:58 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:14:33 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:24:55 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:27:52 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="Passed" time="03/13/2014 02:35:43 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="Passed" time="03/13/2014 04:05:50 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="Passed" time="03/13/2014 04:16:19 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
   </testcase>
   <testcase name="visibility check" feature="Bluetooth" subarea="Connectivity" ucid="" totalruncount="1">
     <testscript directory="..\..\..\s40ng\source\test_scripts" file="connectivity" class="BluetoothTest" method="testBluetoothVisibility" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:53:21" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\visibility check_1.xml" errorreason="[No customization point] at [Bluetooth visibility]" errortraceback="" originalresult="" />
+    <testresult result="N/A" time="03/12/2014 22:29:49" author="" isblackboxmodeon="false" reportpath="..\..\..\s40ng\source\test_scripts\connectivity_results\xml\visibility check_1.xml" errorreason="[No customization point] at [Bluetooth visibility]" errortraceback="" originalresult="" />
+    <testresult result="N/A" time="03/12/2014 10:38:40 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:41:54 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:43:43 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:46:07 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:50:27 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:02:20 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:05:42 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:09:52 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="N/A" time="03/13/2014 02:10:30 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:12:07 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:14:42 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:25:04 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:27:59 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="N/A" time="03/13/2014 02:35:49 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="N/A" time="03/13/2014 04:05:56 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="N/A" time="03/13/2014 04:16:25 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
   </testcase>
   <testcase name="Mobile Data Usage When no Wi-Fi available check" feature="Mobile Data Settings" subarea="Connectivity" ucid="" totalruncount="1">
     <testscript directory="..\..\..\s40ng\source\test_scripts" file="connectivity" class="MobileDataTest" method="testMobileDataUsageWhenNoWifi" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:53:28" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Mobile Data Usage When no Wi-Fi available check_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="03/12/2014 22:29:58" author="" isblackboxmodeon="false" reportpath="..\..\..\s40ng\source\test_scripts\connectivity_results\xml\Mobile Data Usage When no Wi-Fi available check_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="03/12/2014 10:38:49 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/12/2014 10:42:02 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/12/2014 10:43:51 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/12/2014 10:46:15 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/12/2014 10:50:35 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:02:28 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:05:50 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:09:58 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="Passed" time="03/13/2014 02:10:39 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:12:16 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:14:50 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:25:12 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="Passed" time="03/13/2014 02:28:05 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="Passed" time="03/13/2014 02:35:55 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="Passed" time="03/13/2014 04:06:02 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="Passed" time="03/13/2014 04:16:31 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
   </testcase>
   <testcase name="Roaming mobile data usage check" feature="Mobile Data Settings" subarea="Connectivity" ucid="" totalruncount="1">
     <testscript directory="..\..\..\s40ng\source\test_scripts" file="connectivity" class="MobileDataTest" method="testRoamingMobileDataUsage" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:53:34" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Roaming mobile data usage check_1.xml" errorreason="[No customization point] at [Roaming mobile data usage]" errortraceback="" originalresult="" />
+    <testresult result="N/A" time="03/12/2014 22:30:07" author="" isblackboxmodeon="false" reportpath="..\..\..\s40ng\source\test_scripts\connectivity_results\xml\Roaming mobile data usage check_1.xml" errorreason="[No customization point] at [Roaming mobile data usage]" errortraceback="" originalresult="" />
+    <testresult result="N/A" time="03/12/2014 10:38:57 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:42:11 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:43:59 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:46:24 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:50:43 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:02:36 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:05:58 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:10:47 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:12:24 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:14:59 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:25:21 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:28:11 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="N/A" time="03/13/2014 02:36:01 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="N/A" time="03/13/2014 04:06:08 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="N/A" time="03/13/2014 04:16:37 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
   </testcase>
   <testcase name="Enable to hide data connection mode menu settings with When Needed" feature="Mobile Data Settings" subarea="Connectivity" ucid="" totalruncount="1">
     <testscript directory="..\..\..\s40ng\source\test_scripts" file="connectivity" class="MobileDataTest" method="testHideDataConnectionMode" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:53:41" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Enable to hide data connection mode menu settings with When Needed_1.xml" errorreason="[No customization point] at [Enable to hide data connection mode menu settings with When Needed.]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="GSM L2 Fill Bit Randomization" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testGSML2FillBitRandomization" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:53:47" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\GSM L2 Fill Bit Randomization_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="FDN GPRS Control" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testFDNGPRSControl" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:53:54" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\FDN GPRS Control_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Source for Service Provider Name" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testSourceforServiceProviderName" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:54:01" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Source for Service Provider Name_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Enable/disable check for phone updates" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testCheckforPhoneUpdates" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:54:07" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Enable_disable check for phone updates_1.xml" errorreason="[No customization point] at [Enable/disable check for phone updates]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Flexible PLMN indicator support" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testFlexiblePLMNIndicatorSupport" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:54:13" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Flexible PLMN indicator support_1.xml" errorreason="[No customization point] at [Flexible PLMN indicator support]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Enable or Disable VOIP" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testEnableOrDisableVOIP" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:54:20" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Enable or Disable VOIP_1.xml" errorreason="[No customization point] at [Enable or Disable VOIP]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Call barring menu visibility" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testCallBarringMenuVisibility" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:54:26" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Call barring menu visibility_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="3G Fast Dormancy support" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="test3GFastDormancySupport" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:54:33" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\3G Fast Dormancy support_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="GPRS GEA algorithm" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testGPRSGEAAlgorithm" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:54:39" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\GPRS GEA algorithm_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="GSM A5 ciphering algorithm support" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testGSMA5" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:54:46" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\GSM A5 ciphering algorithm support_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Support for wide-band AMR speech in 2G/3G" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testWidebandAMRSpeech" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:54:52" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Support for wide-band AMR speech in 2G_3G_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Intelligent digits in CLI matching" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="ContactSettings" method="testIntelligentDigitsInCLI" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:54:59" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Intelligent digits in CLI matching_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Phonebook ADN before PD CLI matching" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="ContactSettings" method="testPhonebookADN" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:55:05" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Phonebook ADN before PD CLI matching_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Support a star key in number matching" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="ContactSettings" method="testSupportastarkey" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:55:11" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Support a star key in number matching_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Exact number matching" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="ContactSettings" method="testExactNumberMatching" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:55:18" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Exact number matching_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="CPHS/CSP Common PCN Handset support" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="ContactSettings" method="testCommonPCNHandset" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:55:26" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\CPHS_CSP Common PCN Handset support_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Sort contacts by" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="ContactSettings" method="testSortContactsBy" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:55:37" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Sort contacts by_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Phonebook SDN CLI matching" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="ContactSettings" method="testPhonebookSDNCLI" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:55:46" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Phonebook SDN CLI matching_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Phonebook Calling line Identification" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="ContactSettings" method="testPhonebookCalling" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:55:57" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Phonebook Calling line Identification_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Country and Operator variant Emergency number" feature="Emergency Calls" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="EmergencyCalls" method="testOperatorEmergencyNumber" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:56:08" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Country and Operator variant Emergency number_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Voice mail override number" feature="Voicemail box Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="VoiceMailboxSeting" method="testVoiceMailOverrideNumber" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:56:17" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Voice mail override number_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Clear Code support" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testClearCodeSupport" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:56:27" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Clear Code support_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Two Digit Dialing" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testTwoDigitDialing" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:56:36" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Two Digit Dialing_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="2g RAT info" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="OhterCallSettings" method="test2gRATinfo" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:56:45" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\2g RAT info_1.xml" errorreason="[No customization point] at [2g RAT info]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="PDP context activation restriction enabled" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testPDPContext" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:56:53" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\PDP context activation restriction enabled_1.xml" errorreason="[No customization point] at [PDP context activation restriction enabled]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="HS-SCCH less operation" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testHSSCCHLessOperation" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:57:01" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\HS-SCCH less operation_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Enhanced fractional DPCH" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testEnhancedFractionalDPCH" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:57:10" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Enhanced fractional DPCH_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Enable Continuous Packet Connectivity features" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testEnableContinuousPacket" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:57:19" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Enable Continuous Packet Connectivity features_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Vamos level support" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testVamosLevelSupport" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:57:28" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Vamos level support_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Message center number locked check" feature="SMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="SMSSettingsTest" method="testMessageCenterNumberLocked" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:57:37" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Message center number locked check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="SMS Delivery Reports for SIM1 check" feature="SMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="SMSSettingsTest" method="testSMSDeliveryReportsForSIM1" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:57:46" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\SMS Delivery Reports for SIM1 check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="SMS Delivery Reports for SIM2 check" feature="SMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="SMSSettingsTest" method="testSMSDeliveryReportsForSIM2" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:57:55" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\SMS Delivery Reports for SIM2 check_1.xml" errorreason="[No customization point] at [SMS Delivery Reports for SIM2]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Timestamp type to be used in messaging check" feature="SMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="SMSSettingsTest" method="testTimestampUsedInMessaging" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:58:04" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Timestamp type to be used in messaging check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="SMS Encoding Support check" feature="SMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="SMSSettingsTest" method="testSMSEncodingSupport" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:58:12" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\SMS Encoding Support check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Request MMS Delivery Report for SIM1 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="MMSSettingsTest" method="testRequestMMSDeliveryReportForSIM1" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:58:21" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Request MMS Delivery Report for SIM1 check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Request MMS Delivery Report for SIM2 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="MMSSettingsTest" method="testRequestMMSDeliveryReportForSIM2" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:58:29" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Request MMS Delivery Report for SIM2 check_1.xml" errorreason="[No customization point] at [Request MMS Delivery Report for SIM2]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Maximum size for received MMS message check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="MMSSettingsTest" method="testMaximumSizeForReceivedMMSMessage" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:58:38" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Maximum size for received MMS message check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="MMS Retrieval mode for SIM1 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="MMSSettingsTest" method="testMMSRetrievalModeForSIM1" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:58:47" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\MMS Retrieval mode for SIM1 check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="MMS Retrieval mode for SIM2 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="MMSSettingsTest" method="testMMSRetrievalModeForSIM2" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:58:55" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\MMS Retrieval mode for SIM2 check_1.xml" errorreason="[No customization point] at [MMS Retrieval mode for SIM2]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Allow adverts for SIM1 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="MMSSettingsTest" method="testAllowAdvertsForSIM1" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:59:04" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Allow adverts for SIM1 check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Allow adverts for SIM2 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="MMSSettingsTest" method="testAllowAdvertsForSIM2" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:59:13" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Allow adverts for SIM2 check_1.xml" errorreason="[No customization point] at [Allow adverts for SIM2]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="SMS to MMS conversion threshold value check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="MMSSettingsTest" method="testSMSToMMSConversionThresholdValue" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 10:59:21" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\SMS to MMS conversion threshold value check_1.xml" errorreason="[No customization point] at [SMS to MMS conversion threshold value]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Cell Broadcast Reception check" feature="Other Messaging Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="OtherMessagingSettingsTest" method="testCellBroadcastReception" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:59:30" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Cell Broadcast Reception check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Cell Broadcast Channels configuration check" feature="Other Messaging Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="OtherMessagingSettingsTest" method="testCellBroadcastChannelsconfiguration" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:59:39" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Cell Broadcast Channels configuration check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Public Warning system using Cell Broadcast support check" feature="Other Messaging Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="OtherMessagingSettingsTest" method="testPublicWarningSystemUsingCellBroadcastSupport" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:59:47" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Public Warning system using Cell Broadcast support check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="The identifiers of CMAS CB and their display priority check" feature="Other Messaging Settings" subarea="Messaging" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="messaging" class="OtherMessagingSettingsTest" method="testTheIdentifiersOfCMASCBAndTheirDisplayPriority" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 10:59:57" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\The identifiers of CMAS CB and their display priority check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Graphic Files" feature="Preloaded Media" subarea="Application and Content" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="applicationandcontent" class="PreloadedMedia" method="testGraphicFiles" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:00:06" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Graphic Files_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Music Files" feature="Preloaded Media" subarea="Application and Content" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="applicationandcontent" class="PreloadedMedia" method="testMusicFiles" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:00:15" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Music Files_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Tone Files" feature="Preloaded Media" subarea="Application and Content" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="applicationandcontent" class="PreloadedMedia" method="testToneFiles" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:00:24" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Tone Files_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Video Files" feature="Preloaded Media" subarea="Application and Content" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="applicationandcontent" class="PreloadedMedia" method="testVideoFiles" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:00:35" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Video Files_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Midlet Files" feature="Preloaded Appications" subarea="Application and Content" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="applicationandcontent" class="PreloadedApplications" method="testMidletFiles" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:00:44" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Midlet Files_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Date format check" feature="Time and Date Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="TimeAndDateSettingsTest" method="testDateFormat" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:00:53" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Date format check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Time Format check" feature="Time and Date Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="TimeAndDateSettingsTest" method="testTimeFormat" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:01:01" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Time Format check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="NITZ ( Network Identity and Time Zone)  check" feature="Time and Date Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="TimeAndDateSettingsTest" method="testNITZ" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 11:01:10" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\NITZ ( Network Identity and Time Zone)  check_1.xml" errorreason="[No customization point] at [NITZ ( Network Identity and Time Zone) ]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Read Suggested display language from SIM check" feature="Language Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="LanguageSettingsTest" method="testReadSuggestedDisplayLanguageFromSIM" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:01:19" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Read Suggested display language from SIM check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Suggested display language check" feature="Language Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="LanguageSettingsTest" method="testSuggestedDisplayLanguage" relativetotestset="false" />
-    <testresult result="Failed" time="03/11/2014 11:01:31" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Suggested display language check_1.xml" errorreason="'expect[es-US], actual[de-DE]'" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Screen double tap check" feature="Other UI Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="OtherUISettingsTest" method="testScreenToubleTap" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 11:01:40" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Screen double tap check_1.xml" errorreason="[No customization point] at [Screen double tap]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Set Up Event List for ZuHause Application check" feature="SIM Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="SIMSettingsTest" method="testSetUpEventListForZuHauseApplication" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 11:01:48" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Set Up Event List for ZuHause Application check_1.xml" errorreason="[No customization point] at [Set Up Event List for ZuHause Application]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="SIM1 Ringtone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testSIM1Ringtone" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 11:01:57" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\SIM1 Ringtone check_1.xml" errorreason="[No customization point] at [SIM1 Ringtone]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="SIM2 Ringtone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testSIM2Ringtone" relativetotestset="false" />
-    <testresult result="N/A" time="03/11/2014 11:02:05" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\SIM2 Ringtone check_1.xml" errorreason="[No customization point] at [SIM2 Ringtone]" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Message Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testMessageTone" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:02:14" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Message Tone check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Email Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testEmailTone" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:02:23" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Email Tone check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Alarm Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testAlarmTone" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:02:32" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Alarm Tone check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Reminder Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testReminderTone" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:02:40" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Reminder Tone check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Push Notifications Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testPushNotificationsTone" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:02:49" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Push Notifications Tone check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Key Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testKeyTone" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:02:59" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Key Tone check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="System wallpaper check" feature="Graphic UI Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="GraphicUISettingsTest" method="testSystemWallpaper" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:03:10" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\System wallpaper check_1.xml" errorreason="" errortraceback="" originalresult="" />
-  </testcase>
-  <testcase name="Operator Startup Graphic check" feature="Graphic UI Settings" subarea="User Interface" ucid="" totalruncount="1">
-    <testscript directory="..\..\..\s40ng\source\test_scripts" file="user_interface" class="GraphicUISettingsTest" method="testOperatorStartupGraphic" relativetotestset="false" />
-    <testresult result="Passed" time="03/11/2014 11:03:20" author="" isblackboxmodeon="false" reportpath="..\test_sets\new_testset_results\xml\Operator Startup Graphic check_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="N/A" time="03/12/2014 22:30:19" author="" isblackboxmodeon="false" reportpath="..\..\..\s40ng\source\test_scripts\connectivity_results\xml\Enable to hide data connection mode menu settings with When Needed_1.xml" errorreason="[No customization point] at [Enable to hide data connection mode menu settings with When Needed.]" errortraceback="" originalresult="" />
+    <testresult result="N/A" time="03/12/2014 10:39:05 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:42:19 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:44:08 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:46:32 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/12/2014 10:50:52 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:02:45 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:06:07 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:10:56 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:12:33 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:15:07 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:25:29 PM" author="chewyang" isblackboxmodeon="" product="Pegasus DS" />
+    <testresult result="N/A" time="03/13/2014 02:28:17 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="N/A" time="03/13/2014 02:36:07 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="N/A" time="03/13/2014 04:06:14 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
+    <testresult result="N/A" time="03/13/2014 04:16:43 PM" author="chewyang" isblackboxmodeon="" product="Onyx DS" />
   </testcase>
 </testset>
