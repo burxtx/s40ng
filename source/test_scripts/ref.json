@@ -200,7 +200,8 @@
             "Customer folder in Application list": [
                 {
                     "Folder icon": "Folder 1 50x50 .png", 
-                    "Folder name": "Test AL"
+                    "Folder name": "Test AL",
+                    "ref": "./yapas/operator/folder/name"
                 }
             ], 
             "Customer folder in Browser": [

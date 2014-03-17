@@ -148,16 +148,32 @@ class CustomerFolders(uitestcase.UITestCase):
     subarea = "Applications and Content"
     feature = "Customer Folders for Application List and Browser"
 
-    def testGSML2FillBitRandomization(self):
+    def CustomerFolderInApplicationList(self):
         '''
-        #@tcId Customer folder in Application list
+        @tcId Customer folder in Application list
         '''
         group="Applications and Content"
         feature="Customer Folders for Application List and Browser"
         setting="Customer folder in Application list"
-        csc = CommonSettingCompare(self)
-        csc._commonSettingCompare(group, feature, setting)
-
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)
+        # read configuration items mapping file, for reference
+        f_ref = os.path.join(os.path.dirname(__file__), "ref.json").replace("\\", "/")
+        f_ref_ss = self.settingutil.converter(f_ref)
+        try:
+            f = f_ss[group][feature][setting][0]
+        except:
+            self.skip("[No customization point] at [%s]" % setting)
+        sequence = f_ref_ss[group][feature][setting][0]
+        ref_value = sequence["ref"]
+        p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % ref_value)       
+        f_v = f["Folder name"]         
+        r = cmp(str(f_v), str(p_v))
+        status = "pass" if r == 0 else "fail"
+        if status == "fail":
+            self.fail("expect[%s], actual[%s]" % (f_v, p_v))
+                
 class PreloadedApplications(uitestcase.UITestCase):
     subarea = "Application and Content"
     feature = "Preloaded Appications"
