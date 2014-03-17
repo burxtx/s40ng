@@ -175,7 +175,7 @@ class CustomerFolders(uitestcase.UITestCase):
             self.fail("expect[%s], actual[%s]" % (f_v, p_v))
                 
 class PreloadedApplications(uitestcase.UITestCase):
-    subarea = "Application and Content"
+    subarea = "Applications and Content"
     feature = "Preloaded Appications"
     
     def testMidletFiles(self):
@@ -211,9 +211,9 @@ class BookmarksHomepageURL(uitestcase.UITestCase):
     feature = "Bookmarks and Homepage URL"
     def testBookmarks(self):
         """preloaded media
-        #@tcId Midlet Files
+        ####@tcId Midlet Files
         """
-        group="Application and Content"
+        group="Applications and Content"
         feature="Bookmarks and Homepage URL"
         setting="Bookmark"  
         midlet_file_path = 'c:\\sp\\system_files\\_system_applications\\'           
@@ -230,3 +230,34 @@ class BookmarksHomepageURL(uitestcase.UITestCase):
             self.comment("----[setting][%s]%s " % (status, setting))
             if status == "fail":
                 self.fail("expect[%s], actual[%s]" % (f["Jar File"], "N/A"))    
+
+class BrowserSettings(uitestcase.UITestCase):
+    subarea = "Applications and Content"
+    feature = "Browser Settings"
+    def testDefaultSearchProvider(self):
+        """preloaded media
+        @tcId Default Search Provider
+        """
+        group="Applications and Content"
+        feature="Browser Settings"
+        setting="Default Search Provider"      
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)        
+        try:
+            f_ss[group][feature][setting][0]
+        except:
+            self.skip("[No customization value] at [%s]" % setting)
+        if f_ss[group][feature][setting][0]["value"] == "1":            
+            r = self.file.fileExists("c:\\sp\\java-config\\search.xml")
+            status = "pass" if r == True else "fail"
+            self.comment("----[setting][%s]%s " % (status, setting))
+            if status == "fail":
+                self.fail("expect <search.xml> found, actual not found")
+        else:
+            r = self.file.fileExists("c:\\sp\\java-config\\search.xml")
+            status = "pass" if r == False else "fail"
+            self.comment("----[setting][%s]%s " % (status, setting))
+            if status == "fail":
+                self.fail("expect <search.xml> not found, actual found")   
+            
