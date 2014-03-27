@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testset timedrunenabled="False" repeattime="00:00:00" shuffle="False" nexttestsetpath="">
+  <testcase name="Graphic Files" feature="Preloaded Media" subarea="Application and Content" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="applicationandcontent" class="PreloadedMedia" method="testGraphicFiles" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Music Files" feature="Preloaded Media" subarea="Application and Content" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="applicationandcontent" class="PreloadedMedia" method="testMusicFiles" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Tone Files" feature="Preloaded Media" subarea="Application and Content" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="applicationandcontent" class="PreloadedMedia" method="testToneFiles" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Video Files" feature="Preloaded Media" subarea="Application and Content" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="applicationandcontent" class="PreloadedMedia" method="testVideoFiles" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Customer folder in Application list" feature="Customer Folders for Application List and Browser" subarea="Applications and Content" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="applicationandcontent" class="CustomerFolders" method="CustomerFolderInApplicationList" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Midlet Files" feature="Preloaded Appications" subarea="Applications and Content" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="applicationandcontent" class="PreloadedApplications" method="testMidletFiles" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Default Search Provider" feature="Browser Settings" subarea="Applications and Content" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="applicationandcontent" class="BrowserSettings" method="testDefaultSearchProvider" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="GSM L2 Fill Bit Randomization" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testGSML2FillBitRandomization" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="FDN GPRS Control" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testFDNGPRSControl" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Source for Service Provider Name" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testSourceforServiceProviderName" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Enable/disable check for phone updates" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testCheckforPhoneUpdates" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Flexible PLMN indicator support" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testFlexiblePLMNIndicatorSupport" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Enable or Disable VOIP" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testEnableOrDisableVOIP" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Call barring menu visibility" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testCallBarringMenuVisibility" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="3G Fast Dormancy support" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="test3GFastDormancySupport" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="GPRS GEA algorithm" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testGPRSGEAAlgorithm" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="GSM A5 ciphering algorithm support" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testGSMA5" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Support for wide-band AMR speech in 2G/3G" feature="Calling Network settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="CallingNetworkSetting" method="testWidebandAMRSpeech" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Intelligent digits in CLI matching" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="ContactSettings" method="testIntelligentDigitsInCLI" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Phonebook ADN before PD CLI matching" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="ContactSettings" method="testPhonebookADN" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Support a star key in number matching" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="ContactSettings" method="testSupportastarkey" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Exact number matching" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="ContactSettings" method="testExactNumberMatching" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="CPHS/CSP Common PCN Handset support" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="ContactSettings" method="testCommonPCNHandset" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Sort contacts by" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="ContactSettings" method="testSortContactsBy" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Phonebook SDN CLI matching" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="ContactSettings" method="testPhonebookSDNCLI" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Phonebook Calling line Identification" feature="Contact Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="ContactSettings" method="testPhonebookCalling" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Country and Operator variant Emergency number" feature="Emergency Calls" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="EmergencyCalls" method="testOperatorEmergencyNumber" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Voice mail override number" feature="Voicemail box Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="VoiceMailboxSeting" method="testVoiceMailOverrideNumber" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Clear Code support" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testClearCodeSupport" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Two Digit Dialing" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testTwoDigitDialing" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="2g RAT info" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="OhterCallSettings" method="test2gRATinfo" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="PDP context activation restriction enabled" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testPDPContext" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="HS-SCCH less operation" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testHSSCCHLessOperation" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Enhanced fractional DPCH" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testEnhancedFractionalDPCH" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Enable Continuous Packet Connectivity features" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testEnableContinuousPacket" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Vamos level support" feature="Other Call Settings" subarea="Calling and Contact" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="callingandcontact" class="OhterCallSettings" method="testVamosLevelSupport" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="device name check" feature="Bluetooth" subarea="Connectivity" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="connectivity" class="BluetoothTest" method="testBluetoothDeviceName" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="visibility check" feature="Bluetooth" subarea="Connectivity" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="connectivity" class="BluetoothTest" method="testBluetoothVisibility" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Mobile Data Usage When no Wi-Fi available check" feature="Mobile Data Settings" subarea="Connectivity" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="connectivity" class="MobileDataTest" method="testMobileDataUsageWhenNoWifi" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Roaming mobile data usage check" feature="Mobile Data Settings" subarea="Connectivity" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="connectivity" class="MobileDataTest" method="testRoamingMobileDataUsage" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Enable to hide data connection mode menu settings with When Needed" feature="Mobile Data Settings" subarea="Connectivity" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="connectivity" class="MobileDataTest" method="testHideDataConnectionMode" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Message center number locked check" feature="SMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="SMSSettingsTest" method="testMessageCenterNumberLocked" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="SMS Delivery Reports for SIM1 check" feature="SMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="SMSSettingsTest" method="testSMSDeliveryReportsForSIM1" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="SMS Delivery Reports for SIM2 check" feature="SMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="SMSSettingsTest" method="testSMSDeliveryReportsForSIM2" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Timestamp type to be used in messaging check" feature="SMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="SMSSettingsTest" method="testTimestampUsedInMessaging" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="SMS Encoding Support check" feature="SMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="SMSSettingsTest" method="testSMSEncodingSupport" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Request MMS Delivery Report for SIM1 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="MMSSettingsTest" method="testRequestMMSDeliveryReportForSIM1" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Request MMS Delivery Report for SIM2 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="MMSSettingsTest" method="testRequestMMSDeliveryReportForSIM2" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Maximum size for received MMS message check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="MMSSettingsTest" method="testMaximumSizeForReceivedMMSMessage" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="MMS Retrieval mode for SIM1 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="MMSSettingsTest" method="testMMSRetrievalModeForSIM1" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="MMS Retrieval mode for SIM2 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="MMSSettingsTest" method="testMMSRetrievalModeForSIM2" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Allow adverts for SIM1 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="MMSSettingsTest" method="testAllowAdvertsForSIM1" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Allow adverts for SIM2 check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="MMSSettingsTest" method="testAllowAdvertsForSIM2" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="SMS to MMS conversion threshold value check" feature="MMS Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="MMSSettingsTest" method="testSMSToMMSConversionThresholdValue" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Cell Broadcast Reception check" feature="Other Messaging Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="OtherMessagingSettingsTest" method="testCellBroadcastReception" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Cell Broadcast Channels configuration check" feature="Other Messaging Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="OtherMessagingSettingsTest" method="testCellBroadcastChannelsconfiguration" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Public Warning system using Cell Broadcast support check" feature="Other Messaging Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="OtherMessagingSettingsTest" method="testPublicWarningSystemUsingCellBroadcastSupport" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="The identifiers of CMAS CB and their display priority check" feature="Other Messaging Settings" subarea="Messaging" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="messaging" class="OtherMessagingSettingsTest" method="testTheIdentifiersOfCMASCBAndTheirDisplayPriority" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Date format check" feature="Time and Date Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="TimeAndDateSettingsTest" method="testDateFormat" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Time Format check" feature="Time and Date Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="TimeAndDateSettingsTest" method="testTimeFormat" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="NITZ ( Network Identity and Time Zone)  check" feature="Time and Date Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="TimeAndDateSettingsTest" method="testNITZ" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Read Suggested display language from SIM check" feature="Language Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="LanguageSettingsTest" method="testReadSuggestedDisplayLanguageFromSIM" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Suggested display language check" feature="Language Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="LanguageSettingsTest" method="testSuggestedDisplayLanguage" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Screen double tap check" feature="Other UI Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="OtherUISettingsTest" method="testScreenToubleTap" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Set Up Event List for ZuHause Application check" feature="SIM Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="SIMSettingsTest" method="testSetUpEventListForZuHauseApplication" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="SIM1 Ringtone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testSIM1Ringtone" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="SIM2 Ringtone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testSIM2Ringtone" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Message Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testMessageTone" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Email Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testEmailTone" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Alarm Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testAlarmTone" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Reminder Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testReminderTone" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Push Notifications Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testPushNotificationsTone" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Key Tone check" feature="Profile Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="ProfileSettingsTest" method="testKeyTone" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="System wallpaper check" feature="Graphic UI Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="GraphicUISettingsTest" method="testSystemWallpaper" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+  <testcase name="Operator Startup Graphic check" feature="Graphic UI Settings" subarea="User Interface" ucid="" totalruncount="1">
+    <testscript directory="..\test_scripts" file="user_interface" class="GraphicUISettingsTest" method="testOperatorStartupGraphic" relativetotestset="true" />
+    <testresult result="" time="03/27/2014 10:38:58" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+  </testcase>
+</testset>
