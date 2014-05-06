@@ -403,6 +403,16 @@ class OhterCallSettings(uitestcase.UITestCase):
         feature="Other Call Settings"
         setting="2g RAT info"
         csc = CommonSettingCompare(self)
+        csc._commonSettingCompare(group, feature, setting)
+
+    def test35gRATinfo(self):
+        '''
+        @tcId 3.5g RAT info
+        '''
+        group="Calling and Contact"
+        feature="Other Call Settings"
+        setting="3.5g RAT info"
+        csc = CommonSettingCompare(self)
         csc._commonSettingCompare(group, feature, setting) 
     
     def testPDPContext(self):

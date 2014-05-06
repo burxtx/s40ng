@@ -89,3 +89,17 @@ class MobileDataTest(uitestcase.UITestCase):
         setting="Enable to hide data connection mode menu settings with When Needed."
         csc = CommonSettingCompare(self)
         csc._commonSettingCompare(group, feature, setting)
+
+class WlanTest(uitestcase.UITestCase):
+    subarea = "Connectivity"
+    feature = "Wlan"
+
+    def testWlanDefaultStatus(self):
+        '''
+        @tcId Enable/disable WLAN by default check
+        '''
+        group="Connectivity"
+        feature="Wlan settings"
+        setting="Enable/disable WLAN by default"
+        csc = CommonSettingCompare(self)
+        csc._commonSettingCompare(group, feature, setting)
