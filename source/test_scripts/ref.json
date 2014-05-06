@@ -404,6 +404,14 @@
                     "value": "460:00|China CMCC; 460:01|China Unicom"
                 }
             ]
+        },
+        "Wlan settings": {
+            "Enable/disable WLAN by default": [
+                {
+                    "ref": "./yapas/wlan/active", 
+                    "value": true
+                }
+            ]
         }
     }, 
     "User Interface": {
@@ -699,6 +707,12 @@
                     "value": true
                 }
             ], 
+            "3.5g RAT info": [
+                {
+                    "ref": "./yapas/network/35g-rat-info", 
+                    "value": true
+                }
+            ],
             "PDP context activation restriction enabled": [
                 {
                     "ref": "./yapas/mobile/pdp-context-activation-restriction-enabled", 
