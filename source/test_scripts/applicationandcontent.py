@@ -206,6 +206,31 @@ class PreloadedApplications(uitestcase.UITestCase):
             if status == "fail":
                 self.fail("expect[%s], actual[%s]" % (f["Jad File"], "N/A"))    
 
+    def testDisableMixRadio(self):
+        """preloaded media
+        @tcId Disable MixRadio
+        """
+        group="Applications and Content"
+        feature="Preloaded Applications"
+        setting="Disable Nokia Mix Radio"
+        f = os.path.join(os.path.dirname(__file__), "focus_config.json").replace("\\", "/")
+        self.settingutil = SettingUtil(self)
+        f_ss = self.settingutil.converter(f)
+        try:
+            f = f_ss[group][feature][setting][0]
+        except:
+            self.skip("[No customization value] at [%s]" % setting)
+        # 2 Nokia MixRadio related references
+        f_ref1 = './yapas/medialibrary/mix-radio-enabled'
+        f_ref2 = './yapas/mix-radio/dynamic-check'
+        if f['value'] == True:
+            p_v1 = self.sx('(send (send config-manager get-setting "%s") ->string)' % f_ref1)
+            p_v2 = self.sx('(send (send config-manager get-setting "%s") ->string)' % f_ref2)
+            if p_v1 or p_v2:
+                self.fail("expect[%s], actual[%s]" % ('False', 'True'))
+        else:
+            pass
+
 class BookmarksHomepageURL(uitestcase.UITestCase):
     subarea = "Application and Content"
     feature = "Bookmarks and Homepage URL"
