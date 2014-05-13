@@ -226,8 +226,14 @@ class PreloadedApplications(uitestcase.UITestCase):
         if f['value'] == True:
             p_v1 = self.sx('(send (send config-manager get-setting "%s") ->string)' % f_ref1)
             p_v2 = self.sx('(send (send config-manager get-setting "%s") ->string)' % f_ref2)
-            if p_v1 or p_v2:
-                self.fail("expect[%s], actual[%s]" % ('False', 'True'))
+            if p_v1 == 'false':
+                pass
+            else:
+                self.fail("%s expect[%s], actual[%s]" % (f_ref1, 'False', 'True'))
+            if p_v2 == 'false':
+                pass
+            else:
+                self.fail("%s expect[%s], actual[%s]" % (f_ref2, 'False', 'True'))
         else:
             pass
 

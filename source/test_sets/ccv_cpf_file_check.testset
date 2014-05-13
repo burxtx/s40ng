@@ -94,7 +94,15 @@
   </testcase>
   <testcase name="Disable MixRadio" feature="Preloaded Appications" subarea="Applications and Content" ucid="" totalruncount="1">
     <testscript directory="..\test_scripts" file="applicationandcontent" class="PreloadedApplications" method="testDisableMixRadio" relativetotestset="true" />
-    <testresult result="" time="05/06/2014 17:40:24" author="" isblackboxmodeon="false" reportpath="" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="05/07/2014 10:42:45" author="" isblackboxmodeon="false" reportpath="..\..\s40ng\source\test_sets\ccv_cpf_file_check_results\xml\Disable MixRadio_1.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Passed" time="05/07/2014 17:21:39" author="" isblackboxmodeon="false" reportpath="..\..\s40ng\source\test_sets\ccv_cpf_file_check_results\xml\Disable MixRadio_2.xml" errorreason="" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="05/13/2014 11:11:17" author="" isblackboxmodeon="false" reportpath="..\..\s40ng\source\test_sets\ccv_cpf_file_check_results\xml\Disable MixRadio_3.xml" errorreason="'expect[False], actual[True]'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="05/13/2014 11:20:49" author="" isblackboxmodeon="false" reportpath="..\..\s40ng\source\test_sets\ccv_cpf_file_check_results\xml\Disable MixRadio_4.xml" errorreason="'expect[False], actual[True]'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="05/13/2014 11:21:31" author="" isblackboxmodeon="false" reportpath="..\..\s40ng\source\test_sets\ccv_cpf_file_check_results\xml\Disable MixRadio_5.xml" errorreason="'expect[False], actual[True]'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="05/13/2014 11:22:13" author="" isblackboxmodeon="false" reportpath="..\..\s40ng\source\test_sets\ccv_cpf_file_check_results\xml\Disable MixRadio_6.xml" errorreason="'expect[False], actual[True]'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="05/13/2014 12:31:47" author="" isblackboxmodeon="false" reportpath="..\..\s40ng\source\test_sets\ccv_cpf_file_check_results\xml\Disable MixRadio_7.xml" errorreason="'Phone reset detected'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="05/13/2014 12:35:45" author="" isblackboxmodeon="false" reportpath="..\..\s40ng\source\test_sets\ccv_cpf_file_check_results\xml\Disable MixRadio_8.xml" errorreason="'expect[False], actual[True]'" errortraceback="" originalresult="" />
+    <testresult result="Failed" time="05/13/2014 12:40:32" author="" isblackboxmodeon="false" reportpath="..\..\s40ng\source\test_sets\ccv_cpf_file_check_results\xml\Disable MixRadio_9.xml" errorreason="'expect[False], actual[True]'" errortraceback="" originalresult="" />
   </testcase>
   <testcase name="Default Search Provider" feature="Browser Settings" subarea="Applications and Content" ucid="" totalruncount="1">
     <testscript directory="..\test_scripts" file="applicationandcontent" class="BrowserSettings" method="testDefaultSearchProvider" relativetotestset="true" />
