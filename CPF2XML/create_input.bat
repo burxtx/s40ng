@@ -37,7 +37,7 @@ FOR %%X in (*.cpf) DO (
 if exist %choice% (
 echo ------------------------------------------------------------------
 echo Converting CPF into test_automation_input.xml
-cpf2xml4testautomation.py -i %choice% -c -m -f customer -d -o test_automation_input.xml
+python cpf2xml4testautomation.py -i %choice% -c -m -f customer -d -o test_automation_input.xml
 if exist test_automation_input.xml (
 echo ------------------------------------------------------------------
 echo test_automation_input.xml created successfully
