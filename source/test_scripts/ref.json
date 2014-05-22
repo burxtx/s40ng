@@ -464,6 +464,12 @@
                     "ref": "./platform/INFO_PP_ATK_VF_D2_ZUHAUSE", 
                     "value": true
                 }
+            ],
+            "Accessing Vivo DDD and STK Menu functions from SIM slot2": [
+                {
+                    "ref": "./platform/INFO_PP_BRAZIL_VIVO_DDD", 
+                    "value": true
+                }
             ]
         }, 
         "Profile Settings": {
@@ -1117,6 +1123,12 @@
                 {
                     "ref": "", 
                     "value": "102"
+                }
+            ],
+            "USSD expiration time": [
+                {
+                    "ref": "./yapas/suppservice/autocancel", 
+                    "value": "10000"
                 }
             ]
         }

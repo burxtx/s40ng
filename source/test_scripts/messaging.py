@@ -213,3 +213,13 @@ class OtherMessagingSettingsTest(uitestcase.UITestCase):
         setting="The identifiers of CMAS CB and their display priority."
         csc = CommonSettingCompare(self)
         csc._commonSettingCompare(group, feature, setting)
+
+    def testUSSDExpirationTime(self):
+        '''
+        @tcId USSD expiration time
+        '''
+        group="Messaging"
+        feature="Other Messaging Settings"
+        setting="USSD expiration time"
+        csc = CommonSettingCompare(self)
+        csc._commonSettingCompare(group, feature, setting)

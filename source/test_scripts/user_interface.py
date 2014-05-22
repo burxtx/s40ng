@@ -121,6 +121,16 @@ class SIMSettingsTest(uitestcase.UITestCase):
         csc = CommonSettingCompare(self)
         csc._commonSettingCompare(group, feature, setting)
 
+    def testAccessingVivoDDDAndSTKMenuFunctionsFromSIMSlot2(self):
+        '''
+        @tcId Accessing Vivo DDD and STK Menu functions from SIM slot2
+        '''
+        group="User Interface"
+        feature="SIM Settings"
+        setting="Accessing Vivo DDD and STK Menu functions from SIM slot2"
+        csc = CommonSettingCompare(self)
+        csc._commonSettingCompare(group, feature, setting)
+
 class ProfileSettingsTest(uitestcase.UITestCase):
     subarea = "User Interface"
     feature = "Profile Settings"
