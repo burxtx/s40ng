@@ -102,14 +102,14 @@ class CommonSettingCompare(uitestcase.UITestCase):
                 f_v = f_ss[group][feature][setting][0]["value"]
                 if f_v:
                     amr_f_value = amr_f_value | 2
-                else
+                else :
                     amr_f_value = amr_f_value & 5
             if "AMR speech in 3G network" in setting and st_key in setting:
                 self.comment("[group]%s --> [feature]%s -->[setting]%s" % (group,feature,setting))
                 f_v = f_ss[group][feature][setting][0]["value"]
                 if f_v:
                     amr_f_value = amr_f_value | 4
-                else
+                else :
                     amr_f_value = amr_f_value & 3
         if "GSM A5" in st_key:
             p_v = self.sx('(send (send config-manager get-setting "%s") ->string)' % a5_ref_value)
